@@ -10,6 +10,7 @@ dist/
 # Agent data (local only, can be large)
 agent/data/imagery/
 agent/data/footprints/
+agent/data/rasters/
 agent/data/*.db
 
 # Agent credentials
