@@ -15,12 +15,16 @@ Confidence heuristic (documented here so it can be tuned):
   ndvi_score       = min(|ΔNDVI| / 0.20, 1.0)         — corroborating vegetation loss
 
 Detection type assignment:
-  "new_structure"      — change polygon overlaps a building footprint
-                         (MS footprints confirm a building now exists here)
-  "surface_change"     — no footprint overlap; could be road, cleared ground, etc.
-  "expanded_structure" — change polygon partially overlaps a footprint AND is
-                         significantly larger than it (proxy for expansion; requires
-                         baseline footprints to do properly — deferred for v2)
+  "new_structure"  — change polygon overlaps a building footprint
+                     (MS footprints confirm a building exists here now)
+  "surface_change" — no footprint overlap; could be road, cleared ground, etc.
+
+Note: MS Global Building Footprints is a single static snapshot with no temporal
+dimension, so footprint overlap cannot prove a structure is *new* or *expanded* —
+only that a building exists here now. The temporal signal lives entirely in the
+raster diff. We therefore only distinguish "footprint present" (new_structure) vs
+"no footprint" (surface_change). Genuine expansion detection would need baseline
+(before-date) footprints — deferred for v2.
 """
 
 import uuid
@@ -35,19 +39,13 @@ from nova.footprints import load_karrada_footprints
 
 CRS_UTM = "EPSG:32638"
 
-# Fraction of change polygon area that must overlap with a footprint
-# to classify as "new_structure" rather than "expanded_structure"
-_FOOTPRINT_OVERLAP_NEW_THRESH = 0.40
-
 
 class Detection(BaseModel):
     id: str
     lat: float
     lon: float
     geometry: dict                          # GeoJSON geometry (WGS84)
-    detection_type: Literal[
-        "new_structure", "expanded_structure", "surface_change"
-    ]
+    detection_type: Literal["new_structure", "surface_change"]
     confidence: float                       # 0.0 – 1.0
     detected_at: datetime
     source_dates: dict                      # {"before": [start, end], "after": [start, end]}
@@ -85,25 +83,11 @@ def _confidence(
 
 
 def _assign_type(
-    change_geom_utm,
-    footprint_geom_utm,
-) -> Literal["new_structure", "expanded_structure", "surface_change"]:
-    """Assign detection type based on spatial relationship to nearest footprint."""
-    if footprint_geom_utm is None:
-        return "surface_change"
-
-    try:
-        intersection = change_geom_utm.intersection(footprint_geom_utm)
-        overlap_frac = intersection.area / change_geom_utm.area
-    except Exception:
-        return "new_structure"  # topological error — assume structure
-
-    if overlap_frac >= _FOOTPRINT_OVERLAP_NEW_THRESH:
-        return "new_structure"
-    else:
-        # Change polygon is mostly outside the footprint → footprint partially
-        # touched; likely the building expanded beyond its original footprint
-        return "expanded_structure"
+    overlaps_footprint: bool,
+) -> Literal["new_structure", "surface_change"]:
+    """A change polygon overlapping any building footprint is a structure;
+    otherwise it's a generic surface change (road, cleared lot, etc.)."""
+    return "new_structure" if overlaps_footprint else "surface_change"
 
 
 # ---------------------------------------------------------------------------
@@ -169,9 +153,8 @@ def run_nova(
     now = datetime.now(tz=timezone.utc)
 
     for i, row in changes_utm.iterrows():
-        fp_geom = fp_geom_map.get(i)
-        overlaps = fp_geom is not None
-        d_type = _assign_type(row.geometry, fp_geom)
+        overlaps = fp_geom_map.get(i) is not None
+        d_type = _assign_type(overlaps)
 
         conf = _confidence(
             delta_ndbi=row["delta_ndbi"],

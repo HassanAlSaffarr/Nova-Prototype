@@ -7,10 +7,12 @@ Approach:
   1. Build cloud-free median composites from COPERNICUS/S2_SR_HARMONIZED
      for a "before" and "after" window (each ~3 months).
   2. Compute NDVI and NDBI for each composite.
-  3. Subtract to get ΔNDVI, ΔNDBI, Δbrightness.
-  4. Download the 3-band diff raster from GEE (cached to data/rasters/).
-  5. Threshold: ΔNDVI < ndvi_threshold AND ΔNDBI > ndbi_threshold
-     → pixels where vegetation/bare soil was replaced by built surface.
+  3. Subtract to get ΔNDVI, ΔNDBI, Δbrightness; also carry an MNDWI-based
+     WATER band so the Tigris can be masked.
+  4. Download the 4-band diff raster from GEE (cached to data/rasters/).
+  5. Threshold: ΔNDVI < ndvi_threshold AND ΔNDBI > ndbi_threshold,
+     excluding open-water pixels → pixels where vegetation/bare soil was
+     replaced by built surface.
   6. Vectorise contiguous flagged regions with rasterio.features.shapes().
   7. Filter polygons below min_area_m2.
   8. Sample raster at polygon centroids for per-detection delta values.
@@ -39,7 +41,8 @@ CACHE_DIR = Path(__file__).parent.parent / "data" / "rasters"
 # Construction signature thresholds (tunable via detect_changes() args)
 _DEFAULT_NDVI_THRESH = -0.10  # ΔNDVI must drop by at least this much
 _DEFAULT_NDBI_THRESH = 0.05   # ΔNDBI must rise by at least this much
-_DEFAULT_MIN_AREA = 100.0     # m² — smaller polygons are noise
+_DEFAULT_MIN_AREA = 300.0     # m² — ~3 S2 pixels; below this is salt-and-pepper noise
+_WATER_THRESH = 0.0           # MNDWI > this in either epoch ⇒ open water, masked out
 
 
 # ---------------------------------------------------------------------------
@@ -48,13 +51,15 @@ _DEFAULT_MIN_AREA = 100.0     # m² — smaller polygons are noise
 
 
 def _add_indices(img: ee.Image) -> ee.Image:
-    """Add NDVI, NDBI, and visible-mean brightness bands to an S2 image."""
+    """Add NDVI, NDBI, MNDWI, and visible-mean brightness bands to an S2 image."""
     ndvi = img.normalizedDifference(["B8", "B4"]).rename("NDVI")
     ndbi = img.normalizedDifference(["B11", "B8"]).rename("NDBI")
+    # MNDWI = (Green - SWIR) / (Green + SWIR); > 0 ≈ open water (the Tigris)
+    mndwi = img.normalizedDifference(["B3", "B11"]).rename("MNDWI")
     brightness = (
         img.select(["B4", "B3", "B2"]).reduce(ee.Reducer.mean()).rename("BRIGHTNESS")
     )
-    return img.addBands([ndvi, ndbi, brightness])
+    return img.addBands([ndvi, ndbi, mndwi, brightness])
 
 
 def _build_composite(
@@ -92,7 +97,7 @@ def _build_composite(
             "Try widening the date window."
         )
 
-    return collection.select(["NDVI", "NDBI", "BRIGHTNESS"]).median()
+    return collection.select(["NDVI", "NDBI", "MNDWI", "BRIGHTNESS"]).median()
 
 
 # ---------------------------------------------------------------------------
@@ -108,13 +113,15 @@ def _download_diff_raster(
     cache_stem: str,
 ) -> Path:
     """
-    Build before/after composites in GEE, subtract them, download the 3-band
-    diff raster (DELTA_NDVI, DELTA_NDBI, DELTA_BRIGHTNESS) as a UTM GeoTIFF.
+    Build before/after composites in GEE, subtract them, download the 4-band
+    diff raster as a UTM GeoTIFF.
 
     Bands in returned TIF (in order):
         1: DELTA_NDVI
         2: DELTA_NDBI
         3: DELTA_BRIGHTNESS
+        4: WATER          — max(MNDWI_before, MNDWI_after); > 0 ≈ open water,
+                            used to mask out Tigris pixels before vectorising
     """
     cache_path = CACHE_DIR / f"{cache_stem}.tif"
     if cache_path.exists():
@@ -129,9 +136,17 @@ def _download_diff_raster(
     print("  building after composite...")
     after = _build_composite(aoi, date_after[0], date_after[1], cloud_max)
 
-    diff = after.subtract(before).rename(
-        ["DELTA_NDVI", "DELTA_NDBI", "DELTA_BRIGHTNESS"]
+    diff = (
+        after.select(["NDVI", "NDBI", "BRIGHTNESS"])
+        .subtract(before.select(["NDVI", "NDBI", "BRIGHTNESS"]))
+        .rename(["DELTA_NDVI", "DELTA_NDBI", "DELTA_BRIGHTNESS"])
     )
+    # Water indicator: a pixel that is water in EITHER epoch should be masked,
+    # since index "changes" over the river are meaningless (level/turbidity).
+    water = before.select("MNDWI").max(after.select("MNDWI")).rename("WATER")
+    diff = diff.addBands(water)
+
+    bands = ["DELTA_NDVI", "DELTA_NDBI", "DELTA_BRIGHTNESS", "WATER"]
 
     print("  requesting download URL from GEE...")
     url = diff.getDownloadURL(
@@ -140,7 +155,7 @@ def _download_diff_raster(
             "crs": CRS_UTM,
             "region": aoi,
             "format": "GEO_TIFF",
-            "bands": ["DELTA_NDVI", "DELTA_NDBI", "DELTA_BRIGHTNESS"],
+            "bands": bands,
         }
     )
 
@@ -153,11 +168,7 @@ def _download_diff_raster(
 
     if content[:2] == b"PK":
         # GEE returned a zip of per-band TIFs
-        _merge_zip_to_tif(
-            content,
-            ["DELTA_NDVI", "DELTA_NDBI", "DELTA_BRIGHTNESS"],
-            cache_path,
-        )
+        _merge_zip_to_tif(content, bands, cache_path)
     else:
         cache_path.write_bytes(content)
 
@@ -225,6 +236,7 @@ def _vectorise(
         d_ndvi = src.read(1).astype(np.float32)
         d_ndbi = src.read(2).astype(np.float32)
         d_bright = src.read(3).astype(np.float32)
+        water = src.read(4).astype(np.float32)
         transform = src.transform
         crs = src.crs
         nodata = src.nodata
@@ -235,9 +247,16 @@ def _vectorise(
         nodata_mask |= d_ndvi == nodata
     nodata_mask |= np.isnan(d_ndvi) | np.isnan(d_ndbi)
 
-    # Construction mask: vegetation/bare soil → built surface
+    # Water mask: MNDWI > 0 in either epoch → Tigris / open water. Exclude it,
+    # otherwise seasonal level/turbidity shifts masquerade as construction.
+    water_mask = (water > _WATER_THRESH) | np.isnan(water)
+
+    # Construction mask: vegetation/bare soil → built surface, on dry land only
     construction = (
-        (d_ndvi < ndvi_thresh) & (d_ndbi > ndbi_thresh) & ~nodata_mask
+        (d_ndvi < ndvi_thresh)
+        & (d_ndbi > ndbi_thresh)
+        & ~nodata_mask
+        & ~water_mask
     ).astype(np.uint8)
 
     # Vectorise contiguous regions
@@ -309,7 +328,8 @@ def detect_changes(
     # Cache key encodes the full parameters so different runs don't collide
     before_tag = f"{date_before[0]}_{date_before[1]}".replace("-", "")
     after_tag = f"{date_after[0]}_{date_after[1]}".replace("-", "")
-    cache_stem = f"diff_{before_tag}_vs_{after_tag}_c{cloud_threshold}"
+    # "_w" schema marker: 4-band raster incl. WATER (bump if band layout changes)
+    cache_stem = f"diff_{before_tag}_vs_{after_tag}_c{cloud_threshold}_w"
 
     tif_path = _download_diff_raster(
         aoi_ee, date_before, date_after, cloud_threshold, cache_stem
