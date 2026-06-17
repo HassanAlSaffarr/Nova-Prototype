@@ -40,8 +40,8 @@ CACHE_DIR = Path(__file__).parent.parent / "data" / "rasters"
 
 # Construction signature thresholds (tunable via detect_changes() args)
 _DEFAULT_NDVI_THRESH = -0.10  # ΔNDVI must drop by at least this much
-_DEFAULT_NDBI_THRESH = 0.05   # ΔNDBI must rise by at least this much
-_DEFAULT_MIN_AREA = 300.0     # m² — ~3 S2 pixels; below this is salt-and-pepper noise
+_DEFAULT_NDBI_THRESH = 0.10   # ΔNDBI must rise by at least this much
+_DEFAULT_MIN_AREA = 1000.0    # m² — tuned: below this is noise / blankets the AOI
 _WATER_THRESH = 0.0           # MNDWI > this in either epoch ⇒ open water, masked out
 
 
