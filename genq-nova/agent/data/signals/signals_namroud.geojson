@@ -23,7 +23,7 @@
         "confidence": 0.98,
         "timestamp": "2026-05-26T18:19:00+00:00",
         "related_ids": [
-          "1285ef16-3bfa-447a-8010-f2776a89e753"
+          "f477be47-f3db-4e4a-928d-21fa832d8195"
         ],
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
@@ -51,7 +51,7 @@
         "confidence": 0.95,
         "timestamp": "2026-06-13T12:04:00+00:00",
         "related_ids": [
-          "48b74a9c-9dc6-48c5-8608-9fc8dae6077b"
+          "65dbec66-8feb-4e13-b956-09e7b225e9a0"
         ],
         "authority": "National Investment Commission"
       }
@@ -78,7 +78,7 @@
         "confidence": 0.94,
         "timestamp": "2026-05-08T14:27:00+00:00",
         "related_ids": [
-          "56beb6a2-27a7-4055-b81c-13db1c4fd37a"
+          "30d0d21c-a011-42cb-a652-41205df3f952"
         ],
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
@@ -132,7 +132,7 @@
         "confidence": 0.92,
         "timestamp": "2026-06-03T16:54:00+00:00",
         "related_ids": [
-          "56beb6a2-27a7-4055-b81c-13db1c4fd37a"
+          "30d0d21c-a011-42cb-a652-41205df3f952"
         ],
         "use": "residential",
         "permit_authority": "Amanat Baghdad"
@@ -160,7 +160,7 @@
         "confidence": 0.91,
         "timestamp": "2026-06-10T18:44:00+00:00",
         "related_ids": [
-          "959f2b71-1225-40bd-91f8-6c59be1d2231"
+          "507aeddb-ea78-4372-811e-460478341e63"
         ],
         "authority": "National Investment Commission"
       }
@@ -239,7 +239,7 @@
         "confidence": 0.88,
         "timestamp": "2026-06-12T04:10:00+00:00",
         "related_ids": [
-          "32eb26d0-309a-4bd5-bf68-dec938798d6b"
+          "0b934437-b1bc-45f2-bce4-f3a855eaccba"
         ],
         "use": "mixed-use",
         "permit_authority": "Amanat Baghdad"
@@ -267,7 +267,7 @@
         "confidence": 0.88,
         "timestamp": "2026-05-20T21:46:00+00:00",
         "related_ids": [
-          "0aa822f7-dabe-42af-ba62-4f7fff210ab8"
+          "121e01a6-8f91-4e97-81b2-9397a460757a"
         ],
         "business_type": "clothing store",
         "owner": "Fatima al-Saadi"
@@ -295,7 +295,7 @@
         "confidence": 0.87,
         "timestamp": "2026-05-07T23:01:00+00:00",
         "related_ids": [
-          "e739c12a-3e73-49fe-8092-c695b088281f"
+          "73d0d484-e569-4466-b348-cd4a6ef789dc"
         ],
         "business_type": "clothing store",
         "owner": "Noor al-Baghdadi"
@@ -349,7 +349,7 @@
         "confidence": 0.85,
         "timestamp": "2026-05-20T21:58:00+00:00",
         "related_ids": [
-          "2be743c8-e873-45b9-9e7a-5ee485a17a1d"
+          "399e834b-61f8-4602-8a62-727976d5be6a"
         ],
         "business_type": "supermarket",
         "owner": "Sajjad al-Saadi"
@@ -377,7 +377,7 @@
         "confidence": 0.85,
         "timestamp": "2026-05-25T20:17:00+00:00",
         "related_ids": [
-          "d6953323-0b4c-4a2f-a06f-ab3be07b0496"
+          "54f3025d-fe89-4c52-b47f-16a2c04b37aa"
         ],
         "work_type": "street lighting",
         "status": "open"
@@ -405,7 +405,7 @@
         "confidence": 0.84,
         "timestamp": "2026-06-08T20:56:00+00:00",
         "related_ids": [
-          "5efe04c9-64ec-49e1-891a-68cef0b0e897"
+          "a2184ac0-5eee-47b0-90d6-54415c206943"
         ],
         "business_type": "money exchange",
         "owner": "Omar al-Tamimi"

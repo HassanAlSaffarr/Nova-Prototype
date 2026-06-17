@@ -35,9 +35,8 @@ import geopandas as gpd
 from pydantic import BaseModel
 
 from nova.change_detection import detect_changes
+from nova.config import CRS_UTM
 from nova.footprints import load_karrada_footprints
-
-CRS_UTM = "EPSG:32638"
 
 
 class Detection(BaseModel):

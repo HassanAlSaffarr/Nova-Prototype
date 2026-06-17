@@ -18,7 +18,8 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
-DATA_DIR = Path(__file__).parent.parent / "data"
+from nova.config import DATA_DIR
+
 DB_PATH = DATA_DIR / "nova.db"
 SIGNALS_GEOJSON_DIR = DATA_DIR / "signals"
 

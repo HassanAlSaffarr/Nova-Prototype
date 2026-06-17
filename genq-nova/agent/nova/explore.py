@@ -13,19 +13,16 @@ Prerequisites:
 
 import os
 import sys
-from pathlib import Path
 
 import ee
 import httpx
 
-# Karrada peninsula, central Baghdad  [west, south, east, north]
-AOI_BOUNDS = [44.385, 33.285, 44.430, 33.320]
+from nova.config import DATA_DIR, KARRADA_BBOX as AOI_BOUNDS
 
 DATE_START = "2024-01-01"
 DATE_END = "2024-04-01"
 MAX_CLOUD_PCT = 20  # CLOUDY_PIXEL_PERCENTAGE threshold
 
-DATA_DIR = Path(__file__).parent.parent / "data"
 OUTPUT_PATH = DATA_DIR / "preview_karrada.png"
 
 

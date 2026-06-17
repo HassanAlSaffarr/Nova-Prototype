@@ -34,9 +34,9 @@ import rasterio.features
 from rasterio.io import MemoryFile
 from shapely.geometry import shape
 
-CRS_UTM = "EPSG:32638"  # UTM zone 38N — accurate metric CRS for Iraq
+from nova.config import CRS_UTM, DATA_DIR
 
-CACHE_DIR = Path(__file__).parent.parent / "data" / "rasters"
+CACHE_DIR = DATA_DIR / "rasters"
 
 # Construction signature thresholds (tunable via detect_changes() args)
 _DEFAULT_NDVI_THRESH = -0.10  # ΔNDVI must drop by at least this much

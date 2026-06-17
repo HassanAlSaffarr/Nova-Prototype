@@ -18,18 +18,11 @@ import argparse
 import json
 import os
 import sys
-from pathlib import Path
 
 import ee
 
+from nova.config import AOI_PRESETS, DATA_DIR
 from nova.detections import run_nova
-
-DATA_DIR = Path(__file__).parent.parent / "data"
-
-AOI_PRESETS: dict[str, list[float]] = {
-    # [west, south, east, north]
-    "karrada": [44.385, 33.285, 44.430, 33.320],
-}
 
 
 def _parse_date_range(value: str) -> tuple[str, str]:

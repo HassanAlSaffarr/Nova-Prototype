@@ -26,10 +26,9 @@ import httpx
 from shapely.geometry import box as shapely_box
 from shapely.geometry import shape
 
-# Karrada peninsula, central Baghdad  [west, south, east, north]
-KARRADA_BBOX = [44.385, 33.285, 44.430, 33.320]
+from nova.config import CRS_UTM, DATA_DIR as _DATA_DIR, KARRADA_BBOX
 
-DATA_DIR = Path(__file__).parent.parent / "data" / "footprints"
+DATA_DIR = _DATA_DIR / "footprints"
 CLIPPED_PATH = DATA_DIR / "karrada.geojson"
 
 _DATASET_CSV_URL = (
@@ -235,7 +234,7 @@ def setup_karrada_footprints() -> gpd.GeoDataFrame:
 
 
 def _print_stats(gdf: gpd.GeoDataFrame) -> None:
-    utm = gdf.to_crs("EPSG:32638")  # UTM zone 38N — accurate metric CRS for Iraq
+    utm = gdf.to_crs(CRS_UTM)
     utm["area_m2"] = utm.geometry.area
     total_ha = utm["area_m2"].sum() / 1e4
     print(f"  footprints     : {len(gdf):,}")

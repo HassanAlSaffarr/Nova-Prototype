@@ -11,13 +11,10 @@ import random
 import uuid
 from datetime import datetime, timedelta, timezone
 
-from nova.signals import Signal
+from nova.config import KARRADA_BBOX
 
 SEED = 20240620
 _rng = random.Random(SEED)
-
-# Karrada peninsula bbox [west, south, east, north]
-KARRADA_BBOX = [44.385, 33.285, 44.430, 33.320]
 
 # Demo "now": the pipeline pretends to run mid-June 2026
 NOW = datetime(2026, 6, 17, 9, 0, tzinfo=timezone.utc)
