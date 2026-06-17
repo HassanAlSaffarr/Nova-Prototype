@@ -1,0 +1,880 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.424709782118676,
+          33.28954620215074
+        ]
+      },
+      "properties": {
+        "id": "peter-91ede112-b78b-51e4-6edb-6055fdbf3c7a",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Masbah",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Rents in Masbah are getting crazy, landlords asking double now",
+        "value": -0.5,
+        "unit": "sentiment",
+        "confidence": 0.76,
+        "timestamp": "2026-06-13T09:05:00+00:00",
+        "related_ids": [],
+        "text_en": "Rents in Masbah are getting crazy, landlords asking double now",
+        "text_ar": "\u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u0633\u0628\u062d \u0635\u0627\u0631\u062a \u062e\u064a\u0627\u0644\u064a\u0629\u060c \u0623\u0635\u062d\u0627\u0628 \u0627\u0644\u0645\u0644\u0643 \u064a\u0637\u0644\u0628\u0648\u0646 \u0627\u0644\u0636\u0639\u0641",
+        "sentiment": -0.5,
+        "engagement": 343.0,
+        "platform": "Facebook"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.42035573526969,
+          33.30461034698057
+        ]
+      },
+      "properties": {
+        "id": "peter-0dd20b5f-f230-68c4-2420-f33f7a2b5bd2",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Kahramana",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Love the new caf\u00e9s popping up around Kahramana, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.74,
+        "timestamp": "2026-06-16T21:17:00+00:00",
+        "related_ids": [
+          "1a3cc768-3eea-40ba-b478-6733771302a9"
+        ],
+        "text_en": "Love the new caf\u00e9s popping up around Kahramana, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0643\u0647\u0631\u0645\u0627\u0646\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 393.0,
+        "platform": "X"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.3925987275877,
+          33.29253330257635
+        ]
+      },
+      "properties": {
+        "id": "peter-60ac904e-b77d-a7ab-5b9d-10952a51cb08",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Dakhil",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "Traffic on Arasat Street is unbearable since the new building works started",
+        "value": -0.6,
+        "unit": "sentiment",
+        "confidence": 0.74,
+        "timestamp": "2026-06-15T11:27:00+00:00",
+        "related_ids": [],
+        "text_en": "Traffic on Arasat Street is unbearable since the new building works started",
+        "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0639\u0631\u0635\u0627\u062a \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
+        "sentiment": -0.6,
+        "engagement": 106.0,
+        "platform": "X"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40111693069465,
+          33.29298382692182
+        ]
+      },
+      "properties": {
+        "id": "peter-cdbfe93d-f03e-1a76-39a2-2af703e99d4b",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Dakhil",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "Heard a big new tower is coming to Karrada Dakhil, anyone know the developer?",
+        "value": 0.2,
+        "unit": "sentiment",
+        "confidence": 0.73,
+        "timestamp": "2026-06-11T01:23:00+00:00",
+        "related_ids": [
+          "725163fc-41cc-41eb-927d-de12f3bd7227"
+        ],
+        "text_en": "Heard a big new tower is coming to Karrada Dakhil, anyone know the developer?",
+        "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
+        "sentiment": 0.2,
+        "engagement": 303.0,
+        "platform": "Facebook"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.416164026860834,
+          33.29071282767834
+        ]
+      },
+      "properties": {
+        "id": "peter-d21684ed-3ffe-bc03-cb21-597d7dea85f5",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Masbah",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Heard a big new tower is coming to Masbah, anyone know the developer?",
+        "value": 0.2,
+        "unit": "sentiment",
+        "confidence": 0.71,
+        "timestamp": "2026-06-17T03:07:00+00:00",
+        "related_ids": [],
+        "text_en": "Heard a big new tower is coming to Masbah, anyone know the developer?",
+        "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
+        "sentiment": 0.2,
+        "engagement": 158.0,
+        "platform": "Facebook"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39288082235808,
+          33.29033256324291
+        ]
+      },
+      "properties": {
+        "id": "peter-447f9def-44dc-af86-5c44-422993ddb06f",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Kahramana",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Construction everywhere in Kahramana these days, so much dust and noise",
+        "value": -0.4,
+        "unit": "sentiment",
+        "confidence": 0.7,
+        "timestamp": "2026-06-09T19:31:00+00:00",
+        "related_ids": [],
+        "text_en": "Construction everywhere in Kahramana these days, so much dust and noise",
+        "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0643\u0647\u0631\u0645\u0627\u0646\u0629 \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
+        "sentiment": -0.4,
+        "engagement": 390.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.399089660181495,
+          33.29794025037722
+        ]
+      },
+      "properties": {
+        "id": "peter-08ad0b91-7941-d512-3c59-89355b397354",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Arasat al-Hindiya",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0639\u0631\u0635\u0627\u062a \u0627\u0644\u0647\u0646\u062f\u064a\u0629",
+        "summary": "Love the new caf\u00e9s popping up around Arasat al-Hindiya, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.7,
+        "timestamp": "2026-06-09T22:50:00+00:00",
+        "related_ids": [],
+        "text_en": "Love the new caf\u00e9s popping up around Arasat al-Hindiya, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0639\u0631\u0635\u0627\u062a \u0627\u0644\u0647\u0646\u062f\u064a\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 184.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40918214668524,
+          33.312943511272955
+        ]
+      },
+      "properties": {
+        "id": "peter-d73544ec-7493-5472-b844-de6e9fafc3ae",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Arasat al-Hindiya",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0639\u0631\u0635\u0627\u062a \u0627\u0644\u0647\u0646\u062f\u064a\u0629",
+        "summary": "Traffic on Al-Sadoun Street is unbearable since the new building works started",
+        "value": -0.6,
+        "unit": "sentiment",
+        "confidence": 0.69,
+        "timestamp": "2026-06-07T00:23:00+00:00",
+        "related_ids": [
+          "f984221c-5d79-4501-ab3b-0a1f35f3f278"
+        ],
+        "text_en": "Traffic on Al-Sadoun Street is unbearable since the new building works started",
+        "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0627\u0644\u0633\u0639\u062f\u0648\u0646 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
+        "sentiment": -0.6,
+        "engagement": 22.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.387888703793784,
+          33.31569064372167
+        ]
+      },
+      "properties": {
+        "id": "peter-2e049772-3fcf-58a2-633a-27056a26a583",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "trending_topic",
+        "title_en": "Trending \u2014 #KarradaDevelopment",
+        "title_ar": "\u064a\u062a\u062f\u0627\u0648\u0644 \u2014 #\u062a\u0637\u0648\u064a\u0631_\u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "#KarradaDevelopment mentioned 924 times across Karrada this week.",
+        "value": 924.0,
+        "unit": "mentions",
+        "confidence": 0.67,
+        "timestamp": "2026-06-07T00:00:00+00:00",
+        "related_ids": [],
+        "hashtag_en": "#KarradaDevelopment",
+        "hashtag_ar": "#\u062a\u0637\u0648\u064a\u0631_\u0627\u0644\u0643\u0631\u0627\u062f\u0629"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39274036151725,
+          33.29569187959578
+        ]
+      },
+      "properties": {
+        "id": "peter-c814cb92-0a30-100b-fd1a-4c18812d73cd",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Maryam",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "Heard a big new tower is coming to Karrada Maryam, anyone know the developer?",
+        "value": 0.2,
+        "unit": "sentiment",
+        "confidence": 0.66,
+        "timestamp": "2026-06-06T21:16:00+00:00",
+        "related_ids": [
+          "30fb52af-209d-4801-8aac-975869704972"
+        ],
+        "text_en": "Heard a big new tower is coming to Karrada Maryam, anyone know the developer?",
+        "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
+        "sentiment": 0.2,
+        "engagement": 381.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.42891325701967,
+          33.31153783771329
+        ]
+      },
+      "properties": {
+        "id": "peter-72660353-e93b-7df7-7c86-4c025e712183",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Jadriya",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Traffic on 52nd Street is unbearable since the new building works started",
+        "value": -0.6,
+        "unit": "sentiment",
+        "confidence": 0.65,
+        "timestamp": "2026-06-07T06:21:00+00:00",
+        "related_ids": [],
+        "text_en": "Traffic on 52nd Street is unbearable since the new building works started",
+        "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0665\u0662 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
+        "sentiment": -0.6,
+        "engagement": 228.0,
+        "platform": "Facebook"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40537661142276,
+          33.29958240956684
+        ]
+      },
+      "properties": {
+        "id": "peter-6025b917-e7ad-8c2f-2657-94b8d812982b",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Kharij",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c",
+        "summary": "Construction everywhere in Karrada Kharij these days, so much dust and noise",
+        "value": -0.4,
+        "unit": "sentiment",
+        "confidence": 0.63,
+        "timestamp": "2026-06-12T05:18:00+00:00",
+        "related_ids": [],
+        "text_en": "Construction everywhere in Karrada Kharij these days, so much dust and noise",
+        "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
+        "sentiment": -0.4,
+        "engagement": 137.0,
+        "platform": "X"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40140508196816,
+          33.292107404005534
+        ]
+      },
+      "properties": {
+        "id": "peter-7e59568c-580d-e23a-ee9a-91d3caeced09",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Maryam",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "Rents in Karrada Maryam are getting crazy, landlords asking double now",
+        "value": -0.5,
+        "unit": "sentiment",
+        "confidence": 0.61,
+        "timestamp": "2026-06-16T11:49:00+00:00",
+        "related_ids": [
+          "725163fc-41cc-41eb-927d-de12f3bd7227"
+        ],
+        "text_en": "Rents in Karrada Maryam are getting crazy, landlords asking double now",
+        "text_ar": "\u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645 \u0635\u0627\u0631\u062a \u062e\u064a\u0627\u0644\u064a\u0629\u060c \u0623\u0635\u062d\u0627\u0628 \u0627\u0644\u0645\u0644\u0643 \u064a\u0637\u0644\u0628\u0648\u0646 \u0627\u0644\u0636\u0639\u0641",
+        "sentiment": -0.5,
+        "engagement": 163.0,
+        "platform": "X"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.420328719619796,
+          33.3083426211145
+        ]
+      },
+      "properties": {
+        "id": "peter-a457e38b-ac86-a6e0-068e-d66fe710ac31",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Kahramana",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Heard a big new tower is coming to Kahramana, anyone know the developer?",
+        "value": 0.2,
+        "unit": "sentiment",
+        "confidence": 0.61,
+        "timestamp": "2026-06-16T20:47:00+00:00",
+        "related_ids": [
+          "11308fda-6131-49d0-937f-c92c18a2c1e8"
+        ],
+        "text_en": "Heard a big new tower is coming to Kahramana, anyone know the developer?",
+        "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0643\u0647\u0631\u0645\u0627\u0646\u0629\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
+        "sentiment": 0.2,
+        "engagement": 447.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.400523259203496,
+          33.29197970164977
+        ]
+      },
+      "properties": {
+        "id": "peter-0929846e-0365-e4ed-8ee2-b547c819546f",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Al-Wahda",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0648\u062d\u062f\u0629",
+        "summary": "Love the new caf\u00e9s popping up around Al-Wahda, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.6,
+        "timestamp": "2026-06-07T12:47:00+00:00",
+        "related_ids": [
+          "725163fc-41cc-41eb-927d-de12f3bd7227"
+        ],
+        "text_en": "Love the new caf\u00e9s popping up around Al-Wahda, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0648\u062d\u062f\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 188.0,
+        "platform": "Facebook"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39276692929499,
+          33.29317158568885
+        ]
+      },
+      "properties": {
+        "id": "peter-5025c7bf-eca7-2ea2-fe90-c127943a41c7",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Maryam",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "Construction everywhere in Karrada Maryam these days, so much dust and noise",
+        "value": -0.4,
+        "unit": "sentiment",
+        "confidence": 0.58,
+        "timestamp": "2026-06-14T01:03:00+00:00",
+        "related_ids": [
+          "32eb26d0-309a-4bd5-bf68-dec938798d6b"
+        ],
+        "text_en": "Construction everywhere in Karrada Maryam these days, so much dust and noise",
+        "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645 \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
+        "sentiment": -0.4,
+        "engagement": 338.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.427617733564965,
+          33.30323355143988
+        ]
+      },
+      "properties": {
+        "id": "peter-5827ab05-fe54-cbe1-b1e3-ebefd00a9464",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Masbah",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Love the new caf\u00e9s popping up around Masbah, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.58,
+        "timestamp": "2026-06-15T09:58:00+00:00",
+        "related_ids": [],
+        "text_en": "Love the new caf\u00e9s popping up around Masbah, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 33.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38790759700871,
+          33.31951252663651
+        ]
+      },
+      "properties": {
+        "id": "peter-3443f800-2ca1-d32f-6e2e-1745bd7bf797",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Masbah",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "New money exchange just opened in Masbah, the area is really changing \ud83d\udc40",
+        "value": 0.6,
+        "unit": "sentiment",
+        "confidence": 0.58,
+        "timestamp": "2026-06-08T23:34:00+00:00",
+        "related_ids": [],
+        "text_en": "New money exchange just opened in Masbah, the area is really changing \ud83d\udc40",
+        "text_ar": "\u0627\u0641\u062a\u062a\u062d \u0645\u0643\u062a\u0628 \u0635\u0631\u0627\u0641\u0629 \u062c\u062f\u064a\u062f \u0641\u064a \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0627\u0644\u0645\u0646\u0637\u0642\u0629 \u062a\u062a\u063a\u064a\u0631 \u0628\u0633\u0631\u0639\u0629 \ud83d\udc40",
+        "sentiment": 0.6,
+        "engagement": 443.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.399619005516364,
+          33.31305810567724
+        ]
+      },
+      "properties": {
+        "id": "peter-6c1f91f8-f211-bd4a-820d-2180b638050e",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "trending_topic",
+        "title_en": "Trending \u2014 #BaghdadRealEstate",
+        "title_ar": "\u064a\u062a\u062f\u0627\u0648\u0644 \u2014 #\u0639\u0642\u0627\u0631\u0627\u062a_\u0628\u063a\u062f\u0627\u062f",
+        "summary": "#BaghdadRealEstate mentioned 965 times across Karrada this week.",
+        "value": 965.0,
+        "unit": "mentions",
+        "confidence": 0.58,
+        "timestamp": "2026-06-11T12:36:00+00:00",
+        "related_ids": [],
+        "hashtag_en": "#BaghdadRealEstate",
+        "hashtag_ar": "#\u0639\u0642\u0627\u0631\u0627\u062a_\u0628\u063a\u062f\u0627\u062f"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40826050033652,
+          33.31119525915662
+        ]
+      },
+      "properties": {
+        "id": "peter-396728d7-0296-2a15-671f-f39da25cf56f",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Maryam",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "Heard a big new tower is coming to Karrada Maryam, anyone know the developer?",
+        "value": 0.2,
+        "unit": "sentiment",
+        "confidence": 0.56,
+        "timestamp": "2026-06-15T10:17:00+00:00",
+        "related_ids": [],
+        "text_en": "Heard a big new tower is coming to Karrada Maryam, anyone know the developer?",
+        "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
+        "sentiment": 0.2,
+        "engagement": 441.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41728449153083,
+          33.30114028011542
+        ]
+      },
+      "properties": {
+        "id": "peter-49b3cbc5-af8e-df06-d9e6-9ed5cdfd81d7",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "trending_topic",
+        "title_en": "Trending \u2014 #KarradaDevelopment",
+        "title_ar": "\u064a\u062a\u062f\u0627\u0648\u0644 \u2014 #\u062a\u0637\u0648\u064a\u0631_\u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "#KarradaDevelopment mentioned 641 times across Karrada this week.",
+        "value": 641.0,
+        "unit": "mentions",
+        "confidence": 0.55,
+        "timestamp": "2026-06-10T09:57:00+00:00",
+        "related_ids": [],
+        "hashtag_en": "#KarradaDevelopment",
+        "hashtag_ar": "#\u062a\u0637\u0648\u064a\u0631_\u0627\u0644\u0643\u0631\u0627\u062f\u0629"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39711033439505,
+          33.29486580056355
+        ]
+      },
+      "properties": {
+        "id": "peter-a13b6886-b74e-dead-14e9-1110b560a774",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Babil",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0628\u0627\u0628\u0644",
+        "summary": "Traffic on Al-Sadoun Street is unbearable since the new building works started",
+        "value": -0.6,
+        "unit": "sentiment",
+        "confidence": 0.51,
+        "timestamp": "2026-06-16T05:38:00+00:00",
+        "related_ids": [],
+        "text_en": "Traffic on Al-Sadoun Street is unbearable since the new building works started",
+        "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0627\u0644\u0633\u0639\u062f\u0648\u0646 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
+        "sentiment": -0.6,
+        "engagement": 379.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38984657524839,
+          33.314342729712926
+        ]
+      },
+      "properties": {
+        "id": "peter-1e99947d-7cd2-1042-0b3f-0505577646bf",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Masbah",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Heard a big new tower is coming to Masbah, anyone know the developer?",
+        "value": 0.2,
+        "unit": "sentiment",
+        "confidence": 0.5,
+        "timestamp": "2026-06-09T23:05:00+00:00",
+        "related_ids": [],
+        "text_en": "Heard a big new tower is coming to Masbah, anyone know the developer?",
+        "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
+        "sentiment": 0.2,
+        "engagement": 30.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41724712148346,
+          33.30672707813129
+        ]
+      },
+      "properties": {
+        "id": "peter-570418ef-8090-0ab6-ddd7-c8923557877b",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "trending_topic",
+        "title_en": "Trending \u2014 #ArasatNights",
+        "title_ar": "\u064a\u062a\u062f\u0627\u0648\u0644 \u2014 #\u0644\u064a\u0627\u0644\u064a_\u0639\u0631\u0635\u0627\u062a",
+        "summary": "#ArasatNights mentioned 1,040 times across Karrada this week.",
+        "value": 1040.0,
+        "unit": "mentions",
+        "confidence": 0.48,
+        "timestamp": "2026-06-09T16:01:00+00:00",
+        "related_ids": [],
+        "hashtag_en": "#ArasatNights",
+        "hashtag_ar": "#\u0644\u064a\u0627\u0644\u064a_\u0639\u0631\u0635\u0627\u062a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39283277281749,
+          33.3062223324286
+        ]
+      },
+      "properties": {
+        "id": "peter-0d75040f-d1f1-8c44-836a-48ad92bc83e2",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Dakhil",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "Love the new caf\u00e9s popping up around Karrada Dakhil, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.48,
+        "timestamp": "2026-06-08T09:53:00+00:00",
+        "related_ids": [],
+        "text_en": "Love the new caf\u00e9s popping up around Karrada Dakhil, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 462.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41830798366317,
+          33.30998435094255
+        ]
+      },
+      "properties": {
+        "id": "peter-0b96f113-0e3d-38ea-1930-5e72a112cd8b",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Kahramana",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Love the new caf\u00e9s popping up around Kahramana, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.48,
+        "timestamp": "2026-06-10T02:30:00+00:00",
+        "related_ids": [
+          "7e884af2-4514-41c5-81a6-8cac4d92adaa"
+        ],
+        "text_en": "Love the new caf\u00e9s popping up around Kahramana, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0643\u0647\u0631\u0645\u0627\u0646\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 368.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41338584050578,
+          33.290971155962524
+        ]
+      },
+      "properties": {
+        "id": "peter-13e97a44-ec4c-bf1a-0d28-61e83055ee42",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Karrada Kharij",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c",
+        "summary": "Construction everywhere in Karrada Kharij these days, so much dust and noise",
+        "value": -0.4,
+        "unit": "sentiment",
+        "confidence": 0.47,
+        "timestamp": "2026-06-11T00:12:00+00:00",
+        "related_ids": [],
+        "text_en": "Construction everywhere in Karrada Kharij these days, so much dust and noise",
+        "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
+        "sentiment": -0.4,
+        "engagement": 215.0,
+        "platform": "Telegram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40427407199787,
+          33.29527824896701
+        ]
+      },
+      "properties": {
+        "id": "peter-3e3896a6-4e94-5cb3-5119-778872dd22c6",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Kahramana",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Traffic on Al-Nidhal Street is unbearable since the new building works started",
+        "value": -0.6,
+        "unit": "sentiment",
+        "confidence": 0.46,
+        "timestamp": "2026-06-14T20:02:00+00:00",
+        "related_ids": [],
+        "text_en": "Traffic on Al-Nidhal Street is unbearable since the new building works started",
+        "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0627\u0644\u0646\u0636\u0627\u0644 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
+        "sentiment": -0.6,
+        "engagement": 479.0,
+        "platform": "Instagram"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.409527186495815,
+          33.3127655443439
+        ]
+      },
+      "properties": {
+        "id": "peter-f1a17e4f-1159-f281-05f6-80bdd520a94d",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "social_post",
+        "title_en": "Social post \u2014 Masbah",
+        "title_ar": "\u0645\u0646\u0634\u0648\u0631 \u0627\u062c\u062a\u0645\u0627\u0639\u064a \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Love the new caf\u00e9s popping up around Masbah, great vibe lately",
+        "value": 0.7,
+        "unit": "sentiment",
+        "confidence": 0.45,
+        "timestamp": "2026-06-10T09:13:00+00:00",
+        "related_ids": [
+          "f984221c-5d79-4501-ab3b-0a1f35f3f278"
+        ],
+        "text_en": "Love the new caf\u00e9s popping up around Masbah, great vibe lately",
+        "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
+        "sentiment": 0.7,
+        "engagement": 439.0,
+        "platform": "X"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39805595002908,
+          33.30265319309394
+        ]
+      },
+      "properties": {
+        "id": "peter-51b319e8-2fbd-7d29-49bb-0508d103b745",
+        "source_agent": "peter",
+        "layer": "Social Listening",
+        "signal_type": "trending_topic",
+        "title_en": "Trending \u2014 #KarradaTraffic",
+        "title_ar": "\u064a\u062a\u062f\u0627\u0648\u0644 \u2014 #\u0632\u062d\u0627\u0645_\u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "#KarradaTraffic mentioned 179 times across Karrada this week.",
+        "value": 179.0,
+        "unit": "mentions",
+        "confidence": 0.45,
+        "timestamp": "2026-06-07T10:17:00+00:00",
+        "related_ids": [],
+        "hashtag_en": "#KarradaTraffic",
+        "hashtag_ar": "#\u0632\u062d\u0627\u0645_\u0627\u0644\u0643\u0631\u0627\u062f\u0629"
+      }
+    }
+  ]
+}

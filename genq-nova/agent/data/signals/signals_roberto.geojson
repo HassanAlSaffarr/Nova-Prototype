@@ -1,0 +1,575 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.413733447273984,
+          33.30362215458023
+        ]
+      },
+      "properties": {
+        "id": "roberto-39b6d33f-0e6f-1e2a-6926-3c4130b3f4a1",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "business_confidence",
+        "title_en": "Business confidence index \u2014 Jadriya",
+        "title_ar": "\u0645\u0624\u0634\u0631 \u062b\u0642\u0629 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Small-business confidence in Jadriya surveyed at 77/100 this period.",
+        "value": 77.0,
+        "unit": "/100",
+        "confidence": 0.89,
+        "timestamp": "2026-06-04T01:01:00+00:00",
+        "related_ids": [],
+        "surveyor": "Hassan al-Dulaimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.426967867982846,
+          33.294909675887986
+        ]
+      },
+      "properties": {
+        "id": "roberto-ffe653e8-70ff-b723-4514-d164dd2f618d",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "business_confidence",
+        "title_en": "Business confidence index \u2014 Babil",
+        "title_ar": "\u0645\u0624\u0634\u0631 \u062b\u0642\u0629 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0628\u0627\u0628\u0644",
+        "summary": "Small-business confidence in Babil surveyed at 50/100 this period.",
+        "value": 50.0,
+        "unit": "/100",
+        "confidence": 0.87,
+        "timestamp": "2026-05-29T11:51:00+00:00",
+        "related_ids": [],
+        "surveyor": "Maryam al-Dulaimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.418613629368835,
+          33.29578780219437
+        ]
+      },
+      "properties": {
+        "id": "roberto-e970b6a6-11d2-0dfc-42db-17b266040062",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Al-Nidhal Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0627\u0644\u0646\u0636\u0627\u0644",
+        "summary": "Estimated daily pedestrian footfall on Al-Nidhal Street counted at 1,800 during survey hours.",
+        "value": 1800.0,
+        "unit": "people/day",
+        "confidence": 0.85,
+        "timestamp": "2026-06-09T22:07:00+00:00",
+        "related_ids": [],
+        "surveyor": "Haider al-Janabi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39017560278741,
+          33.29275193767864
+        ]
+      },
+      "properties": {
+        "id": "roberto-9ea2b532-a18c-925b-ed59-c6ba73a2570c",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Arasat Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0639\u0631\u0635\u0627\u062a",
+        "summary": "Estimated daily pedestrian footfall on Arasat Street counted at 1,950 during survey hours.",
+        "value": 1950.0,
+        "unit": "people/day",
+        "confidence": 0.84,
+        "timestamp": "2026-06-06T14:57:00+00:00",
+        "related_ids": [],
+        "surveyor": "Hassan al-Obeidi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41488292180481,
+          33.31785818439152
+        ]
+      },
+      "properties": {
+        "id": "roberto-946041a2-40f1-5805-35e3-b1533fae9ea2",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "residential_rent",
+        "title_en": "Residential rent survey \u2014 Babil",
+        "title_ar": "\u0645\u0633\u062d \u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0633\u0643\u0646\u064a\u0629 \u2014 \u0628\u0627\u0628\u0644",
+        "summary": "Median monthly rent for a 2-bedroom apartment in Babil surveyed at 900,000 IQD.",
+        "value": 900000.0,
+        "unit": "IQD/month",
+        "confidence": 0.82,
+        "timestamp": "2026-06-05T10:49:00+00:00",
+        "related_ids": [
+          "4cb5507d-f7eb-496a-8f98-12216cdaa9a1"
+        ],
+        "surveyor": "Sara al-Baghdadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39856773174567,
+          33.30818268234181
+        ]
+      },
+      "properties": {
+        "id": "roberto-5568ab5f-8ad6-e34e-0306-38761ed8767e",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "business_confidence",
+        "title_en": "Business confidence index \u2014 Jadriya",
+        "title_ar": "\u0645\u0624\u0634\u0631 \u062b\u0642\u0629 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Small-business confidence in Jadriya surveyed at 68/100 this period.",
+        "value": 68.0,
+        "unit": "/100",
+        "confidence": 0.79,
+        "timestamp": "2026-06-13T04:00:00+00:00",
+        "related_ids": [
+          "38aa92b1-66c4-4fcf-9a72-cb11acd239d2"
+        ],
+        "surveyor": "Ali al-Dulaimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39640964813489,
+          33.30743187854209
+        ]
+      },
+      "properties": {
+        "id": "roberto-666460a8-c613-932a-6df5-ece2f325311b",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "business_confidence",
+        "title_en": "Business confidence index \u2014 Masbah",
+        "title_ar": "\u0645\u0624\u0634\u0631 \u062b\u0642\u0629 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Small-business confidence in Masbah surveyed at 78/100 this period.",
+        "value": 78.0,
+        "unit": "/100",
+        "confidence": 0.78,
+        "timestamp": "2026-06-01T23:33:00+00:00",
+        "related_ids": [
+          "fbb344c4-edbc-443d-b64a-52faaa1f359e"
+        ],
+        "surveyor": "Ahmed al-Janabi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40038636660468,
+          33.2959629817823
+        ]
+      },
+      "properties": {
+        "id": "roberto-4be5b0de-912b-1514-f4db-ab3a6610a38e",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "residential_rent",
+        "title_en": "Residential rent survey \u2014 Jadriya",
+        "title_ar": "\u0645\u0633\u062d \u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0633\u0643\u0646\u064a\u0629 \u2014 \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Median monthly rent for a 2-bedroom apartment in Jadriya surveyed at 650,000 IQD.",
+        "value": 650000.0,
+        "unit": "IQD/month",
+        "confidence": 0.78,
+        "timestamp": "2026-06-17T08:33:00+00:00",
+        "related_ids": [
+          "13916337-b0e0-4a38-ad52-b67a26952d91"
+        ],
+        "surveyor": "Ali al-Tamimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41840608323321,
+          33.309749059956
+        ]
+      },
+      "properties": {
+        "id": "roberto-d73c09a8-f2b1-10d1-bc7d-0fff8914c416",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "business_confidence",
+        "title_en": "Business confidence index \u2014 Jadriya",
+        "title_ar": "\u0645\u0624\u0634\u0631 \u062b\u0642\u0629 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Small-business confidence in Jadriya surveyed at 43/100 this period.",
+        "value": 43.0,
+        "unit": "/100",
+        "confidence": 0.77,
+        "timestamp": "2026-06-05T01:34:00+00:00",
+        "related_ids": [
+          "7e884af2-4514-41c5-81a6-8cac4d92adaa"
+        ],
+        "surveyor": "Mustafa al-Karkhi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.42880405849105,
+          33.30697629501539
+        ]
+      },
+      "properties": {
+        "id": "roberto-76878b47-db8f-2275-af03-1afbf5f88c12",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 52nd Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0665\u0662",
+        "summary": "Estimated daily pedestrian footfall on 52nd Street counted at 2,050 during survey hours.",
+        "value": 2050.0,
+        "unit": "people/day",
+        "confidence": 0.76,
+        "timestamp": "2026-06-05T19:22:00+00:00",
+        "related_ids": [],
+        "surveyor": "Omar al-Saadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.4299110965391,
+          33.29644371831193
+        ]
+      },
+      "properties": {
+        "id": "roberto-c356d619-206c-46ec-b76f-99c039da8eba",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Arasat Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0639\u0631\u0635\u0627\u062a",
+        "summary": "Estimated daily pedestrian footfall on Arasat Street counted at 2,350 during survey hours.",
+        "value": 2350.0,
+        "unit": "people/day",
+        "confidence": 0.76,
+        "timestamp": "2026-06-07T17:49:00+00:00",
+        "related_ids": [],
+        "surveyor": "Ahmed al-Tamimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38744178993815,
+          33.30751825258171
+        ]
+      },
+      "properties": {
+        "id": "roberto-57702fe2-7d41-7f72-9371-5819efb6acc1",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "business_confidence",
+        "title_en": "Business confidence index \u2014 Masbah",
+        "title_ar": "\u0645\u0624\u0634\u0631 \u062b\u0642\u0629 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u2014 \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Small-business confidence in Masbah surveyed at 47/100 this period.",
+        "value": 47.0,
+        "unit": "/100",
+        "confidence": 0.75,
+        "timestamp": "2026-06-08T18:08:00+00:00",
+        "related_ids": [],
+        "surveyor": "Omar al-Janabi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.4053941954337,
+          33.30878814800184
+        ]
+      },
+      "properties": {
+        "id": "roberto-706b9896-2670-dac8-efd2-88fd615de75c",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "property_price",
+        "title_en": "Property asking price \u2014 Karrada Maryam",
+        "title_ar": "\u0633\u0639\u0631 \u0639\u0642\u0627\u0631 \u0645\u0639\u0631\u0648\u0636 \u2014 \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "Asking price for a residential unit in Karrada Maryam recorded at $92,000.",
+        "value": 92000.0,
+        "unit": "USD",
+        "confidence": 0.75,
+        "timestamp": "2026-06-05T19:33:00+00:00",
+        "related_ids": [],
+        "surveyor": "Mustafa al-Baghdadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38685789211356,
+          33.29819490419451
+        ]
+      },
+      "properties": {
+        "id": "roberto-078cf269-6a4d-03b9-e961-76ba5864fdd0",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "property_price",
+        "title_en": "Property asking price \u2014 Karrada Dakhil",
+        "title_ar": "\u0633\u0639\u0631 \u0639\u0642\u0627\u0631 \u0645\u0639\u0631\u0648\u0636 \u2014 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "Asking price for a residential unit in Karrada Dakhil recorded at $148,000.",
+        "value": 148000.0,
+        "unit": "USD",
+        "confidence": 0.74,
+        "timestamp": "2026-06-16T02:22:00+00:00",
+        "related_ids": [],
+        "surveyor": "Haider al-Obeidi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.395735288156665,
+          33.31043827586146
+        ]
+      },
+      "properties": {
+        "id": "roberto-4f2eca46-2a11-56e4-0425-651eaf99669e",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "residential_rent",
+        "title_en": "Residential rent survey \u2014 Babil",
+        "title_ar": "\u0645\u0633\u062d \u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0633\u0643\u0646\u064a\u0629 \u2014 \u0628\u0627\u0628\u0644",
+        "summary": "Median monthly rent for a 2-bedroom apartment in Babil surveyed at 900,000 IQD.",
+        "value": 900000.0,
+        "unit": "IQD/month",
+        "confidence": 0.74,
+        "timestamp": "2026-06-12T08:06:00+00:00",
+        "related_ids": [],
+        "surveyor": "Sajjad al-Saadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.402844742262076,
+          33.28709153681715
+        ]
+      },
+      "properties": {
+        "id": "roberto-b0046a8a-e285-e6d6-9a5d-58b7a538b6e1",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "property_price",
+        "title_en": "Property asking price \u2014 Kahramana",
+        "title_ar": "\u0633\u0639\u0631 \u0639\u0642\u0627\u0631 \u0645\u0639\u0631\u0648\u0636 \u2014 \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Asking price for a residential unit in Kahramana recorded at $103,000.",
+        "value": 103000.0,
+        "unit": "USD",
+        "confidence": 0.73,
+        "timestamp": "2026-05-29T04:53:00+00:00",
+        "related_ids": [
+          "1285ef16-3bfa-447a-8010-f2776a89e753"
+        ],
+        "surveyor": "Sajjad al-Dulaimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38879301413535,
+          33.30233269069418
+        ]
+      },
+      "properties": {
+        "id": "roberto-a0c0bff7-f2b7-6dbe-d28d-cb8b10566f8f",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 52nd Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0665\u0662",
+        "summary": "Estimated daily pedestrian footfall on 52nd Street counted at 400 during survey hours.",
+        "value": 400.0,
+        "unit": "people/day",
+        "confidence": 0.72,
+        "timestamp": "2026-06-13T07:16:00+00:00",
+        "related_ids": [],
+        "surveyor": "Ali al-Saadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39911510342942,
+          33.28838644461472
+        ]
+      },
+      "properties": {
+        "id": "roberto-2c481aa2-5acf-4a3a-72f3-2276ea9d7035",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "residential_rent",
+        "title_en": "Residential rent survey \u2014 Babil",
+        "title_ar": "\u0645\u0633\u062d \u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0633\u0643\u0646\u064a\u0629 \u2014 \u0628\u0627\u0628\u0644",
+        "summary": "Median monthly rent for a 2-bedroom apartment in Babil surveyed at 1,100,000 IQD.",
+        "value": 1100000.0,
+        "unit": "IQD/month",
+        "confidence": 0.72,
+        "timestamp": "2026-06-07T16:16:00+00:00",
+        "related_ids": [],
+        "surveyor": "Ali al-Baghdadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40056978029516,
+          33.29418544391551
+        ]
+      },
+      "properties": {
+        "id": "roberto-538e3721-ce67-e73f-632e-ffd4a94ed579",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Al-Nidhal Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0627\u0644\u0646\u0636\u0627\u0644",
+        "summary": "Estimated daily pedestrian footfall on Al-Nidhal Street counted at 650 during survey hours.",
+        "value": 650.0,
+        "unit": "people/day",
+        "confidence": 0.69,
+        "timestamp": "2026-05-29T23:55:00+00:00",
+        "related_ids": [
+          "c679b6a7-3547-4322-a9e1-d5c27778bb4b"
+        ],
+        "surveyor": "Noor al-Karkhi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41383162241804,
+          33.29856717961807
+        ]
+      },
+      "properties": {
+        "id": "roberto-48438dac-d5e2-d68b-3813-138667d32eff",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Arasat Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0639\u0631\u0635\u0627\u062a",
+        "summary": "Estimated daily pedestrian footfall on Arasat Street counted at 550 during survey hours.",
+        "value": 550.0,
+        "unit": "people/day",
+        "confidence": 0.66,
+        "timestamp": "2026-06-13T06:16:00+00:00",
+        "related_ids": [
+          "bdb1247e-555a-4ce4-9183-37475868fe40"
+        ],
+        "surveyor": "Zainab al-Baghdadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40835161313056,
+          33.31603208132669
+        ]
+      },
+      "properties": {
+        "id": "roberto-409ca5fd-e217-ab00-abc5-acb35ee51275",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Al-Sadoun Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0627\u0644\u0633\u0639\u062f\u0648\u0646",
+        "summary": "Estimated daily pedestrian footfall on Al-Sadoun Street counted at 1,400 during survey hours.",
+        "value": 1400.0,
+        "unit": "people/day",
+        "confidence": 0.63,
+        "timestamp": "2026-06-14T03:13:00+00:00",
+        "related_ids": [
+          "53b92017-4e9e-42d9-bd43-dae112f1e5af"
+        ],
+        "surveyor": "Ahmed al-Saadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40140250314175,
+          33.29588392386043
+        ]
+      },
+      "properties": {
+        "id": "roberto-f460ae34-fc6e-d33e-836b-079033b69bd1",
+        "source_agent": "roberto",
+        "layer": "Survey Intelligence",
+        "signal_type": "retail_footfall",
+        "title_en": "Retail footfall \u2014 Al-Nidhal Street",
+        "title_ar": "\u0643\u062b\u0627\u0641\u0629 \u0627\u0644\u0645\u062a\u0633\u0648\u0642\u064a\u0646 \u2014 \u0634\u0627\u0631\u0639 \u0627\u0644\u0646\u0636\u0627\u0644",
+        "summary": "Estimated daily pedestrian footfall on Al-Nidhal Street counted at 2,500 during survey hours.",
+        "value": 2500.0,
+        "unit": "people/day",
+        "confidence": 0.6,
+        "timestamp": "2026-06-13T00:11:00+00:00",
+        "related_ids": [
+          "13916337-b0e0-4a38-ad52-b67a26952d91"
+        ],
+        "surveyor": "Maryam al-Obeidi"
+      }
+    }
+  ]
+}

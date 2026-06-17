@@ -1,0 +1,655 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40056164195173,
+          33.294755821986435
+        ]
+      },
+      "properties": {
+        "id": "data_chef-7d69f210-67e6-a9a0-7a43-cbf36368d9ce",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "7 signals from 3 independent sources (Namroud, Nova, Roberto) cluster within 220 m in southern Karrada. Breakdown: 1\u00d7 Namroud; 3\u00d7 Nova; 3\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 7.0,
+        "unit": "signals",
+        "confidence": 0.845,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "13916337-b0e0-4a38-ad52-b67a26952d91",
+          "c679b6a7-3547-4322-a9e1-d5c27778bb4b",
+          "5efe04c9-64ec-49e1-891a-68cef0b0e897",
+          "roberto-f460ae34-fc6e-d33e-836b-079033b69bd1",
+          "roberto-538e3721-ce67-e73f-632e-ffd4a94ed579",
+          "roberto-4be5b0de-912b-1514-f4db-ab3a6610a38e",
+          "namroud-9109aac1-d41f-2bcf-5117-7d922a40a5d5"
+        ],
+        "source_count": 3,
+        "member_count": 7,
+        "sources": [
+          "namroud",
+          "nova",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 3,
+          "roberto": 3,
+          "namroud": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41813752643431,
+          33.301966326813385
+        ]
+      },
+      "properties": {
+        "id": "data_chef-8ea6f221-3bca-0759-3cd4-3bf9689f739e",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 central-eastern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0648\u0633\u0637-\u0634\u0631\u0642 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "5 signals from 3 independent sources (Namroud, Nova, Peter) cluster within 220 m in central-eastern Karrada. Breakdown: 2\u00d7 Namroud; 2\u00d7 Nova; 1\u00d7 Peter. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 5.0,
+        "unit": "signals",
+        "confidence": 0.815,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "56beb6a2-27a7-4055-b81c-13db1c4fd37a",
+          "5b0c85b9-4272-4722-8583-2976a9217625",
+          "namroud-4d05cac4-7b59-f0a9-bb3c-9c6c65110fd3",
+          "namroud-8810b35c-6456-61f8-bf93-169b8468b953",
+          "peter-49b3cbc5-af8e-df06-d9e6-9ed5cdfd81d7"
+        ],
+        "source_count": 3,
+        "member_count": 5,
+        "sources": [
+          "namroud",
+          "nova",
+          "peter"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "namroud": 2,
+          "peter": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41866691947317,
+          33.30944463414352
+        ]
+      },
+      "properties": {
+        "id": "data_chef-0d8682b4-7451-4945-3ef7-85c23cf3d51d",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 northern-eastern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0634\u0645\u0627\u0644-\u0634\u0631\u0642 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "4 signals from 3 independent sources (Nova, Peter, Roberto) cluster within 220 m in northern-eastern Karrada. Breakdown: 2\u00d7 Nova; 1\u00d7 Peter; 1\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 4.0,
+        "unit": "signals",
+        "confidence": 0.8,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "7e884af2-4514-41c5-81a6-8cac4d92adaa",
+          "11308fda-6131-49d0-937f-c92c18a2c1e8",
+          "roberto-d73c09a8-f2b1-10d1-bc7d-0fff8914c416",
+          "peter-0b96f113-0e3d-38ea-1930-5e72a112cd8b"
+        ],
+        "source_count": 3,
+        "member_count": 4,
+        "sources": [
+          "nova",
+          "peter",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "roberto": 1,
+          "peter": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39264237212665,
+          33.29282149224302
+        ]
+      },
+      "properties": {
+        "id": "data_chef-1ca35308-dd27-c7e9-d33a-820d7692177c",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern-western Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628-\u063a\u0631\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "4 signals from 3 independent sources (Namroud, Nova, Peter) cluster within 220 m in southern-western Karrada. Breakdown: 1\u00d7 Namroud; 1\u00d7 Nova; 2\u00d7 Peter. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 4.0,
+        "unit": "signals",
+        "confidence": 0.8,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "32eb26d0-309a-4bd5-bf68-dec938798d6b",
+          "namroud-6c058bf7-cd0a-a9f1-0cb5-e51b27ce6824",
+          "peter-5025c7bf-eca7-2ea2-fe90-c127943a41c7",
+          "peter-60ac904e-b77d-a7ab-5b9d-10952a51cb08"
+        ],
+        "source_count": 3,
+        "member_count": 4,
+        "sources": [
+          "namroud",
+          "nova",
+          "peter"
+        ],
+        "breakdown": {
+          "nova": 1,
+          "namroud": 1,
+          "peter": 2
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.415340316271376,
+          33.31686340620172
+        ]
+      },
+      "properties": {
+        "id": "data_chef-f630c457-8311-f059-fa01-7da69ca9d94b",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 northern-eastern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0634\u0645\u0627\u0644-\u0634\u0631\u0642 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 3 independent sources (Namroud, Nova, Roberto) cluster within 220 m in northern-eastern Karrada. Breakdown: 1\u00d7 Namroud; 1\u00d7 Nova; 1\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.785,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "48b74a9c-9dc6-48c5-8608-9fc8dae6077b",
+          "roberto-946041a2-40f1-5805-35e3-b1533fae9ea2",
+          "namroud-edea31ec-72c5-35a9-51ab-94feb877abf5"
+        ],
+        "source_count": 3,
+        "member_count": 3,
+        "sources": [
+          "namroud",
+          "nova",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 1,
+          "roberto": 1,
+          "namroud": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40361576911587,
+          33.29512656311228
+        ]
+      },
+      "properties": {
+        "id": "data_chef-79b434e6-9615-75ba-5013-018194fef0e9",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 3 independent sources (Namroud, Nova, Peter) cluster within 220 m in southern Karrada. Breakdown: 1\u00d7 Namroud; 1\u00d7 Nova; 1\u00d7 Peter. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.785,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "959f2b71-1225-40bd-91f8-6c59be1d2231",
+          "namroud-35976730-7c9f-f8b7-2801-18e394c6dee8",
+          "peter-3e3896a6-4e94-5cb3-5119-778872dd22c6"
+        ],
+        "source_count": 3,
+        "member_count": 3,
+        "sources": [
+          "namroud",
+          "nova",
+          "peter"
+        ],
+        "breakdown": {
+          "nova": 1,
+          "namroud": 1,
+          "peter": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40930941053364,
+          33.31235594478202
+        ]
+      },
+      "properties": {
+        "id": "data_chef-b7cef62f-6cd0-8b98-c66f-5c508ab2e57b",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 northern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0634\u0645\u0627\u0644 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "6 signals from 2 independent sources (Nova, Peter) cluster within 220 m in northern Karrada. Breakdown: 3\u00d7 Nova; 3\u00d7 Peter. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 6.0,
+        "unit": "signals",
+        "confidence": 0.75,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "f984221c-5d79-4501-ab3b-0a1f35f3f278",
+          "f7a5fcaa-d8b8-4d4a-9d49-4efd060f3ef5",
+          "7be7eecb-aee0-4d81-aefa-cb82b6bf09e4",
+          "peter-f1a17e4f-1159-f281-05f6-80bdd520a94d",
+          "peter-396728d7-0296-2a15-671f-f39da25cf56f",
+          "peter-d73544ec-7493-5472-b844-de6e9fafc3ae"
+        ],
+        "source_count": 2,
+        "member_count": 6,
+        "sources": [
+          "nova",
+          "peter"
+        ],
+        "breakdown": {
+          "nova": 3,
+          "peter": 3
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40078784470899,
+          33.29254881630595
+        ]
+      },
+      "properties": {
+        "id": "data_chef-9553ebac-258b-d910-e9c3-b06cf154d096",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "5 signals from 2 independent sources (Nova, Peter) cluster within 220 m in southern Karrada. Breakdown: 2\u00d7 Nova; 3\u00d7 Peter. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 5.0,
+        "unit": "signals",
+        "confidence": 0.735,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "725163fc-41cc-41eb-927d-de12f3bd7227",
+          "6d37de21-15ab-47fb-aa78-c6c764eca168",
+          "peter-7e59568c-580d-e23a-ee9a-91d3caeced09",
+          "peter-cdbfe93d-f03e-1a76-39a2-2af703e99d4b",
+          "peter-0929846e-0365-e4ed-8ee2-b547c819546f"
+        ],
+        "source_count": 2,
+        "member_count": 5,
+        "sources": [
+          "nova",
+          "peter"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "peter": 3
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41828951299655,
+          33.311501914749726
+        ]
+      },
+      "properties": {
+        "id": "data_chef-4c68475a-04d4-439c-055d-b3e49d42eb10",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 northern-eastern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0634\u0645\u0627\u0644-\u0634\u0631\u0642 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "4 signals from 2 independent sources (Namroud, Nova) cluster within 220 m in northern-eastern Karrada. Breakdown: 1\u00d7 Namroud; 3\u00d7 Nova. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 4.0,
+        "unit": "signals",
+        "confidence": 0.72,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "cbc96655-ae20-42c9-adc6-26b91fe9f429",
+          "1fbe66de-0ae3-40da-8a80-9e68a168d738",
+          "d6953323-0b4c-4a2f-a06f-ab3be07b0496",
+          "namroud-08636d7c-03d9-4677-9cb3-f3f23c5e7f6d"
+        ],
+        "source_count": 2,
+        "member_count": 4,
+        "sources": [
+          "namroud",
+          "nova"
+        ],
+        "breakdown": {
+          "nova": 3,
+          "namroud": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.396444320730545,
+          33.30762660596476
+        ]
+      },
+      "properties": {
+        "id": "data_chef-05c1836c-ac7b-11eb-443b-ef4e35487e0d",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 central-western Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0648\u0633\u0637-\u063a\u0631\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Nova, Roberto) cluster within 220 m in central-western Karrada. Breakdown: 2\u00d7 Nova; 1\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "fbb344c4-edbc-443d-b64a-52faaa1f359e",
+          "38aa92b1-66c4-4fcf-9a72-cb11acd239d2",
+          "roberto-666460a8-c613-932a-6df5-ece2f325311b"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "nova",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "roberto": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.401376396975785,
+          33.28707070722502
+        ]
+      },
+      "properties": {
+        "id": "data_chef-68cac287-0c9e-cee5-26a3-42e46391cbf7",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Namroud, Nova) cluster within 220 m in southern Karrada. Breakdown: 2\u00d7 Namroud; 1\u00d7 Nova. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "e739c12a-3e73-49fe-8092-c695b088281f",
+          "namroud-8a2435cb-3229-4c22-5669-0e1420cde0c4",
+          "namroud-4b77870d-691c-e7fe-da3e-b10eedf1b641"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "namroud",
+          "nova"
+        ],
+        "breakdown": {
+          "nova": 1,
+          "namroud": 2
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40354087607392,
+          33.286135357557505
+        ]
+      },
+      "properties": {
+        "id": "data_chef-fecc34f0-79dd-b4cd-bf6e-32e111346d9d",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Nova, Roberto) cluster within 220 m in southern Karrada. Breakdown: 2\u00d7 Nova; 1\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "293f128b-bee9-47c4-9f82-6e9d27f1c921",
+          "4092ede3-e3d7-4d33-850a-f9d5f8d0915e",
+          "roberto-b0046a8a-e285-e6d6-9a5d-58b7a538b6e1"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "nova",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "roberto": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.412428303585635,
+          33.31969024483174
+        ]
+      },
+      "properties": {
+        "id": "data_chef-b36cb330-2b18-3ac9-70e4-1e782507384b",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 northern Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0634\u0645\u0627\u0644 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Namroud, Nova) cluster within 220 m in northern Karrada. Breakdown: 1\u00d7 Namroud; 2\u00d7 Nova. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "13d8da97-5817-46db-90d2-1a9826df72c5",
+          "0aa822f7-dabe-42af-ba62-4f7fff210ab8",
+          "namroud-ebe75e3f-866d-4268-6893-45ad0554c196"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "namroud",
+          "nova"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "namroud": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38639309245099,
+          33.307395949122366
+        ]
+      },
+      "properties": {
+        "id": "data_chef-e75ce9a5-b7df-a7d9-557c-244b0ad43c04",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 central-western Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0648\u0633\u0637-\u063a\u0631\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Nova, Roberto) cluster within 220 m in central-western Karrada. Breakdown: 2\u00d7 Nova; 1\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "b4080746-179d-4ef8-848a-353e9a99e07a",
+          "a23ba72a-c68d-4b06-b4b9-da59dae1193b",
+          "roberto-57702fe2-7d41-7f72-9371-5819efb6acc1"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "nova",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "roberto": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.414861185058044,
+          33.29845144135046
+        ]
+      },
+      "properties": {
+        "id": "data_chef-7c9dfaf2-5e76-67a5-1d7b-85ecd4405dd0",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 central Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u0648\u0633\u0637 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Nova, Roberto) cluster within 220 m in central Karrada. Breakdown: 2\u00d7 Nova; 1\u00d7 Roberto. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "bdb1247e-555a-4ce4-9183-37475868fe40",
+          "238108a9-683a-4dd5-b1e8-513d8265823e",
+          "roberto-48438dac-d5e2-d68b-3813-138667d32eff"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "nova",
+          "roberto"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "roberto": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39732151060209,
+          33.295212779754195
+        ]
+      },
+      "properties": {
+        "id": "data_chef-73e72a00-cdc0-c70f-a687-a09a171b01b9",
+        "source_agent": "data_chef",
+        "layer": "Expert Analysis",
+        "signal_type": "synthesis_insight",
+        "title_en": "Emerging development zone \u2014 southern-western Karrada",
+        "title_ar": "\u0645\u0646\u0637\u0642\u0629 \u062a\u0637\u0648\u0651\u0631 \u0646\u0627\u0634\u0626\u0629 \u2014 \u062c\u0646\u0648\u0628-\u063a\u0631\u0628 \u0627\u0644\u0643\u0631\u0627\u062f\u0629",
+        "summary": "3 signals from 2 independent sources (Nova, Peter) cluster within 220 m in southern-western Karrada. Breakdown: 2\u00d7 Nova; 1\u00d7 Peter. Satellite-detected change is corroborated by ground and institutional signals \u2014 a high-confidence growth pocket.",
+        "value": 3.0,
+        "unit": "signals",
+        "confidence": 0.705,
+        "timestamp": "2026-06-17T09:00:00+00:00",
+        "related_ids": [
+          "ad00e44e-5c0b-45ba-8f75-465796aef129",
+          "e9f4af46-2a91-4bf1-8b62-86df84aedc80",
+          "peter-a13b6886-b74e-dead-14e9-1110b560a774"
+        ],
+        "source_count": 2,
+        "member_count": 3,
+        "sources": [
+          "nova",
+          "peter"
+        ],
+        "breakdown": {
+          "nova": 2,
+          "peter": 1
+        },
+        "corroborated_by_satellite": true
+      }
+    }
+  ]
+}

@@ -32,6 +32,7 @@ dependencies = [
 nova-explore = "nova.explore:main"
 nova-footprints = "nova.footprints:main"
 nova-run = "nova.run:main"
+nova-generate = "nova.generate:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

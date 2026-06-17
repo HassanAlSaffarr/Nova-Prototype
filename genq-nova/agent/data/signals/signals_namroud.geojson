@@ -1,0 +1,492 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.402017865023595,
+          33.287746631026366
+        ]
+      },
+      "properties": {
+        "id": "namroud-8a2435cb-3229-4c22-5669-0e1420cde0c4",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "building_permit",
+        "title_en": "Building permit \u2014 16-storey commercial, Jadriya",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0628\u0646\u0627\u0621 \u2014 \u062a\u062c\u0627\u0631\u064a 16 \u0637\u0648\u0627\u0628\u0642\u060c \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Amanat Baghdad issued a permit for a 16-storey commercial building in Jadriya.",
+        "value": 16.0,
+        "unit": "storeys",
+        "confidence": 0.98,
+        "timestamp": "2026-05-26T18:19:00+00:00",
+        "related_ids": [
+          "1285ef16-3bfa-447a-8010-f2776a89e753"
+        ],
+        "use": "commercial",
+        "permit_authority": "Amanat Baghdad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.415471755853325,
+          33.31643293388276
+        ]
+      },
+      "properties": {
+        "id": "namroud-edea31ec-72c5-35a9-51ab-94feb877abf5",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "investment_license",
+        "title_en": "Investment license \u2014 mixed-use project, Karrada Dakhil",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0627\u0633\u062a\u062b\u0645\u0627\u0631 \u2014 \u0645\u0634\u0631\u0648\u0639 \u0645\u062a\u0639\u062f\u062f \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645\u060c \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "National Investment Commission granted a license for a mixed-use project in Karrada Dakhil valued at $15,000,000.",
+        "value": 15000000.0,
+        "unit": "USD",
+        "confidence": 0.95,
+        "timestamp": "2026-06-13T12:04:00+00:00",
+        "related_ids": [
+          "48b74a9c-9dc6-48c5-8608-9fc8dae6077b"
+        ],
+        "authority": "National Investment Commission"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41888230144199,
+          33.301963803531166
+        ]
+      },
+      "properties": {
+        "id": "namroud-8810b35c-6456-61f8-bf93-169b8468b953",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "building_permit",
+        "title_en": "Building permit \u2014 6-storey commercial, Masbah",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0628\u0646\u0627\u0621 \u2014 \u062a\u062c\u0627\u0631\u064a 6 \u0637\u0648\u0627\u0628\u0642\u060c \u0627\u0644\u0645\u0633\u0628\u062d",
+        "summary": "Amanat Baghdad issued a permit for a 6-storey commercial building in Masbah.",
+        "value": 6.0,
+        "unit": "storeys",
+        "confidence": 0.94,
+        "timestamp": "2026-05-08T14:27:00+00:00",
+        "related_ids": [
+          "56beb6a2-27a7-4055-b81c-13db1c4fd37a"
+        ],
+        "use": "commercial",
+        "permit_authority": "Amanat Baghdad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40867869884858,
+          33.28937361267968
+        ]
+      },
+      "properties": {
+        "id": "namroud-7af9973f-aedd-c398-ea2e-d55ee74fd2e1",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "government_tender",
+        "title_en": "Government tender \u2014 sidewalk rehabilitation, Abu Nuwas Street",
+        "title_ar": "\u0645\u0646\u0627\u0642\u0635\u0629 \u062d\u0643\u0648\u0645\u064a\u0629 \u2014 \u062a\u0623\u0647\u064a\u0644 \u0627\u0644\u0623\u0631\u0635\u0641\u0629\u060c \u0634\u0627\u0631\u0639 \u0623\u0628\u0648 \u0646\u0648\u0627\u0633",
+        "summary": "Public tender opened for sidewalk rehabilitation on Abu Nuwas Street, budgeted at 700,000,000 IQD.",
+        "value": 700000000.0,
+        "unit": "IQD",
+        "confidence": 0.93,
+        "timestamp": "2026-05-23T19:38:00+00:00",
+        "related_ids": [],
+        "work_type": "sidewalk rehabilitation",
+        "status": "open"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41853061917834,
+          33.30179436078153
+        ]
+      },
+      "properties": {
+        "id": "namroud-4d05cac4-7b59-f0a9-bb3c-9c6c65110fd3",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "building_permit",
+        "title_en": "Building permit \u2014 3-storey residential, Karrada Dakhil",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0628\u0646\u0627\u0621 \u2014 \u0633\u0643\u0646\u064a 3 \u0637\u0648\u0627\u0628\u0642\u060c \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "Amanat Baghdad issued a permit for a 3-storey residential building in Karrada Dakhil.",
+        "value": 3.0,
+        "unit": "storeys",
+        "confidence": 0.92,
+        "timestamp": "2026-06-03T16:54:00+00:00",
+        "related_ids": [
+          "56beb6a2-27a7-4055-b81c-13db1c4fd37a"
+        ],
+        "use": "residential",
+        "permit_authority": "Amanat Baghdad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.403143685952976,
+          33.294966239094926
+        ]
+      },
+      "properties": {
+        "id": "namroud-35976730-7c9f-f8b7-2801-18e394c6dee8",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "investment_license",
+        "title_en": "Investment license \u2014 mixed-use project, Jadriya",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0627\u0633\u062a\u062b\u0645\u0627\u0631 \u2014 \u0645\u0634\u0631\u0648\u0639 \u0645\u062a\u0639\u062f\u062f \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645\u060c \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "National Investment Commission granted a license for a mixed-use project in Jadriya valued at $13,750,000.",
+        "value": 13750000.0,
+        "unit": "USD",
+        "confidence": 0.91,
+        "timestamp": "2026-06-10T18:44:00+00:00",
+        "related_ids": [
+          "959f2b71-1225-40bd-91f8-6c59be1d2231"
+        ],
+        "authority": "National Investment Commission"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.38996680161502,
+          33.30593596440052
+        ]
+      },
+      "properties": {
+        "id": "namroud-a2a39145-68ab-781e-5511-8148f6f36a27",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "building_permit",
+        "title_en": "Building permit \u2014 9-storey residential, Al-Wahda",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0628\u0646\u0627\u0621 \u2014 \u0633\u0643\u0646\u064a 9 \u0637\u0648\u0627\u0628\u0642\u060c \u0627\u0644\u0648\u062d\u062f\u0629",
+        "summary": "Amanat Baghdad issued a permit for a 9-storey residential building in Al-Wahda.",
+        "value": 9.0,
+        "unit": "storeys",
+        "confidence": 0.9,
+        "timestamp": "2026-05-19T04:48:00+00:00",
+        "related_ids": [],
+        "use": "residential",
+        "permit_authority": "Amanat Baghdad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.42965884058754,
+          33.30045661282573
+        ]
+      },
+      "properties": {
+        "id": "namroud-d189a1ae-fd2c-2ecc-b3a3-7ed0e4cb9a1f",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 supermarket, Karrada Kharij",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0633\u0648\u0628\u0631 \u0645\u0627\u0631\u0643\u062a\u060c \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c",
+        "summary": "Sara al-Dulaimi registered a new supermarket in Karrada Kharij with declared capital of 178,000,000 IQD.",
+        "value": 178000000.0,
+        "unit": "IQD",
+        "confidence": 0.88,
+        "timestamp": "2026-05-28T09:44:00+00:00",
+        "related_ids": [],
+        "business_type": "supermarket",
+        "owner": "Sara al-Dulaimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.391983291255364,
+          33.29274522401305
+        ]
+      },
+      "properties": {
+        "id": "namroud-6c058bf7-cd0a-a9f1-0cb5-e51b27ce6824",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "building_permit",
+        "title_en": "Building permit \u2014 7-storey mixed-use, Karrada Dakhil",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0628\u0646\u0627\u0621 \u2014 \u0645\u062a\u0639\u062f\u062f \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645 7 \u0637\u0648\u0627\u0628\u0642\u060c \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644",
+        "summary": "Amanat Baghdad issued a permit for a 7-storey mixed-use building in Karrada Dakhil.",
+        "value": 7.0,
+        "unit": "storeys",
+        "confidence": 0.88,
+        "timestamp": "2026-06-12T04:10:00+00:00",
+        "related_ids": [
+          "32eb26d0-309a-4bd5-bf68-dec938798d6b"
+        ],
+        "use": "mixed-use",
+        "permit_authority": "Amanat Baghdad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.412240232090724,
+          33.31944276969041
+        ]
+      },
+      "properties": {
+        "id": "namroud-ebe75e3f-866d-4268-6893-45ad0554c196",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 clothing store, Al-Wahda",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0645\u062d\u0644 \u0645\u0644\u0627\u0628\u0633\u060c \u0627\u0644\u0648\u062d\u062f\u0629",
+        "summary": "Fatima al-Saadi registered a new clothing store in Al-Wahda with declared capital of 60,000,000 IQD.",
+        "value": 60000000.0,
+        "unit": "IQD",
+        "confidence": 0.88,
+        "timestamp": "2026-05-20T21:46:00+00:00",
+        "related_ids": [
+          "0aa822f7-dabe-42af-ba62-4f7fff210ab8"
+        ],
+        "business_type": "clothing store",
+        "owner": "Fatima al-Saadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40157718610789,
+          33.286982223057834
+        ]
+      },
+      "properties": {
+        "id": "namroud-4b77870d-691c-e7fe-da3e-b10eedf1b641",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 clothing store, Kahramana",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0645\u062d\u0644 \u0645\u0644\u0627\u0628\u0633\u060c \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Noor al-Baghdadi registered a new clothing store in Kahramana with declared capital of 104,000,000 IQD.",
+        "value": 104000000.0,
+        "unit": "IQD",
+        "confidence": 0.87,
+        "timestamp": "2026-05-07T23:01:00+00:00",
+        "related_ids": [
+          "e739c12a-3e73-49fe-8092-c695b088281f"
+        ],
+        "business_type": "clothing store",
+        "owner": "Noor al-Baghdadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.3885966305716,
+          33.288312016566096
+        ]
+      },
+      "properties": {
+        "id": "namroud-91543964-e2c6-1e1c-e01e-21e0ed54cdd5",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 clothing store, Karrada Maryam",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0645\u062d\u0644 \u0645\u0644\u0627\u0628\u0633\u060c \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "Mustafa al-Janabi registered a new clothing store in Karrada Maryam with declared capital of 181,000,000 IQD.",
+        "value": 181000000.0,
+        "unit": "IQD",
+        "confidence": 0.86,
+        "timestamp": "2026-06-14T10:27:00+00:00",
+        "related_ids": [],
+        "business_type": "clothing store",
+        "owner": "Mustafa al-Janabi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.39060346048341,
+          33.31112538776162
+        ]
+      },
+      "properties": {
+        "id": "namroud-752e8c92-79ee-42e6-bc87-a8e43f2123a3",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 supermarket, Babil",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0633\u0648\u0628\u0631 \u0645\u0627\u0631\u0643\u062a\u060c \u0628\u0627\u0628\u0644",
+        "summary": "Sajjad al-Saadi registered a new supermarket in Babil with declared capital of 79,000,000 IQD.",
+        "value": 79000000.0,
+        "unit": "IQD",
+        "confidence": 0.85,
+        "timestamp": "2026-05-20T21:58:00+00:00",
+        "related_ids": [
+          "2be743c8-e873-45b9-9e7a-5ee485a17a1d"
+        ],
+        "business_type": "supermarket",
+        "owner": "Sajjad al-Saadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.419051406982554,
+          33.311475071934495
+        ]
+      },
+      "properties": {
+        "id": "namroud-08636d7c-03d9-4677-9cb3-f3f23c5e7f6d",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "government_tender",
+        "title_en": "Government tender \u2014 street lighting, Al-Nidhal Street",
+        "title_ar": "\u0645\u0646\u0627\u0642\u0635\u0629 \u062d\u0643\u0648\u0645\u064a\u0629 \u2014 \u0625\u0646\u0627\u0631\u0629 \u0627\u0644\u0634\u0648\u0627\u0631\u0639\u060c \u0634\u0627\u0631\u0639 \u0627\u0644\u0646\u0636\u0627\u0644",
+        "summary": "Public tender opened for street lighting on Al-Nidhal Street, budgeted at 1,300,000,000 IQD.",
+        "value": 1300000000.0,
+        "unit": "IQD",
+        "confidence": 0.85,
+        "timestamp": "2026-05-25T20:17:00+00:00",
+        "related_ids": [
+          "d6953323-0b4c-4a2f-a06f-ab3be07b0496"
+        ],
+        "work_type": "street lighting",
+        "status": "open"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.40027872773587,
+          33.29417065726661
+        ]
+      },
+      "properties": {
+        "id": "namroud-9109aac1-d41f-2bcf-5117-7d922a40a5d5",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 money exchange, Jadriya",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0645\u0643\u062a\u0628 \u0635\u0631\u0627\u0641\u0629\u060c \u0627\u0644\u062c\u0627\u062f\u0631\u064a\u0629",
+        "summary": "Omar al-Tamimi registered a new money exchange in Jadriya with declared capital of 71,000,000 IQD.",
+        "value": 71000000.0,
+        "unit": "IQD",
+        "confidence": 0.84,
+        "timestamp": "2026-06-08T20:56:00+00:00",
+        "related_ids": [
+          "5efe04c9-64ec-49e1-891a-68cef0b0e897"
+        ],
+        "business_type": "money exchange",
+        "owner": "Omar al-Tamimi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.409254442189,
+          33.30135353663822
+        ]
+      },
+      "properties": {
+        "id": "namroud-9ede40d2-ce8c-9ef3-d5a1-110efa21fa30",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "government_tender",
+        "title_en": "Government tender \u2014 street lighting, Al-Sadoun Street",
+        "title_ar": "\u0645\u0646\u0627\u0642\u0635\u0629 \u062d\u0643\u0648\u0645\u064a\u0629 \u2014 \u0625\u0646\u0627\u0631\u0629 \u0627\u0644\u0634\u0648\u0627\u0631\u0639\u060c \u0634\u0627\u0631\u0639 \u0627\u0644\u0633\u0639\u062f\u0648\u0646",
+        "summary": "Public tender opened for street lighting on Al-Sadoun Street, budgeted at 1,150,000,000 IQD.",
+        "value": 1150000000.0,
+        "unit": "IQD",
+        "confidence": 0.84,
+        "timestamp": "2026-05-27T05:08:00+00:00",
+        "related_ids": [],
+        "work_type": "street lighting",
+        "status": "open"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.429316303207365,
+          33.304029818563805
+        ]
+      },
+      "properties": {
+        "id": "namroud-e6105125-6ee5-34cd-c45a-eddc910c4fdb",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "investment_license",
+        "title_en": "Investment license \u2014 mixed-use project, Karrada Maryam",
+        "title_ar": "\u0625\u062c\u0627\u0632\u0629 \u0627\u0633\u062a\u062b\u0645\u0627\u0631 \u2014 \u0645\u0634\u0631\u0648\u0639 \u0645\u062a\u0639\u062f\u062f \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645\u060c \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645",
+        "summary": "National Investment Commission granted a license for a mixed-use project in Karrada Maryam valued at $3,250,000.",
+        "value": 3250000.0,
+        "unit": "USD",
+        "confidence": 0.84,
+        "timestamp": "2026-05-14T14:21:00+00:00",
+        "related_ids": [],
+        "authority": "National Investment Commission"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.42124945622715,
+          33.31153337538881
+        ]
+      },
+      "properties": {
+        "id": "namroud-852b9a0b-7cda-d674-9a1b-95902546fb2f",
+        "source_agent": "namroud",
+        "layer": "Institutional Data",
+        "signal_type": "commercial_registration",
+        "title_en": "New commercial registration \u2014 supermarket, Kahramana",
+        "title_ar": "\u062a\u0633\u062c\u064a\u0644 \u062a\u062c\u0627\u0631\u064a \u062c\u062f\u064a\u062f \u2014 \u0633\u0648\u0628\u0631 \u0645\u0627\u0631\u0643\u062a\u060c \u0643\u0647\u0631\u0645\u0627\u0646\u0629",
+        "summary": "Ahmed al-Dulaimi registered a new supermarket in Kahramana with declared capital of 169,000,000 IQD.",
+        "value": 169000000.0,
+        "unit": "IQD",
+        "confidence": 0.83,
+        "timestamp": "2026-06-13T00:19:00+00:00",
+        "related_ids": [],
+        "business_type": "supermarket",
+        "owner": "Ahmed al-Dulaimi"
+      }
+    }
+  ]
+}
