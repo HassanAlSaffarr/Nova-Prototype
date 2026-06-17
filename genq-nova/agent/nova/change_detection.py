@@ -365,9 +365,9 @@ def detect_changes(
     gdf_utm = gdf_utm[gdf_utm["area_m2"] >= min_area_m2].copy()
     print(f"  polygons after area filter (≥{min_area_m2} m²): {len(gdf_utm)}")
 
-    # Reproject to WGS84 and add centroid lat/lon
+    # Compute centroids in the projected (UTM) CRS for accuracy, then reproject.
+    centroids = gdf_utm.geometry.centroid.to_crs("EPSG:4326")
     gdf = gdf_utm.to_crs("EPSG:4326")
-    centroids = gdf.geometry.centroid
     gdf["centroid_lat"] = centroids.y
     gdf["centroid_lon"] = centroids.x
     gdf["date_after"] = date_after[1]
