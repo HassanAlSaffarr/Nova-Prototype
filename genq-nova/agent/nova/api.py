@@ -110,14 +110,33 @@ def get_signals_for_agent(agent: str) -> dict:
     return signals_to_geojson(_require_signals().by_agent(agent))
 
 
+_DETECTION_SETS = {
+    "full": "detections_karrada.geojson",
+    "inland": "detections_karrada_inland.geojson",
+    "recent": "detections_karrada_recent.geojson",
+}
+
+
 @app.get("/detections")
-def get_detections() -> dict:
-    """Nova's raw CV output: change polygons + ΔNDVI/ΔNDBI/area metadata."""
-    path = DATA_DIR / "detections_karrada.geojson"
+def get_detections(set: str = "full") -> dict:
+    """
+    Nova's raw CV output: change polygons + ΔNDVI/ΔNDBI/area metadata.
+
+    ?set=full   (default) 2022→2024 canonical set
+    ?set=inland           canonical set with riverbank detections excluded
+    ?set=recent           2023→2026 comparison set
+    """
+    if set not in _DETECTION_SETS:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Unknown set '{set}'. Valid: {', '.join(_DETECTION_SETS)}",
+        )
+    path = DATA_DIR / _DETECTION_SETS[set]
     if not path.exists():
         raise HTTPException(
             status_code=503,
-            detail="Detections not found. Run: python -m nova.run",
+            detail=f"Detection set '{set}' not found at {path.name}. "
+                   "Run: python -m nova.run",
         )
     return json.loads(path.read_text())
 
