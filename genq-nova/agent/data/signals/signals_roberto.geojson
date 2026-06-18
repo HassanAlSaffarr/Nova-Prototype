@@ -123,7 +123,7 @@
         "confidence": 0.82,
         "timestamp": "2026-06-05T10:49:00+00:00",
         "related_ids": [
-          "b3916d92-d9a6-4788-bb86-676508653d42"
+          "nova-3ec26516ab7bbf84"
         ],
         "surveyor": "Sara al-Baghdadi"
       }
@@ -150,7 +150,7 @@
         "confidence": 0.79,
         "timestamp": "2026-06-13T04:00:00+00:00",
         "related_ids": [
-          "894a7ac0-fbfd-4db3-a414-a05eb06a01b5"
+          "nova-1ada5651d5822835"
         ],
         "surveyor": "Ali al-Dulaimi"
       }
@@ -177,7 +177,7 @@
         "confidence": 0.78,
         "timestamp": "2026-06-01T23:33:00+00:00",
         "related_ids": [
-          "b0d22710-ac9d-4ce6-bf03-51665fc3de76"
+          "nova-ab9c41dfbbf3efec"
         ],
         "surveyor": "Ahmed al-Janabi"
       }
@@ -204,7 +204,7 @@
         "confidence": 0.78,
         "timestamp": "2026-06-17T08:33:00+00:00",
         "related_ids": [
-          "ce6764fb-94a4-4a2e-a053-ce281d0e54b7"
+          "nova-826a988e49ec7ce2"
         ],
         "surveyor": "Ali al-Tamimi"
       }
@@ -231,7 +231,7 @@
         "confidence": 0.77,
         "timestamp": "2026-06-05T01:34:00+00:00",
         "related_ids": [
-          "a9dfc0b9-f6af-43d4-bdd7-096af97a11ef"
+          "nova-61967f29b5e345f8"
         ],
         "surveyor": "Mustafa al-Karkhi"
       }
@@ -408,7 +408,7 @@
         "confidence": 0.73,
         "timestamp": "2026-05-29T04:53:00+00:00",
         "related_ids": [
-          "f9a7977e-5b8a-4971-90ed-48589c8db8b5"
+          "nova-893e88e456d471d2"
         ],
         "surveyor": "Sajjad al-Dulaimi"
       }
@@ -485,7 +485,7 @@
         "confidence": 0.69,
         "timestamp": "2026-05-29T23:55:00+00:00",
         "related_ids": [
-          "490ef6d6-55ac-48fb-af72-6b26246870c5"
+          "nova-cfab8a773951feee"
         ],
         "surveyor": "Noor al-Karkhi"
       }
@@ -512,7 +512,7 @@
         "confidence": 0.66,
         "timestamp": "2026-06-13T06:16:00+00:00",
         "related_ids": [
-          "19936906-0c3b-4a07-a492-fbf5b242815a"
+          "nova-92c2b73b7d4ae80f"
         ],
         "surveyor": "Zainab al-Baghdadi"
       }
@@ -539,7 +539,7 @@
         "confidence": 0.63,
         "timestamp": "2026-06-14T03:13:00+00:00",
         "related_ids": [
-          "4f3c7541-5e26-4c99-b3d5-ffba59140be2"
+          "nova-73d3098ca3b79150"
         ],
         "surveyor": "Ahmed al-Saadi"
       }
@@ -566,7 +566,7 @@
         "confidence": 0.6,
         "timestamp": "2026-06-13T00:11:00+00:00",
         "related_ids": [
-          "ce6764fb-94a4-4a2e-a053-ce281d0e54b7"
+          "nova-826a988e49ec7ce2"
         ],
         "surveyor": "Maryam al-Obeidi"
       }

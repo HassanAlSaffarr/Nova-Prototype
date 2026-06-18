@@ -71,7 +71,7 @@
         ]
       },
       "properties": {
-        "id": "ce6764fb-94a4-4a2e-a053-ce281d0e54b7",
+        "id": "nova-826a988e49ec7ce2",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -81,7 +81,7 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 1.0,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.6586,
         "delta_ndbi": 0.3182,
@@ -515,7 +515,7 @@
         ]
       },
       "properties": {
-        "id": "a9e8a6e4-4379-4e08-95c7-d13ce2d2f841",
+        "id": "nova-526ce65a5e4f0dab",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -525,7 +525,7 @@
         "value": 23800.0,
         "unit": "m\u00b2",
         "confidence": 0.9721,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4316,
         "delta_ndbi": 0.279,
@@ -587,7 +587,7 @@
         ]
       },
       "properties": {
-        "id": "47ff8b76-8dc9-4a26-a2fd-8cc91c1e9451",
+        "id": "nova-091f4eda421c8852",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -597,7 +597,7 @@
         "value": 1700.0,
         "unit": "m\u00b2",
         "confidence": 0.9536,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2683,
         "delta_ndbi": 0.2652,
@@ -1157,7 +1157,7 @@
         ]
       },
       "properties": {
-        "id": "b0d22710-ac9d-4ce6-bf03-51665fc3de76",
+        "id": "nova-ab9c41dfbbf3efec",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1167,7 +1167,7 @@
         "value": 25100.0,
         "unit": "m\u00b2",
         "confidence": 0.9046,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3857,
         "delta_ndbi": 0.2284,
@@ -1229,7 +1229,7 @@
         ]
       },
       "properties": {
-        "id": "7c9d7be0-f0e1-4838-b6e5-50b963a39732",
+        "id": "nova-6eb2a010de3a5019",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1239,7 +1239,7 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.8774,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3252,
         "delta_ndbi": 0.2081,
@@ -1301,7 +1301,7 @@
         ]
       },
       "properties": {
-        "id": "304114d0-6a8c-443f-8817-d773c5ed0266",
+        "id": "nova-2df7f4cb3f0bcd91",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1311,7 +1311,7 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.8729,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3818,
         "delta_ndbi": 0.2047,
@@ -1413,7 +1413,7 @@
         ]
       },
       "properties": {
-        "id": "46e7af6c-ad09-4fdd-a288-c9d4da09c5af",
+        "id": "nova-20fd923cc06c6386",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1423,7 +1423,7 @@
         "value": 2800.0,
         "unit": "m\u00b2",
         "confidence": 0.8715,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4446,
         "delta_ndbi": 0.2036,
@@ -1557,7 +1557,7 @@
         ]
       },
       "properties": {
-        "id": "239deb85-73a0-41cc-9236-1f3d884f7719",
+        "id": "nova-a616bb061116fdf9",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1567,7 +1567,7 @@
         "value": 3800.0,
         "unit": "m\u00b2",
         "confidence": 0.8417,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2381,
         "delta_ndbi": 0.1813,
@@ -1661,7 +1661,7 @@
         ]
       },
       "properties": {
-        "id": "5ec42589-0027-4388-9df7-511b8f4e8977",
+        "id": "nova-65cec4b45045cd2d",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1671,7 +1671,7 @@
         "value": 1400.0,
         "unit": "m\u00b2",
         "confidence": 0.8414,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3774,
         "delta_ndbi": 0.1811,
@@ -1725,7 +1725,7 @@
         ]
       },
       "properties": {
-        "id": "9f89fe0a-90b2-43ae-996a-ef1936568da8",
+        "id": "nova-7cbaa65e21cb0e39",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1735,7 +1735,7 @@
         "value": 1300.0,
         "unit": "m\u00b2",
         "confidence": 0.8283,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2739,
         "delta_ndbi": 0.1712,
@@ -1805,7 +1805,7 @@
         ]
       },
       "properties": {
-        "id": "2d904e95-64bf-4e99-980e-91a6eda59a45",
+        "id": "nova-fb040b23603d7869",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1815,7 +1815,7 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.8267,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.317,
         "delta_ndbi": 0.17,
@@ -1933,7 +1933,7 @@
         ]
       },
       "properties": {
-        "id": "f9a7977e-5b8a-4971-90ed-48589c8db8b5",
+        "id": "nova-893e88e456d471d2",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -1943,7 +1943,7 @@
         "value": 1900.0,
         "unit": "m\u00b2",
         "confidence": 0.8079,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2568,
         "delta_ndbi": 0.1559,
@@ -2005,7 +2005,7 @@
         ]
       },
       "properties": {
-        "id": "21def28d-0844-457e-a4a7-16c226549165",
+        "id": "nova-aa051e220553b8c1",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -2015,7 +2015,7 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4997,
         "delta_ndbi": 0.3057,
@@ -2149,7 +2149,7 @@
         ]
       },
       "properties": {
-        "id": "0729449a-452e-4239-839c-6f589172f74c",
+        "id": "nova-ebb5a02aa01b7f31",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -2159,7 +2159,7 @@
         "value": 6300.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.6249,
         "delta_ndbi": 0.3485,
@@ -2221,7 +2221,7 @@
         ]
       },
       "properties": {
-        "id": "0ecc61c3-7005-4768-9657-7b2afc297f64",
+        "id": "nova-31651a5dd2000acf",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -2231,7 +2231,7 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.6025,
         "delta_ndbi": 0.6978,
@@ -2277,7 +2277,7 @@
         ]
       },
       "properties": {
-        "id": "71741b9e-8c59-45ff-9f80-28fb2a3b657a",
+        "id": "nova-9810ac800d42b15a",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -2287,7 +2287,7 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4337,
         "delta_ndbi": 0.3089,
@@ -2563,7 +2563,7 @@
         ]
       },
       "properties": {
-        "id": "a9dfc0b9-f6af-43d4-bdd7-096af97a11ef",
+        "id": "nova-61967f29b5e345f8",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -2573,7 +2573,7 @@
         "value": 22400.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.7446,
         "delta_ndbi": 0.407,
@@ -2635,7 +2635,7 @@
         ]
       },
       "properties": {
-        "id": "9c6deeea-b475-40bb-a9fa-436e1667e972",
+        "id": "nova-9569e28d574b7ac4",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -2645,7 +2645,7 @@
         "value": 3100.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.71,
         "delta_ndbi": 0.4296,
@@ -2739,7 +2739,7 @@
         ]
       },
       "properties": {
-        "id": "4ce67edc-bef7-441f-921e-827025dadef1",
+        "id": "nova-62fb270d6c9f309d",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -2749,7 +2749,7 @@
         "value": 1500.0,
         "unit": "m\u00b2",
         "confidence": 0.7874,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2048,
         "delta_ndbi": 0.1405,
@@ -3111,7 +3111,7 @@
         ]
       },
       "properties": {
-        "id": "99721c27-1a6a-4997-af80-0b370616f59e",
+        "id": "nova-c049d5e938b3162e",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -3121,7 +3121,7 @@
         "value": 11400.0,
         "unit": "m\u00b2",
         "confidence": 0.7782,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2465,
         "delta_ndbi": 0.1336,
@@ -3199,7 +3199,7 @@
         ]
       },
       "properties": {
-        "id": "1663ac19-bf9a-4312-9e35-6c872f7b32ec",
+        "id": "nova-890163ec392f9335",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -3209,7 +3209,7 @@
         "value": 1100.0,
         "unit": "m\u00b2",
         "confidence": 0.7716,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2144,
         "delta_ndbi": 0.1287,
@@ -3279,7 +3279,7 @@
         ]
       },
       "properties": {
-        "id": "ab2e92d2-3cda-4ae6-aa23-17d16e34acf0",
+        "id": "nova-29d0794cb855f3c7",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -3289,7 +3289,7 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.7691,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2443,
         "delta_ndbi": 0.1268,
@@ -3383,7 +3383,7 @@
         ]
       },
       "properties": {
-        "id": "47c927e5-21c8-4ca9-9f38-a44baff1eba9",
+        "id": "nova-7ac128e829b42362",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -3393,7 +3393,7 @@
         "value": 4800.0,
         "unit": "m\u00b2",
         "confidence": 0.7558,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4575,
         "delta_ndbi": 0.2669,
@@ -3543,7 +3543,7 @@
         ]
       },
       "properties": {
-        "id": "b3916d92-d9a6-4788-bb86-676508653d42",
+        "id": "nova-3ec26516ab7bbf84",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -3553,7 +3553,7 @@
         "value": 7400.0,
         "unit": "m\u00b2",
         "confidence": 0.7441,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3992,
         "delta_ndbi": 0.258,
@@ -3669,7 +3669,7 @@
         ]
       },
       "properties": {
-        "id": "894a7ac0-fbfd-4db3-a414-a05eb06a01b5",
+        "id": "nova-1ada5651d5822835",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -3679,7 +3679,7 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 0.7426,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.5057,
         "delta_ndbi": 0.1069,
@@ -3765,7 +3765,7 @@
         ]
       },
       "properties": {
-        "id": "824f55a0-d948-43ad-b9b1-0c7aa19fd83a",
+        "id": "nova-494db53d86553edb",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -3775,7 +3775,7 @@
         "value": 1400.0,
         "unit": "m\u00b2",
         "confidence": 0.7409,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.5393,
         "delta_ndbi": 0.2557,
@@ -3853,7 +3853,7 @@
         ]
       },
       "properties": {
-        "id": "4f3c7541-5e26-4c99-b3d5-ffba59140be2",
+        "id": "nova-73d3098ca3b79150",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -3863,7 +3863,7 @@
         "value": 2100.0,
         "unit": "m\u00b2",
         "confidence": 0.7332,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.1648,
         "delta_ndbi": 0.1131,
@@ -3979,7 +3979,7 @@
         ]
       },
       "properties": {
-        "id": "83bc4341-6ada-48db-87f5-5f3949ff583c",
+        "id": "nova-f39fca1e75456c15",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -3989,7 +3989,7 @@
         "value": 1800.0,
         "unit": "m\u00b2",
         "confidence": 0.7321,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.5957,
         "delta_ndbi": 0.249,
@@ -4097,7 +4097,7 @@
         ]
       },
       "properties": {
-        "id": "aaddc6f6-df41-4ab3-99da-1d6740a28007",
+        "id": "nova-abb95f3f3427dd5a",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -4107,7 +4107,7 @@
         "value": 2700.0,
         "unit": "m\u00b2",
         "confidence": 0.7212,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.1108,
         "delta_ndbi": 0.1244,
@@ -4193,7 +4193,7 @@
         ]
       },
       "properties": {
-        "id": "28712bfe-0d15-4747-99c7-38f61ad81369",
+        "id": "nova-3bac71037c3e1e5e",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4203,7 +4203,7 @@
         "value": 1800.0,
         "unit": "m\u00b2",
         "confidence": 0.7198,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.1661,
         "delta_ndbi": 0.2526,
@@ -4305,7 +4305,7 @@
         ]
       },
       "properties": {
-        "id": "c6e9b4bd-01ea-4fd9-aa89-53b44005929e",
+        "id": "nova-0ec55d591af5cb27",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4315,7 +4315,7 @@
         "value": 4100.0,
         "unit": "m\u00b2",
         "confidence": 0.7149,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4593,
         "delta_ndbi": 0.2362,
@@ -4505,7 +4505,7 @@
         ]
       },
       "properties": {
-        "id": "a3af90fa-f4d5-4818-b64c-a9f4081e4a5d",
+        "id": "nova-bbe90dc84502876c",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4515,7 +4515,7 @@
         "value": 6400.0,
         "unit": "m\u00b2",
         "confidence": 0.7084,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3979,
         "delta_ndbi": 0.2313,
@@ -4737,7 +4737,7 @@
         ]
       },
       "properties": {
-        "id": "19936906-0c3b-4a07-a492-fbf5b242815a",
+        "id": "nova-92c2b73b7d4ae80f",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4747,7 +4747,7 @@
         "value": 5400.0,
         "unit": "m\u00b2",
         "confidence": 0.7045,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3482,
         "delta_ndbi": 0.2284,
@@ -4809,7 +4809,7 @@
         ]
       },
       "properties": {
-        "id": "31b5620c-4488-456f-aec3-aa5d9d095e62",
+        "id": "nova-f57338735a8b7e90",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4819,7 +4819,7 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.6772,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2384,
         "delta_ndbi": 0.2079,
@@ -4865,7 +4865,7 @@
         ]
       },
       "properties": {
-        "id": "18e47764-d149-4ea3-985f-4bd18460e41f",
+        "id": "nova-14b5adb87725f255",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4875,7 +4875,7 @@
         "value": 1100.0,
         "unit": "m\u00b2",
         "confidence": 0.6684,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.22,
         "delta_ndbi": 0.2013,
@@ -4953,7 +4953,7 @@
         ]
       },
       "properties": {
-        "id": "e5274afc-d570-499f-a917-098a06ed3e6c",
+        "id": "nova-1844e849837129d5",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -4963,7 +4963,7 @@
         "value": 3900.0,
         "unit": "m\u00b2",
         "confidence": 0.6582,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2965,
         "delta_ndbi": 0.1936,
@@ -5089,7 +5089,7 @@
         ]
       },
       "properties": {
-        "id": "99821dca-c7f3-4da5-a982-5220dea4a14c",
+        "id": "nova-70c54e285f7c6d1f",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5099,7 +5099,7 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 0.6539,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4329,
         "delta_ndbi": 0.1904,
@@ -5169,7 +5169,7 @@
         ]
       },
       "properties": {
-        "id": "29137a31-d625-4cdd-98d8-78b7fa4e8e63",
+        "id": "nova-bcf3c67bcdf15f3f",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5179,7 +5179,7 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.6468,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3891,
         "delta_ndbi": 0.1851,
@@ -5233,7 +5233,7 @@
         ]
       },
       "properties": {
-        "id": "a574f579-2fe2-4054-840e-03227317144c",
+        "id": "nova-72f64d9848f80bb4",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5243,7 +5243,7 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.6465,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4401,
         "delta_ndbi": 0.1849,
@@ -5393,7 +5393,7 @@
         ]
       },
       "properties": {
-        "id": "490ef6d6-55ac-48fb-af72-6b26246870c5",
+        "id": "nova-cfab8a773951feee",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "confirmed_change",
@@ -5403,7 +5403,7 @@
         "value": 7100.0,
         "unit": "m\u00b2",
         "confidence": 0.6405,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.0704,
         "delta_ndbi": 0.079,
@@ -5521,7 +5521,7 @@
         ]
       },
       "properties": {
-        "id": "cb08ee20-d7c8-4e7d-baa3-bed53108a758",
+        "id": "nova-3e9fb4e076adefb0",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5531,7 +5531,7 @@
         "value": 2900.0,
         "unit": "m\u00b2",
         "confidence": 0.64,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.352,
         "delta_ndbi": 0.18,
@@ -5593,7 +5593,7 @@
         ]
       },
       "properties": {
-        "id": "58483f88-5674-42c3-b13e-97dffb889c15",
+        "id": "nova-5824954d297f5873",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5603,7 +5603,7 @@
         "value": 1700.0,
         "unit": "m\u00b2",
         "confidence": 0.6283,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3485,
         "delta_ndbi": 0.1712,
@@ -5745,7 +5745,7 @@
         ]
       },
       "properties": {
-        "id": "7d7b9e8c-ac0f-4cec-9bfc-0e5521bb10c6",
+        "id": "nova-c67421a9d383f625",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5755,7 +5755,7 @@
         "value": 1800.0,
         "unit": "m\u00b2",
         "confidence": 0.6211,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3036,
         "delta_ndbi": 0.1658,
@@ -5825,7 +5825,7 @@
         ]
       },
       "properties": {
-        "id": "20bae4eb-7c67-443c-9090-e37adb5154ba",
+        "id": "nova-5d772b55670d1aee",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -5835,7 +5835,7 @@
         "value": 1300.0,
         "unit": "m\u00b2",
         "confidence": 0.5966,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2089,
         "delta_ndbi": 0.1475,
@@ -6271,7 +6271,7 @@
         ]
       },
       "properties": {
-        "id": "4c80e455-8f5a-42d8-8886-660db5cb0a48",
+        "id": "nova-563ab5bed95548c3",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -6281,7 +6281,7 @@
         "value": 12000.0,
         "unit": "m\u00b2",
         "confidence": 0.5823,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.1238,
         "delta_ndbi": 0.1653,
@@ -6383,7 +6383,7 @@
         ]
       },
       "properties": {
-        "id": "a0644f42-a2cb-4fb6-9591-28ab75029b73",
+        "id": "nova-3ebe43228414b9b9",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -6393,7 +6393,7 @@
         "value": 2000.0,
         "unit": "m\u00b2",
         "confidence": 0.581,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.3616,
         "delta_ndbi": 0.1357,
@@ -6487,7 +6487,7 @@
         ]
       },
       "properties": {
-        "id": "c6f99236-8d04-40ca-8d07-cb769e19d3fe",
+        "id": "nova-ec5f1a19fb454d0a",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -6497,7 +6497,7 @@
         "value": 1500.0,
         "unit": "m\u00b2",
         "confidence": 0.5663,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2184,
         "delta_ndbi": 0.1247,
@@ -6543,7 +6543,7 @@
         ]
       },
       "properties": {
-        "id": "b33435d2-7ad1-4860-a9c5-d1d0b03188b7",
+        "id": "nova-882d00726b468ebf",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -6553,7 +6553,7 @@
         "value": 1100.0,
         "unit": "m\u00b2",
         "confidence": 0.5657,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4297,
         "delta_ndbi": 0.1242,
@@ -6639,7 +6639,7 @@
         ]
       },
       "properties": {
-        "id": "7a68208e-8a3e-401a-ad8e-a4ccab61eaa4",
+        "id": "nova-b5284e61c7451b16",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -6649,7 +6649,7 @@
         "value": 2400.0,
         "unit": "m\u00b2",
         "confidence": 0.5354,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.2372,
         "delta_ndbi": 0.1016,
@@ -6743,7 +6743,7 @@
         ]
       },
       "properties": {
-        "id": "111f446e-b886-4538-9b0e-7be31a5f01f5",
+        "id": "nova-391efb39782ad645",
         "source_agent": "nova",
         "layer": "Geo-mapping",
         "signal_type": "candidate_change",
@@ -6753,7 +6753,7 @@
         "value": 2100.0,
         "unit": "m\u00b2",
         "confidence": 0.4949,
-        "timestamp": "2026-06-18T12:31:46.450904+00:00",
+        "timestamp": "2026-06-18T13:55:50.453650+00:00",
         "related_ids": [],
         "delta_ndvi": -0.4442,
         "delta_ndbi": 0.0712,

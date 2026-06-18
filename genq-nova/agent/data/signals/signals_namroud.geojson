@@ -23,7 +23,7 @@
         "confidence": 0.98,
         "timestamp": "2026-05-26T18:19:00+00:00",
         "related_ids": [
-          "f9a7977e-5b8a-4971-90ed-48589c8db8b5"
+          "nova-893e88e456d471d2"
         ],
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
@@ -51,7 +51,7 @@
         "confidence": 0.95,
         "timestamp": "2026-06-13T12:04:00+00:00",
         "related_ids": [
-          "a9e8a6e4-4379-4e08-95c7-d13ce2d2f841"
+          "nova-526ce65a5e4f0dab"
         ],
         "authority": "National Investment Commission"
       }
@@ -78,7 +78,7 @@
         "confidence": 0.94,
         "timestamp": "2026-05-08T14:27:00+00:00",
         "related_ids": [
-          "a3af90fa-f4d5-4818-b64c-a9f4081e4a5d"
+          "nova-bbe90dc84502876c"
         ],
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
@@ -132,7 +132,7 @@
         "confidence": 0.92,
         "timestamp": "2026-06-03T16:54:00+00:00",
         "related_ids": [
-          "a3af90fa-f4d5-4818-b64c-a9f4081e4a5d"
+          "nova-bbe90dc84502876c"
         ],
         "use": "residential",
         "permit_authority": "Amanat Baghdad"
@@ -160,7 +160,7 @@
         "confidence": 0.91,
         "timestamp": "2026-06-10T18:44:00+00:00",
         "related_ids": [
-          "99721c27-1a6a-4997-af80-0b370616f59e"
+          "nova-c049d5e938b3162e"
         ],
         "authority": "National Investment Commission"
       }
@@ -239,7 +239,7 @@
         "confidence": 0.88,
         "timestamp": "2026-06-12T04:10:00+00:00",
         "related_ids": [
-          "c6e9b4bd-01ea-4fd9-aa89-53b44005929e"
+          "nova-0ec55d591af5cb27"
         ],
         "use": "mixed-use",
         "permit_authority": "Amanat Baghdad"
@@ -267,7 +267,7 @@
         "confidence": 0.88,
         "timestamp": "2026-05-20T21:46:00+00:00",
         "related_ids": [
-          "7a68208e-8a3e-401a-ad8e-a4ccab61eaa4"
+          "nova-b5284e61c7451b16"
         ],
         "business_type": "clothing store",
         "owner": "Fatima al-Saadi"
@@ -295,7 +295,7 @@
         "confidence": 0.87,
         "timestamp": "2026-05-07T23:01:00+00:00",
         "related_ids": [
-          "7c9d7be0-f0e1-4838-b6e5-50b963a39732"
+          "nova-6eb2a010de3a5019"
         ],
         "business_type": "clothing store",
         "owner": "Noor al-Baghdadi"
@@ -349,7 +349,7 @@
         "confidence": 0.85,
         "timestamp": "2026-05-20T21:58:00+00:00",
         "related_ids": [
-          "58483f88-5674-42c3-b13e-97dffb889c15"
+          "nova-5824954d297f5873"
         ],
         "business_type": "supermarket",
         "owner": "Sajjad al-Saadi"
@@ -377,7 +377,7 @@
         "confidence": 0.85,
         "timestamp": "2026-05-25T20:17:00+00:00",
         "related_ids": [
-          "4c80e455-8f5a-42d8-8886-660db5cb0a48"
+          "nova-563ab5bed95548c3"
         ],
         "work_type": "street lighting",
         "status": "open"
@@ -405,7 +405,7 @@
         "confidence": 0.84,
         "timestamp": "2026-06-08T20:56:00+00:00",
         "related_ids": [
-          "b33435d2-7ad1-4860-a9c5-d1d0b03188b7"
+          "nova-882d00726b468ebf"
         ],
         "business_type": "money exchange",
         "owner": "Omar al-Tamimi"

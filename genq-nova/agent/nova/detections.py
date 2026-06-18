@@ -30,7 +30,7 @@ footprint" (candidate_change). Distinguishing genuinely new vertical buildings
 would need baseline (before-date) footprints — deferred for v2.
 """
 
-import uuid
+import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Literal
@@ -59,6 +59,18 @@ class Detection(BaseModel):
     source_dates: dict                      # {"before": [start, end], "after": [start, end]}
     area_m2: float
     metadata: dict                          # delta_ndvi, delta_ndbi, delta_brightness
+
+
+# ---------------------------------------------------------------------------
+# Deterministic ID
+# ---------------------------------------------------------------------------
+
+
+def _detection_id(lat: float, lon: float, after_date: str) -> str:
+    """Stable ID for a detection: same site + same after-window → same ID, every
+    run. Lets the full, inland, and recent sets be correlated by ID."""
+    basis = f"{lat:.6f},{lon:.6f}|{after_date}"
+    return "nova-" + hashlib.sha1(basis.encode()).hexdigest()[:16]
 
 
 # ---------------------------------------------------------------------------
@@ -174,12 +186,14 @@ def run_nova(
 
         wgs_row = changes_wgs.loc[i]
         geom_json = wgs_row.geometry.__geo_interface__
+        lat = float(wgs_row["centroid_lat"])
+        lon = float(wgs_row["centroid_lon"])
 
         detections.append(
             Detection(
-                id=str(uuid.uuid4()),
-                lat=float(wgs_row["centroid_lat"]),
-                lon=float(wgs_row["centroid_lon"]),
+                id=_detection_id(lat, lon, date_after[1]),
+                lat=lat,
+                lon=lon,
                 geometry=geom_json,
                 detection_type=d_type,
                 confidence=conf,
