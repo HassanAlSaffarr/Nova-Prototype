@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import MapGL, { useControl, type MapRef } from "react-map-gl/maplibre";
+import MapGL, {
+  Layer,
+  Source,
+  useControl,
+  type MapRef,
+} from "react-map-gl/maplibre";
 import { MapboxOverlay, type MapboxOverlayProps } from "@deck.gl/mapbox";
 import { GeoJsonLayer, ScatterplotLayer } from "@deck.gl/layers";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -23,6 +28,10 @@ const KARRADA_CENTER: [number, number] = [
 ];
 
 const IRAQ_VIEW = { longitude: 43.7, latitude: 33.2, zoom: 5.2, pitch: 0 };
+
+// Cinematic easing for the Iraq ↔ Karrada transition (easeInOutCubic).
+const easeInOutCubic = (t: number) =>
+  t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
 const ACCENT = hexToRgb(AGENT_COLOR.nova);
 
@@ -103,13 +112,23 @@ export default function Map() {
     const map = mapRef.current;
     if (!map) return;
     if (target === "karrada") {
-      map.flyTo({ center: KARRADA_CENTER, zoom: 14.2, duration: 2200 });
+      map.flyTo({
+        center: KARRADA_CENTER,
+        zoom: 14.2,
+        duration: 3000,
+        curve: 1.6,
+        easing: easeInOutCubic,
+        essential: true,
+      });
       setZoomed(true);
     } else {
       map.flyTo({
         center: [IRAQ_VIEW.longitude, IRAQ_VIEW.latitude],
         zoom: IRAQ_VIEW.zoom,
-        duration: 1800,
+        duration: 3000,
+        curve: 1.6,
+        easing: easeInOutCubic,
+        essential: true,
       });
       setZoomed(false);
     }
@@ -132,15 +151,6 @@ export default function Map() {
         getLineWidth: 1,
         lineWidthMinPixels: 1,
       }),
-    new GeoJsonLayer({
-      id: "karrada-aoi",
-      data: karradaOutline(),
-      stroked: true,
-      filled: false,
-      getLineColor: [...ACCENT, 220] as [number, number, number, number],
-      getLineWidth: 2,
-      lineWidthMinPixels: 1.5,
-    }),
     novaActive &&
       new GeoJsonLayer({
         id: "nova-detections",
@@ -191,6 +201,29 @@ export default function Map() {
           if (Date.now() - featureClickRef.current > 150) select(null);
         }}
       >
+        {/* Karrada AOI: subtle dashed marker of place; fades out past zoom 13 */}
+        <Source id="karrada-aoi" type="geojson" data={karradaOutline()}>
+          <Layer
+            id="karrada-aoi-line"
+            type="line"
+            paint={{
+              "line-color": "#00ff9d",
+              "line-width": 1.5,
+              "line-dasharray": [3, 3],
+              "line-opacity": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                6,
+                0.3,
+                12.5,
+                0.3,
+                13,
+                0,
+              ],
+            }}
+          />
+        </Source>
         <DeckOverlay layers={layers} />
       </MapGL>
 
