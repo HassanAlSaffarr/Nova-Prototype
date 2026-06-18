@@ -32,10 +32,16 @@ would need baseline (before-date) footprints — deferred for v2.
 
 import uuid
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Literal
 
 import geopandas as gpd
+import numpy as np
+import rasterio
+import rasterio.features
 from pydantic import BaseModel
+from shapely.geometry import Point, shape
+from shapely.ops import unary_union
 
 from nova.change_detection import detect_changes
 from nova.config import CRS_UTM
@@ -195,6 +201,52 @@ def run_nova(
     detections.sort(key=lambda d: d.confidence, reverse=True)
     print(f"  {len(detections)} detections built")
     return detections
+
+
+def filter_riverbank(
+    detections: list[Detection],
+    water_tif: Path,
+    buffer_m: float = 30.0,
+) -> list[Detection]:
+    """
+    Drop detections whose centroid lies within `buffer_m` of the water-mask
+    boundary (the Tigris edge). Karrada's only undeveloped strip hugs the river,
+    so those detections are real but visually over-represent the riverbank; this
+    yields an inland-only set that emphasises interior development.
+
+    Uses the WATER band (band 4) of the cached diff raster. Returns a new list
+    with original order preserved; non-destructive.
+    """
+    if not detections:
+        return []
+
+    with rasterio.open(water_tif) as src:
+        water = src.read(4).astype(np.float32)
+        transform = src.transform
+        raster_crs = src.crs
+
+    mask = water > 0
+    if not mask.any():
+        return list(detections)
+
+    water_geoms = [
+        shape(geom)
+        for geom, val in rasterio.features.shapes(
+            mask.astype(np.uint8), mask=mask, transform=transform
+        )
+        if val == 1
+    ]
+    water_union = unary_union(water_geoms)
+
+    # Detection centroids → raster CRS (UTM, metres) for an accurate distance.
+    centroids = gpd.GeoSeries(
+        [Point(d.lon, d.lat) for d in detections], crs="EPSG:4326"
+    ).to_crs(raster_crs)
+
+    return [
+        d for d, pt in zip(detections, centroids)
+        if pt.distance(water_union) > buffer_m
+    ]
 
 
 def _is_null(v) -> bool:

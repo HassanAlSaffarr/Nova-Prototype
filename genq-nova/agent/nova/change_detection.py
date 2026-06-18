@@ -105,6 +105,18 @@ def _build_composite(
 # ---------------------------------------------------------------------------
 
 
+def diff_raster_path(
+    date_before: tuple[str, str],
+    date_after: tuple[str, str],
+    cloud_threshold: int,
+) -> Path:
+    """Cached diff-raster path for a given run. The "_w" marker denotes the
+    4-band layout (incl. the WATER band); bump it if the band layout changes."""
+    before_tag = f"{date_before[0]}_{date_before[1]}".replace("-", "")
+    after_tag = f"{date_after[0]}_{date_after[1]}".replace("-", "")
+    return CACHE_DIR / f"diff_{before_tag}_vs_{after_tag}_c{cloud_threshold}_w.tif"
+
+
 def _download_diff_raster(
     aoi: ee.Geometry,
     date_before: tuple[str, str],
@@ -326,10 +338,7 @@ def detect_changes(
     aoi_ee = ee.Geometry.Rectangle(aoi_bounds)
 
     # Cache key encodes the full parameters so different runs don't collide
-    before_tag = f"{date_before[0]}_{date_before[1]}".replace("-", "")
-    after_tag = f"{date_after[0]}_{date_after[1]}".replace("-", "")
-    # "_w" schema marker: 4-band raster incl. WATER (bump if band layout changes)
-    cache_stem = f"diff_{before_tag}_vs_{after_tag}_c{cloud_threshold}_w"
+    cache_stem = diff_raster_path(date_before, date_after, cloud_threshold).stem
 
     tif_path = _download_diff_raster(
         aoi_ee, date_before, date_after, cloud_threshold, cache_stem

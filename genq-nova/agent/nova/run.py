@@ -21,8 +21,9 @@ import sys
 
 import ee
 
+from nova.change_detection import diff_raster_path
 from nova.config import AOI_PRESETS, DATA_DIR
-from nova.detections import run_nova
+from nova.detections import filter_riverbank, run_nova
 
 
 def _parse_date_range(value: str) -> tuple[str, str]:
@@ -90,6 +91,12 @@ def main() -> None:
         metavar="PCT",
         help="Max CLOUDY_PIXEL_PERCENTAGE per S2 scene (default: 20)",
     )
+    parser.add_argument(
+        "--exclude-riverbank",
+        action="store_true",
+        help="Drop detections within 30 m of the water-mask boundary and write "
+             "an inland-only set (detections_<aoi>_inland.geojson)",
+    )
     args = parser.parse_args()
 
     project = os.environ.get("GEE_PROJECT")
@@ -116,6 +123,17 @@ def main() -> None:
         args.after,
         cloud_threshold=args.cloud_threshold,
     )
+
+    suffix = ""
+    if args.exclude_riverbank:
+        water_tif = diff_raster_path(args.before, args.after, args.cloud_threshold)
+        before_n = len(detections)
+        detections = filter_riverbank(detections, water_tif, buffer_m=30)
+        suffix = "_inland"
+        print(
+            f"\n  Riverbank filter: {before_n} → {len(detections)} "
+            f"({before_n - len(detections)} within 30 m of water excluded)"
+        )
 
     # -----------------------------------------------------------------------
     # Print summary stats
@@ -159,7 +177,7 @@ def main() -> None:
     # Save GeoJSON
     # -----------------------------------------------------------------------
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    output_path = DATA_DIR / f"detections_{args.aoi}.geojson"
+    output_path = DATA_DIR / f"detections_{args.aoi}{suffix}.geojson"
     output_path.write_text(json.dumps(_build_geojson(detections), indent=2))
     print(f"\n  Saved → {output_path.resolve()}")
     print("  Drop it into https://geojson.io to eyeball results.\n")
