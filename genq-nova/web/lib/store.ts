@@ -29,10 +29,15 @@ interface NovaState {
   runningNova: boolean;
   newEventId: string | null; // for the flash animation
 
+  // Map registers a fly-to fn so the panel can pan to related signals.
+  flyToFn: ((lon: number, lat: number) => void) | null;
+
   loadAll: () => Promise<void>;
   setDetectionSet: (s: DetectionSet) => Promise<void>;
   toggleAgent: (a: SourceAgent) => void;
   select: (id: string | null) => void;
+  selectRelated: (id: string) => void;
+  setFlyToFn: (fn: (lon: number, lat: number) => void) => void;
   toggleEventLog: () => void;
   runNova: () => Promise<void>;
 }
@@ -43,11 +48,46 @@ const allOn = () =>
     {} as Record<SourceAgent, boolean>,
   );
 
+// Raw /detections features lack the Signal envelope (title/summary/etc).
+// Normalise one into the same shape the panel expects for every agent.
+function detectionToFeature(f: Feature): Feature {
+  const p = f.properties;
+  const confirmed = p.signal_type === "confirmed_change" ||
+    (p as Record<string, unknown>).detection_type === "confirmed_change";
+  const dndbi = (p as Record<string, unknown>).delta_ndbi;
+  const dndvi = (p as Record<string, unknown>).delta_ndvi;
+  return {
+    ...f,
+    properties: {
+      ...p,
+      source_agent: "nova",
+      layer: "Geo-mapping",
+      signal_type:
+        (p.signal_type as string) ??
+        ((p as Record<string, unknown>).detection_type as string),
+      title_en: confirmed
+        ? "Confirmed change detected"
+        : "Candidate change detected",
+      title_ar: confirmed ? "رصد تغيّر مؤكَّد" : "رصد تغيّر محتمل",
+      summary: `Satellite change detection flagged a ${Number(
+        p.area_m2,
+      ).toLocaleString()} m² site (ΔNDBI ${dndbi}, ΔNDVI ${dndvi}).`,
+      value: Number(p.area_m2),
+      unit: "m²",
+      timestamp:
+        ((p as Record<string, unknown>).detected_at as string) ??
+        p.timestamp,
+      related_ids: (p.related_ids as string[]) ?? [],
+    } as Feature["properties"],
+  };
+}
+
 function indexById(detections: Feature[], points: Feature[]) {
   const byId: Record<string, Feature> = {};
-  // Nova polygons first so a Nova id resolves to its polygon, not its point twin
-  for (const f of detections) byId[f.properties.id] = f;
   for (const f of points) byId[f.properties.id] = f;
+  // Nova entries come from the (normalised) detection set, so the panel works
+  // for full / inland / recent uniformly.
+  for (const f of detections) byId[f.properties.id] = detectionToFeature(f);
   return byId;
 }
 
@@ -64,6 +104,7 @@ export const useStore = create<NovaState>((set, get) => ({
   eventLogOpen: true,
   runningNova: false,
   newEventId: null,
+  flyToFn: null,
 
   loadAll: async () => {
     set({ loading: true, error: null });
@@ -107,6 +148,15 @@ export const useStore = create<NovaState>((set, get) => ({
     })),
 
   select: (id) => set({ selectedId: id }),
+
+  selectRelated: (id) => {
+    const f = get().byId[id];
+    set({ selectedId: id });
+    const fly = get().flyToFn;
+    if (f && fly) fly(f.properties.lon, f.properties.lat);
+  },
+
+  setFlyToFn: (fn) => set({ flyToFn: fn }),
 
   toggleEventLog: () => set((st) => ({ eventLogOpen: !st.eventLogOpen })),
 

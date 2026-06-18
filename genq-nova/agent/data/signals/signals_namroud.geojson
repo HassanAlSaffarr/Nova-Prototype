@@ -25,6 +25,8 @@
         "related_ids": [
           "nova-893e88e456d471d2"
         ],
+        "lat": 33.287746631026366,
+        "lon": 44.402017865023595,
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
       }
@@ -53,6 +55,8 @@
         "related_ids": [
           "nova-526ce65a5e4f0dab"
         ],
+        "lat": 33.31643293388276,
+        "lon": 44.415471755853325,
         "authority": "National Investment Commission"
       }
     },
@@ -80,6 +84,8 @@
         "related_ids": [
           "nova-bbe90dc84502876c"
         ],
+        "lat": 33.301963803531166,
+        "lon": 44.41888230144199,
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
       }
@@ -106,6 +112,8 @@
         "confidence": 0.93,
         "timestamp": "2026-05-23T19:38:00+00:00",
         "related_ids": [],
+        "lat": 33.28937361267968,
+        "lon": 44.40867869884858,
         "work_type": "sidewalk rehabilitation",
         "status": "open"
       }
@@ -134,6 +142,8 @@
         "related_ids": [
           "nova-bbe90dc84502876c"
         ],
+        "lat": 33.30179436078153,
+        "lon": 44.41853061917834,
         "use": "residential",
         "permit_authority": "Amanat Baghdad"
       }
@@ -162,6 +172,8 @@
         "related_ids": [
           "nova-c049d5e938b3162e"
         ],
+        "lat": 33.294966239094926,
+        "lon": 44.403143685952976,
         "authority": "National Investment Commission"
       }
     },
@@ -187,6 +199,8 @@
         "confidence": 0.9,
         "timestamp": "2026-05-19T04:48:00+00:00",
         "related_ids": [],
+        "lat": 33.30593596440052,
+        "lon": 44.38996680161502,
         "use": "residential",
         "permit_authority": "Amanat Baghdad"
       }
@@ -213,6 +227,8 @@
         "confidence": 0.88,
         "timestamp": "2026-05-28T09:44:00+00:00",
         "related_ids": [],
+        "lat": 33.30045661282573,
+        "lon": 44.42965884058754,
         "business_type": "supermarket",
         "owner": "Sara al-Dulaimi"
       }
@@ -241,6 +257,8 @@
         "related_ids": [
           "nova-0ec55d591af5cb27"
         ],
+        "lat": 33.29274522401305,
+        "lon": 44.391983291255364,
         "use": "mixed-use",
         "permit_authority": "Amanat Baghdad"
       }
@@ -269,6 +287,8 @@
         "related_ids": [
           "nova-b5284e61c7451b16"
         ],
+        "lat": 33.31944276969041,
+        "lon": 44.412240232090724,
         "business_type": "clothing store",
         "owner": "Fatima al-Saadi"
       }
@@ -297,6 +317,8 @@
         "related_ids": [
           "nova-6eb2a010de3a5019"
         ],
+        "lat": 33.286982223057834,
+        "lon": 44.40157718610789,
         "business_type": "clothing store",
         "owner": "Noor al-Baghdadi"
       }
@@ -323,6 +345,8 @@
         "confidence": 0.86,
         "timestamp": "2026-06-14T10:27:00+00:00",
         "related_ids": [],
+        "lat": 33.288312016566096,
+        "lon": 44.3885966305716,
         "business_type": "clothing store",
         "owner": "Mustafa al-Janabi"
       }
@@ -351,6 +375,8 @@
         "related_ids": [
           "nova-5824954d297f5873"
         ],
+        "lat": 33.31112538776162,
+        "lon": 44.39060346048341,
         "business_type": "supermarket",
         "owner": "Sajjad al-Saadi"
       }
@@ -379,6 +405,8 @@
         "related_ids": [
           "nova-563ab5bed95548c3"
         ],
+        "lat": 33.311475071934495,
+        "lon": 44.419051406982554,
         "work_type": "street lighting",
         "status": "open"
       }
@@ -407,6 +435,8 @@
         "related_ids": [
           "nova-882d00726b468ebf"
         ],
+        "lat": 33.29417065726661,
+        "lon": 44.40027872773587,
         "business_type": "money exchange",
         "owner": "Omar al-Tamimi"
       }
@@ -433,6 +463,8 @@
         "confidence": 0.84,
         "timestamp": "2026-05-27T05:08:00+00:00",
         "related_ids": [],
+        "lat": 33.30135353663822,
+        "lon": 44.409254442189,
         "work_type": "street lighting",
         "status": "open"
       }
@@ -459,6 +491,8 @@
         "confidence": 0.84,
         "timestamp": "2026-05-14T14:21:00+00:00",
         "related_ids": [],
+        "lat": 33.304029818563805,
+        "lon": 44.429316303207365,
         "authority": "National Investment Commission"
       }
     },
@@ -484,6 +518,8 @@
         "confidence": 0.83,
         "timestamp": "2026-06-13T00:19:00+00:00",
         "related_ids": [],
+        "lat": 33.31153337538881,
+        "lon": 44.42124945622715,
         "business_type": "supermarket",
         "owner": "Ahmed al-Dulaimi"
       }

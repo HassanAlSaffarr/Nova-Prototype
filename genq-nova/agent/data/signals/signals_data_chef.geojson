@@ -31,6 +31,8 @@
           "roberto-4be5b0de-912b-1514-f4db-ab3a6610a38e",
           "namroud-9109aac1-d41f-2bcf-5117-7d922a40a5d5"
         ],
+        "lat": 33.294755821986435,
+        "lon": 44.40056164195173,
         "source_count": 3,
         "member_count": 7,
         "sources": [
@@ -74,6 +76,8 @@
           "namroud-8810b35c-6456-61f8-bf93-169b8468b953",
           "peter-49b3cbc5-af8e-df06-d9e6-9ed5cdfd81d7"
         ],
+        "lat": 33.301966326813385,
+        "lon": 44.41813752643431,
         "source_count": 3,
         "member_count": 5,
         "sources": [
@@ -116,6 +120,8 @@
           "roberto-d73c09a8-f2b1-10d1-bc7d-0fff8914c416",
           "peter-0b96f113-0e3d-38ea-1930-5e72a112cd8b"
         ],
+        "lat": 33.30944463414352,
+        "lon": 44.41866691947317,
         "source_count": 3,
         "member_count": 4,
         "sources": [
@@ -158,6 +164,8 @@
           "peter-5025c7bf-eca7-2ea2-fe90-c127943a41c7",
           "peter-60ac904e-b77d-a7ab-5b9d-10952a51cb08"
         ],
+        "lat": 33.29282149224302,
+        "lon": 44.39264237212665,
         "source_count": 3,
         "member_count": 4,
         "sources": [
@@ -199,6 +207,8 @@
           "roberto-946041a2-40f1-5805-35e3-b1533fae9ea2",
           "namroud-edea31ec-72c5-35a9-51ab-94feb877abf5"
         ],
+        "lat": 33.31686340620172,
+        "lon": 44.415340316271376,
         "source_count": 3,
         "member_count": 3,
         "sources": [
@@ -240,6 +250,8 @@
           "namroud-35976730-7c9f-f8b7-2801-18e394c6dee8",
           "peter-3e3896a6-4e94-5cb3-5119-778872dd22c6"
         ],
+        "lat": 33.29512656311228,
+        "lon": 44.40361576911587,
         "source_count": 3,
         "member_count": 3,
         "sources": [
@@ -284,6 +296,8 @@
           "peter-396728d7-0296-2a15-671f-f39da25cf56f",
           "peter-d73544ec-7493-5472-b844-de6e9fafc3ae"
         ],
+        "lat": 33.31235594478202,
+        "lon": 44.40930941053364,
         "source_count": 2,
         "member_count": 6,
         "sources": [
@@ -325,6 +339,8 @@
           "peter-cdbfe93d-f03e-1a76-39a2-2af703e99d4b",
           "peter-0929846e-0365-e4ed-8ee2-b547c819546f"
         ],
+        "lat": 33.29254881630595,
+        "lon": 44.40078784470899,
         "source_count": 2,
         "member_count": 5,
         "sources": [
@@ -365,6 +381,8 @@
           "nova-563ab5bed95548c3",
           "namroud-08636d7c-03d9-4677-9cb3-f3f23c5e7f6d"
         ],
+        "lat": 33.311501914749726,
+        "lon": 44.41828951299655,
         "source_count": 2,
         "member_count": 4,
         "sources": [
@@ -404,6 +422,8 @@
           "nova-1ada5651d5822835",
           "roberto-666460a8-c613-932a-6df5-ece2f325311b"
         ],
+        "lat": 33.30762660596476,
+        "lon": 44.396444320730545,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -443,6 +463,8 @@
           "namroud-8a2435cb-3229-4c22-5669-0e1420cde0c4",
           "namroud-4b77870d-691c-e7fe-da3e-b10eedf1b641"
         ],
+        "lat": 33.28707070722502,
+        "lon": 44.401376396975785,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -482,6 +504,8 @@
           "nova-1844e849837129d5",
           "roberto-b0046a8a-e285-e6d6-9a5d-58b7a538b6e1"
         ],
+        "lat": 33.286135357557505,
+        "lon": 44.40354087607392,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -521,6 +545,8 @@
           "nova-b5284e61c7451b16",
           "namroud-ebe75e3f-866d-4268-6893-45ad0554c196"
         ],
+        "lat": 33.31969024483174,
+        "lon": 44.412428303585635,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -560,6 +586,8 @@
           "nova-abb95f3f3427dd5a",
           "roberto-57702fe2-7d41-7f72-9371-5819efb6acc1"
         ],
+        "lat": 33.307395949122366,
+        "lon": 44.38639309245099,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -599,6 +627,8 @@
           "nova-f57338735a8b7e90",
           "roberto-48438dac-d5e2-d68b-3813-138667d32eff"
         ],
+        "lat": 33.29845144135046,
+        "lon": 44.414861185058044,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -638,6 +668,8 @@
           "nova-a616bb061116fdf9",
           "peter-a13b6886-b74e-dead-14e9-1110b560a774"
         ],
+        "lat": 33.295212779754195,
+        "lon": 44.39732151060209,
         "source_count": 2,
         "member_count": 3,
         "sources": [

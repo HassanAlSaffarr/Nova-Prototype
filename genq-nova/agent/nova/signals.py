@@ -243,6 +243,8 @@ def signals_to_geojson(signals: list[Signal]) -> dict:
                     "confidence": s.confidence,
                     "timestamp": s.timestamp.isoformat(),
                     "related_ids": s.related_ids,
+                    "lat": s.lat,
+                    "lon": s.lon,
                     **s.payload,
                 },
             }

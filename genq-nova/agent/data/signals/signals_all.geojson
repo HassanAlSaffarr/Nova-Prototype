@@ -81,8 +81,10 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 1.0,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.295018876435925,
+        "lon": 44.400773076624915,
         "delta_ndvi": -0.6586,
         "delta_ndbi": 0.3182,
         "delta_brightness": 1294.0,
@@ -113,6 +115,8 @@
         "related_ids": [
           "nova-893e88e456d471d2"
         ],
+        "lat": 33.287746631026366,
+        "lon": 44.402017865023595,
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
       }
@@ -553,8 +557,10 @@
         "value": 23800.0,
         "unit": "m\u00b2",
         "confidence": 0.9721,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.316299100330866,
+        "lon": 44.415666271156,
         "delta_ndvi": -0.4316,
         "delta_ndbi": 0.279,
         "delta_brightness": 451.67,
@@ -625,8 +631,10 @@
         "value": 1700.0,
         "unit": "m\u00b2",
         "confidence": 0.9536,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28712831484034,
+        "lon": 44.391607516580784,
         "delta_ndvi": -0.2683,
         "delta_ndbi": 0.2652,
         "delta_brightness": -60.33,
@@ -657,6 +665,8 @@
         "related_ids": [
           "nova-526ce65a5e4f0dab"
         ],
+        "lat": 33.31643293388276,
+        "lon": 44.415471755853325,
         "authority": "National Investment Commission"
       }
     },
@@ -684,6 +694,8 @@
         "related_ids": [
           "nova-bbe90dc84502876c"
         ],
+        "lat": 33.301963803531166,
+        "lon": 44.41888230144199,
         "use": "commercial",
         "permit_authority": "Amanat Baghdad"
       }
@@ -710,6 +722,8 @@
         "confidence": 0.93,
         "timestamp": "2026-05-23T19:38:00+00:00",
         "related_ids": [],
+        "lat": 33.28937361267968,
+        "lon": 44.40867869884858,
         "work_type": "sidewalk rehabilitation",
         "status": "open"
       }
@@ -738,6 +752,8 @@
         "related_ids": [
           "nova-bbe90dc84502876c"
         ],
+        "lat": 33.30179436078153,
+        "lon": 44.41853061917834,
         "use": "residential",
         "permit_authority": "Amanat Baghdad"
       }
@@ -766,6 +782,8 @@
         "related_ids": [
           "nova-c049d5e938b3162e"
         ],
+        "lat": 33.294966239094926,
+        "lon": 44.403143685952976,
         "authority": "National Investment Commission"
       }
     },
@@ -1331,8 +1349,10 @@
         "value": 25100.0,
         "unit": "m\u00b2",
         "confidence": 0.9046,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.307614003326,
+        "lon": 44.39556324173105,
         "delta_ndvi": -0.3857,
         "delta_ndbi": 0.2284,
         "delta_brightness": 720.67,
@@ -1361,6 +1381,8 @@
         "confidence": 0.9,
         "timestamp": "2026-05-19T04:48:00+00:00",
         "related_ids": [],
+        "lat": 33.30593596440052,
+        "lon": 44.38996680161502,
         "use": "residential",
         "permit_authority": "Amanat Baghdad"
       }
@@ -1387,6 +1409,8 @@
         "confidence": 0.89,
         "timestamp": "2026-06-04T01:01:00+00:00",
         "related_ids": [],
+        "lat": 33.30362215458023,
+        "lon": 44.413733447273984,
         "surveyor": "Hassan al-Dulaimi"
       }
     },
@@ -1412,6 +1436,8 @@
         "confidence": 0.88,
         "timestamp": "2026-05-28T09:44:00+00:00",
         "related_ids": [],
+        "lat": 33.30045661282573,
+        "lon": 44.42965884058754,
         "business_type": "supermarket",
         "owner": "Sara al-Dulaimi"
       }
@@ -1440,6 +1466,8 @@
         "related_ids": [
           "nova-0ec55d591af5cb27"
         ],
+        "lat": 33.29274522401305,
+        "lon": 44.391983291255364,
         "use": "mixed-use",
         "permit_authority": "Amanat Baghdad"
       }
@@ -1468,6 +1496,8 @@
         "related_ids": [
           "nova-b5284e61c7451b16"
         ],
+        "lat": 33.31944276969041,
+        "lon": 44.412240232090724,
         "business_type": "clothing store",
         "owner": "Fatima al-Saadi"
       }
@@ -1536,8 +1566,10 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.8774,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28648326759087,
+        "lon": 44.40053413979585,
         "delta_ndvi": -0.3252,
         "delta_ndbi": 0.2081,
         "delta_brightness": 574.33,
@@ -1608,8 +1640,10 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.8729,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28609280166753,
+        "lon": 44.403740725564326,
         "delta_ndvi": -0.3818,
         "delta_ndbi": 0.2047,
         "delta_brightness": 482.33,
@@ -1720,8 +1754,10 @@
         "value": 2800.0,
         "unit": "m\u00b2",
         "confidence": 0.8715,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29658149385245,
+        "lon": 44.39640024836292,
         "delta_ndvi": -0.4446,
         "delta_ndbi": 0.2036,
         "delta_brightness": 728.0,
@@ -1750,6 +1786,8 @@
         "confidence": 0.87,
         "timestamp": "2026-05-29T11:51:00+00:00",
         "related_ids": [],
+        "lat": 33.294909675887986,
+        "lon": 44.426967867982846,
         "surveyor": "Maryam al-Dulaimi"
       }
     },
@@ -1777,6 +1815,8 @@
         "related_ids": [
           "nova-6eb2a010de3a5019"
         ],
+        "lat": 33.286982223057834,
+        "lon": 44.40157718610789,
         "business_type": "clothing store",
         "owner": "Noor al-Baghdadi"
       }
@@ -1803,6 +1843,8 @@
         "confidence": 0.86,
         "timestamp": "2026-06-14T10:27:00+00:00",
         "related_ids": [],
+        "lat": 33.288312016566096,
+        "lon": 44.3885966305716,
         "business_type": "clothing store",
         "owner": "Mustafa al-Janabi"
       }
@@ -1829,6 +1871,8 @@
         "confidence": 0.85,
         "timestamp": "2026-06-09T22:07:00+00:00",
         "related_ids": [],
+        "lat": 33.29578780219437,
+        "lon": 44.418613629368835,
         "surveyor": "Haider al-Janabi"
       }
     },
@@ -1856,6 +1900,8 @@
         "related_ids": [
           "nova-5824954d297f5873"
         ],
+        "lat": 33.31112538776162,
+        "lon": 44.39060346048341,
         "business_type": "supermarket",
         "owner": "Sajjad al-Saadi"
       }
@@ -1884,6 +1930,8 @@
         "related_ids": [
           "nova-563ab5bed95548c3"
         ],
+        "lat": 33.311475071934495,
+        "lon": 44.419051406982554,
         "work_type": "street lighting",
         "status": "open"
       }
@@ -1918,6 +1966,8 @@
           "roberto-4be5b0de-912b-1514-f4db-ab3a6610a38e",
           "namroud-9109aac1-d41f-2bcf-5117-7d922a40a5d5"
         ],
+        "lat": 33.294755821986435,
+        "lon": 44.40056164195173,
         "source_count": 3,
         "member_count": 7,
         "sources": [
@@ -2069,8 +2119,10 @@
         "value": 3800.0,
         "unit": "m\u00b2",
         "confidence": 0.8417,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29419104484659,
+        "lon": 44.3984539490483,
         "delta_ndvi": -0.2381,
         "delta_ndbi": 0.1813,
         "delta_brightness": 326.33,
@@ -2173,8 +2225,10 @@
         "value": 1400.0,
         "unit": "m\u00b2",
         "confidence": 0.8414,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31214369162373,
+        "lon": 44.40911890009706,
         "delta_ndvi": -0.3774,
         "delta_ndbi": 0.1811,
         "delta_brightness": 558.33,
@@ -2203,6 +2257,8 @@
         "confidence": 0.84,
         "timestamp": "2026-06-06T14:57:00+00:00",
         "related_ids": [],
+        "lat": 33.29275193767864,
+        "lon": 44.39017560278741,
         "surveyor": "Hassan al-Obeidi"
       }
     },
@@ -2230,6 +2286,8 @@
         "related_ids": [
           "nova-882d00726b468ebf"
         ],
+        "lat": 33.29417065726661,
+        "lon": 44.40027872773587,
         "business_type": "money exchange",
         "owner": "Omar al-Tamimi"
       }
@@ -2256,6 +2314,8 @@
         "confidence": 0.84,
         "timestamp": "2026-05-27T05:08:00+00:00",
         "related_ids": [],
+        "lat": 33.30135353663822,
+        "lon": 44.409254442189,
         "work_type": "street lighting",
         "status": "open"
       }
@@ -2282,6 +2342,8 @@
         "confidence": 0.84,
         "timestamp": "2026-05-14T14:21:00+00:00",
         "related_ids": [],
+        "lat": 33.304029818563805,
+        "lon": 44.429316303207365,
         "authority": "National Investment Commission"
       }
     },
@@ -2307,6 +2369,8 @@
         "confidence": 0.83,
         "timestamp": "2026-06-13T00:19:00+00:00",
         "related_ids": [],
+        "lat": 33.31153337538881,
+        "lon": 44.42124945622715,
         "business_type": "supermarket",
         "owner": "Ahmed al-Dulaimi"
       }
@@ -2367,8 +2431,10 @@
         "value": 1300.0,
         "unit": "m\u00b2",
         "confidence": 0.8283,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29262869716355,
+        "lon": 44.400503131444005,
         "delta_ndvi": -0.2739,
         "delta_ndbi": 0.1712,
         "delta_brightness": 328.0,
@@ -2447,8 +2513,10 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.8267,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.311729826349406,
+        "lon": 44.42443901567379,
         "delta_ndvi": -0.317,
         "delta_ndbi": 0.17,
         "delta_brightness": 466.67,
@@ -2479,6 +2547,8 @@
         "related_ids": [
           "nova-3ec26516ab7bbf84"
         ],
+        "lat": 33.31785818439152,
+        "lon": 44.41488292180481,
         "surveyor": "Sara al-Baghdadi"
       }
     },
@@ -2510,6 +2580,8 @@
           "namroud-8810b35c-6456-61f8-bf93-169b8468b953",
           "peter-49b3cbc5-af8e-df06-d9e6-9ed5cdfd81d7"
         ],
+        "lat": 33.301966326813385,
+        "lon": 44.41813752643431,
         "source_count": 3,
         "member_count": 5,
         "sources": [
@@ -2645,8 +2717,10 @@
         "value": 1900.0,
         "unit": "m\u00b2",
         "confidence": 0.8079,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28797150143479,
+        "lon": 44.4027472524445,
         "delta_ndvi": -0.2568,
         "delta_ndbi": 0.1559,
         "delta_brightness": 786.0,
@@ -2717,8 +2791,10 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.32010566989849,
+        "lon": 44.41181757675181,
         "delta_ndvi": -0.4997,
         "delta_ndbi": 0.3057,
         "delta_brightness": 836.0,
@@ -2861,8 +2937,10 @@
         "value": 6300.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.311770198728496,
+        "lon": 44.41703764816244,
         "delta_ndvi": -0.6249,
         "delta_ndbi": 0.3485,
         "delta_brightness": 1100.67,
@@ -2933,8 +3011,10 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31116868392414,
+        "lon": 44.40990113643059,
         "delta_ndvi": -0.6025,
         "delta_ndbi": 0.6978,
         "delta_brightness": -54.33,
@@ -2989,8 +3069,10 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.30819125345657,
+        "lon": 44.38615595601696,
         "delta_ndvi": -0.4337,
         "delta_ndbi": 0.3089,
         "delta_brightness": 255.67,
@@ -3275,8 +3357,10 @@
         "value": 22400.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.30931343371402,
+        "lon": 44.418096251061264,
         "delta_ndvi": -0.7446,
         "delta_ndbi": 0.407,
         "delta_brightness": 698.0,
@@ -3347,8 +3431,10 @@
         "value": 3100.0,
         "unit": "m\u00b2",
         "confidence": 0.8,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28505925275626,
+        "lon": 44.42286884329439,
         "delta_ndvi": -0.71,
         "delta_ndbi": 0.4296,
         "delta_brightness": 1725.0,
@@ -3382,6 +3468,8 @@
           "roberto-d73c09a8-f2b1-10d1-bc7d-0fff8914c416",
           "peter-0b96f113-0e3d-38ea-1930-5e72a112cd8b"
         ],
+        "lat": 33.30944463414352,
+        "lon": 44.41866691947317,
         "source_count": 3,
         "member_count": 4,
         "sources": [
@@ -3424,6 +3512,8 @@
           "peter-5025c7bf-eca7-2ea2-fe90-c127943a41c7",
           "peter-60ac904e-b77d-a7ab-5b9d-10952a51cb08"
         ],
+        "lat": 33.29282149224302,
+        "lon": 44.39264237212665,
         "source_count": 3,
         "member_count": 4,
         "sources": [
@@ -3463,6 +3553,8 @@
         "related_ids": [
           "nova-1ada5651d5822835"
         ],
+        "lat": 33.30818268234181,
+        "lon": 44.39856773174567,
         "surveyor": "Ali al-Dulaimi"
       }
     },
@@ -3562,8 +3654,10 @@
         "value": 1500.0,
         "unit": "m\u00b2",
         "confidence": 0.7874,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28895262975369,
+        "lon": 44.40229289115732,
         "delta_ndvi": -0.2048,
         "delta_ndbi": 0.1405,
         "delta_brightness": 390.0,
@@ -3596,6 +3690,8 @@
           "roberto-946041a2-40f1-5805-35e3-b1533fae9ea2",
           "namroud-edea31ec-72c5-35a9-51ab-94feb877abf5"
         ],
+        "lat": 33.31686340620172,
+        "lon": 44.415340316271376,
         "source_count": 3,
         "member_count": 3,
         "sources": [
@@ -3637,6 +3733,8 @@
           "namroud-35976730-7c9f-f8b7-2801-18e394c6dee8",
           "peter-3e3896a6-4e94-5cb3-5119-778872dd22c6"
         ],
+        "lat": 33.29512656311228,
+        "lon": 44.40361576911587,
         "source_count": 3,
         "member_count": 3,
         "sources": [
@@ -3676,6 +3774,8 @@
         "related_ids": [
           "nova-ab9c41dfbbf3efec"
         ],
+        "lat": 33.30743187854209,
+        "lon": 44.39640964813489,
         "surveyor": "Ahmed al-Janabi"
       }
     },
@@ -3703,6 +3803,8 @@
         "related_ids": [
           "nova-826a988e49ec7ce2"
         ],
+        "lat": 33.2959629817823,
+        "lon": 44.40038636660468,
         "surveyor": "Ali al-Tamimi"
       }
     },
@@ -4070,8 +4172,10 @@
         "value": 11400.0,
         "unit": "m\u00b2",
         "confidence": 0.7782,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.295135201274896,
+        "lon": 44.40342954939679,
         "delta_ndvi": -0.2465,
         "delta_ndbi": 0.1336,
         "delta_brightness": 950.33,
@@ -4158,8 +4262,10 @@
         "value": 1100.0,
         "unit": "m\u00b2",
         "confidence": 0.7716,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.30478021677359,
+        "lon": 44.419789577989725,
         "delta_ndvi": -0.2144,
         "delta_ndbi": 0.1287,
         "delta_brightness": 875.67,
@@ -4190,6 +4296,8 @@
         "related_ids": [
           "nova-61967f29b5e345f8"
         ],
+        "lat": 33.309749059956,
+        "lon": 44.41840608323321,
         "surveyor": "Mustafa al-Karkhi"
       }
     },
@@ -4265,8 +4373,10 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.7691,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31802121986436,
+        "lon": 44.42414162037054,
         "delta_ndvi": -0.2443,
         "delta_ndbi": 0.1268,
         "delta_brightness": 3304.67,
@@ -4295,6 +4405,8 @@
         "confidence": 0.76,
         "timestamp": "2026-06-05T19:22:00+00:00",
         "related_ids": [],
+        "lat": 33.30697629501539,
+        "lon": 44.42880405849105,
         "surveyor": "Omar al-Saadi"
       }
     },
@@ -4320,6 +4432,8 @@
         "confidence": 0.76,
         "timestamp": "2026-06-07T17:49:00+00:00",
         "related_ids": [],
+        "lat": 33.29644371831193,
+        "lon": 44.4299110965391,
         "surveyor": "Ahmed al-Tamimi"
       }
     },
@@ -4345,6 +4459,8 @@
         "confidence": 0.76,
         "timestamp": "2026-06-13T09:05:00+00:00",
         "related_ids": [],
+        "lat": 33.28954620215074,
+        "lon": 44.424709782118676,
         "text_en": "Rents in Masbah are getting crazy, landlords asking double now",
         "text_ar": "\u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u0633\u0628\u062d \u0635\u0627\u0631\u062a \u062e\u064a\u0627\u0644\u064a\u0629\u060c \u0623\u0635\u062d\u0627\u0628 \u0627\u0644\u0645\u0644\u0643 \u064a\u0637\u0644\u0628\u0648\u0646 \u0627\u0644\u0636\u0639\u0641",
         "sentiment": -0.5,
@@ -4448,8 +4564,10 @@
         "value": 4800.0,
         "unit": "m\u00b2",
         "confidence": 0.7558,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.310676298237176,
+        "lon": 44.418606094446844,
         "delta_ndvi": -0.4575,
         "delta_ndbi": 0.2669,
         "delta_brightness": 655.67,
@@ -4478,6 +4596,8 @@
         "confidence": 0.75,
         "timestamp": "2026-06-08T18:08:00+00:00",
         "related_ids": [],
+        "lat": 33.30751825258171,
+        "lon": 44.38744178993815,
         "surveyor": "Omar al-Janabi"
       }
     },
@@ -4503,6 +4623,8 @@
         "confidence": 0.75,
         "timestamp": "2026-06-05T19:33:00+00:00",
         "related_ids": [],
+        "lat": 33.30878814800184,
+        "lon": 44.4053941954337,
         "surveyor": "Mustafa al-Baghdadi"
       }
     },
@@ -4535,6 +4657,8 @@
           "peter-396728d7-0296-2a15-671f-f39da25cf56f",
           "peter-d73544ec-7493-5472-b844-de6e9fafc3ae"
         ],
+        "lat": 33.31235594478202,
+        "lon": 44.40930941053364,
         "source_count": 2,
         "member_count": 6,
         "sources": [
@@ -4700,8 +4824,10 @@
         "value": 7400.0,
         "unit": "m\u00b2",
         "confidence": 0.7441,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31857058386017,
+        "lon": 44.41398720901448,
         "delta_ndvi": -0.3992,
         "delta_ndbi": 0.258,
         "delta_brightness": 792.0,
@@ -4826,8 +4952,10 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 0.7426,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.30783393602617,
+        "lon": 44.39736007232569,
         "delta_ndvi": -0.5057,
         "delta_ndbi": 0.1069,
         "delta_brightness": 2023.0,
@@ -4922,8 +5050,10 @@
         "value": 1400.0,
         "unit": "m\u00b2",
         "confidence": 0.7409,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.313918978370786,
+        "lon": 44.40986659315661,
         "delta_ndvi": -0.5393,
         "delta_ndbi": 0.2557,
         "delta_brightness": 488.67,
@@ -4952,6 +5082,8 @@
         "confidence": 0.74,
         "timestamp": "2026-06-16T02:22:00+00:00",
         "related_ids": [],
+        "lat": 33.29819490419451,
+        "lon": 44.38685789211356,
         "surveyor": "Haider al-Obeidi"
       }
     },
@@ -4977,6 +5109,8 @@
         "confidence": 0.74,
         "timestamp": "2026-06-12T08:06:00+00:00",
         "related_ids": [],
+        "lat": 33.31043827586146,
+        "lon": 44.395735288156665,
         "surveyor": "Sajjad al-Saadi"
       }
     },
@@ -5004,6 +5138,8 @@
         "related_ids": [
           "nova-890163ec392f9335"
         ],
+        "lat": 33.30461034698057,
+        "lon": 44.42035573526969,
         "text_en": "Love the new caf\u00e9s popping up around Kahramana, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0643\u0647\u0631\u0645\u0627\u0646\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -5033,6 +5169,8 @@
         "confidence": 0.74,
         "timestamp": "2026-06-15T11:27:00+00:00",
         "related_ids": [],
+        "lat": 33.29253330257635,
+        "lon": 44.3925987275877,
         "text_en": "Traffic on Arasat Street is unbearable since the new building works started",
         "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0639\u0631\u0635\u0627\u062a \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
         "sentiment": -0.6,
@@ -5068,6 +5206,8 @@
           "peter-cdbfe93d-f03e-1a76-39a2-2af703e99d4b",
           "peter-0929846e-0365-e4ed-8ee2-b547c819546f"
         ],
+        "lat": 33.29254881630595,
+        "lon": 44.40078784470899,
         "source_count": 2,
         "member_count": 5,
         "sources": [
@@ -5161,8 +5301,10 @@
         "value": 2100.0,
         "unit": "m\u00b2",
         "confidence": 0.7332,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31543414957522,
+        "lon": 44.40830120875249,
         "delta_ndvi": -0.1648,
         "delta_ndbi": 0.1131,
         "delta_brightness": 324.0,
@@ -5287,8 +5429,10 @@
         "value": 1800.0,
         "unit": "m\u00b2",
         "confidence": 0.7321,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29367913074776,
+        "lon": 44.38668960468531,
         "delta_ndvi": -0.5957,
         "delta_ndbi": 0.249,
         "delta_brightness": 597.67,
@@ -5319,6 +5463,8 @@
         "related_ids": [
           "nova-893e88e456d471d2"
         ],
+        "lat": 33.28709153681715,
+        "lon": 44.402844742262076,
         "surveyor": "Sajjad al-Dulaimi"
       }
     },
@@ -5346,6 +5492,8 @@
         "related_ids": [
           "nova-7cbaa65e21cb0e39"
         ],
+        "lat": 33.29298382692182,
+        "lon": 44.40111693069465,
         "text_en": "Heard a big new tower is coming to Karrada Dakhil, anyone know the developer?",
         "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
         "sentiment": 0.2,
@@ -5463,8 +5611,10 @@
         "value": 2700.0,
         "unit": "m\u00b2",
         "confidence": 0.7212,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.306478341328834,
+        "lon": 44.38558153139785,
         "delta_ndvi": -0.1108,
         "delta_ndbi": 0.1244,
         "delta_brightness": 21.0,
@@ -5493,6 +5643,8 @@
         "confidence": 0.72,
         "timestamp": "2026-06-13T07:16:00+00:00",
         "related_ids": [],
+        "lat": 33.30233269069418,
+        "lon": 44.38879301413535,
         "surveyor": "Ali al-Saadi"
       }
     },
@@ -5518,6 +5670,8 @@
         "confidence": 0.72,
         "timestamp": "2026-06-07T16:16:00+00:00",
         "related_ids": [],
+        "lat": 33.28838644461472,
+        "lon": 44.39911510342942,
         "surveyor": "Ali al-Baghdadi"
       }
     },
@@ -5548,6 +5702,8 @@
           "nova-563ab5bed95548c3",
           "namroud-08636d7c-03d9-4677-9cb3-f3f23c5e7f6d"
         ],
+        "lat": 33.311501914749726,
+        "lon": 44.41828951299655,
         "source_count": 2,
         "member_count": 4,
         "sources": [
@@ -5649,8 +5805,10 @@
         "value": 1800.0,
         "unit": "m\u00b2",
         "confidence": 0.7198,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.287338415898446,
+        "lon": 44.39243784562809,
         "delta_ndvi": -0.1661,
         "delta_ndbi": 0.2526,
         "delta_brightness": -237.0,
@@ -5761,8 +5919,10 @@
         "value": 4100.0,
         "unit": "m\u00b2",
         "confidence": 0.7149,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29283585669383,
+        "lon": 44.39322054036854,
         "delta_ndvi": -0.4593,
         "delta_ndbi": 0.2362,
         "delta_brightness": 995.0,
@@ -5791,6 +5951,8 @@
         "confidence": 0.71,
         "timestamp": "2026-06-17T03:07:00+00:00",
         "related_ids": [],
+        "lat": 33.29071282767834,
+        "lon": 44.416164026860834,
         "text_en": "Heard a big new tower is coming to Masbah, anyone know the developer?",
         "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
         "sentiment": 0.2,
@@ -5990,8 +6152,10 @@
         "value": 6400.0,
         "unit": "m\u00b2",
         "confidence": 0.7084,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.30223671416745,
+        "lon": 44.417700409157256,
         "delta_ndvi": -0.3979,
         "delta_ndbi": 0.2313,
         "delta_brightness": 61.67,
@@ -6024,6 +6188,8 @@
           "nova-1ada5651d5822835",
           "roberto-666460a8-c613-932a-6df5-ece2f325311b"
         ],
+        "lat": 33.30762660596476,
+        "lon": 44.396444320730545,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6063,6 +6229,8 @@
           "namroud-8a2435cb-3229-4c22-5669-0e1420cde0c4",
           "namroud-4b77870d-691c-e7fe-da3e-b10eedf1b641"
         ],
+        "lat": 33.28707070722502,
+        "lon": 44.401376396975785,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6102,6 +6270,8 @@
           "nova-1844e849837129d5",
           "roberto-b0046a8a-e285-e6d6-9a5d-58b7a538b6e1"
         ],
+        "lat": 33.286135357557505,
+        "lon": 44.40354087607392,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6141,6 +6311,8 @@
           "nova-b5284e61c7451b16",
           "namroud-ebe75e3f-866d-4268-6893-45ad0554c196"
         ],
+        "lat": 33.31969024483174,
+        "lon": 44.412428303585635,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6180,6 +6352,8 @@
           "nova-abb95f3f3427dd5a",
           "roberto-57702fe2-7d41-7f72-9371-5819efb6acc1"
         ],
+        "lat": 33.307395949122366,
+        "lon": 44.38639309245099,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6219,6 +6393,8 @@
           "nova-f57338735a8b7e90",
           "roberto-48438dac-d5e2-d68b-3813-138667d32eff"
         ],
+        "lat": 33.29845144135046,
+        "lon": 44.414861185058044,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6258,6 +6434,8 @@
           "nova-a616bb061116fdf9",
           "peter-a13b6886-b74e-dead-14e9-1110b560a774"
         ],
+        "lat": 33.295212779754195,
+        "lon": 44.39732151060209,
         "source_count": 2,
         "member_count": 3,
         "sources": [
@@ -6495,8 +6673,10 @@
         "value": 5400.0,
         "unit": "m\u00b2",
         "confidence": 0.7045,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.297976816779055,
+        "lon": 44.41473488917635,
         "delta_ndvi": -0.3482,
         "delta_ndbi": 0.2284,
         "delta_brightness": 1299.33,
@@ -6525,6 +6705,8 @@
         "confidence": 0.7,
         "timestamp": "2026-06-09T19:31:00+00:00",
         "related_ids": [],
+        "lat": 33.29033256324291,
+        "lon": 44.39288082235808,
         "text_en": "Construction everywhere in Kahramana these days, so much dust and noise",
         "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0643\u0647\u0631\u0645\u0627\u0646\u0629 \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
         "sentiment": -0.4,
@@ -6554,6 +6736,8 @@
         "confidence": 0.7,
         "timestamp": "2026-06-09T22:50:00+00:00",
         "related_ids": [],
+        "lat": 33.29794025037722,
+        "lon": 44.399089660181495,
         "text_en": "Love the new caf\u00e9s popping up around Arasat al-Hindiya, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0639\u0631\u0635\u0627\u062a \u0627\u0644\u0647\u0646\u062f\u064a\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -6585,6 +6769,8 @@
         "related_ids": [
           "nova-cfab8a773951feee"
         ],
+        "lat": 33.29418544391551,
+        "lon": 44.40056978029516,
         "surveyor": "Noor al-Karkhi"
       }
     },
@@ -6612,6 +6798,8 @@
         "related_ids": [
           "nova-65cec4b45045cd2d"
         ],
+        "lat": 33.312943511272955,
+        "lon": 44.40918214668524,
         "text_en": "Traffic on Al-Sadoun Street is unbearable since the new building works started",
         "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0627\u0644\u0633\u0639\u062f\u0648\u0646 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
         "sentiment": -0.6,
@@ -6683,8 +6871,10 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.6772,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29881032765426,
+        "lon": 44.41601704357976,
         "delta_ndvi": -0.2384,
         "delta_ndbi": 0.2079,
         "delta_brightness": 751.67,
@@ -6713,6 +6903,8 @@
         "confidence": 0.67,
         "timestamp": "2026-06-07T00:00:00+00:00",
         "related_ids": [],
+        "lat": 33.31569064372167,
+        "lon": 44.387888703793784,
         "hashtag_en": "#KarradaDevelopment",
         "hashtag_ar": "#\u062a\u0637\u0648\u064a\u0631_\u0627\u0644\u0643\u0631\u0627\u062f\u0629"
       }
@@ -6765,8 +6957,10 @@
         "value": 1100.0,
         "unit": "m\u00b2",
         "confidence": 0.6684,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31111917086348,
+        "lon": 44.38744210983029,
         "delta_ndvi": -0.22,
         "delta_ndbi": 0.2013,
         "delta_brightness": -43.0,
@@ -6797,6 +6991,8 @@
         "related_ids": [
           "nova-92c2b73b7d4ae80f"
         ],
+        "lat": 33.29856717961807,
+        "lon": 44.41383162241804,
         "surveyor": "Zainab al-Baghdadi"
       }
     },
@@ -6824,6 +7020,8 @@
         "related_ids": [
           "nova-3ebe43228414b9b9"
         ],
+        "lat": 33.29569187959578,
+        "lon": 44.39274036151725,
         "text_en": "Heard a big new tower is coming to Karrada Maryam, anyone know the developer?",
         "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
         "sentiment": 0.2,
@@ -6911,8 +7109,10 @@
         "value": 3900.0,
         "unit": "m\u00b2",
         "confidence": 0.6582,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28522173418786,
+        "lon": 44.40403716039535,
         "delta_ndvi": -0.2965,
         "delta_ndbi": 0.1936,
         "delta_brightness": 681.33,
@@ -7047,8 +7247,10 @@
         "value": 2300.0,
         "unit": "m\u00b2",
         "confidence": 0.6539,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.301236017364346,
+        "lon": 44.413386551850934,
         "delta_ndvi": -0.4329,
         "delta_ndbi": 0.1904,
         "delta_brightness": 184.67,
@@ -7077,6 +7279,8 @@
         "confidence": 0.65,
         "timestamp": "2026-06-07T06:21:00+00:00",
         "related_ids": [],
+        "lat": 33.31153783771329,
+        "lon": 44.42891325701967,
         "text_en": "Traffic on 52nd Street is unbearable since the new building works started",
         "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0665\u0662 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
         "sentiment": -0.6,
@@ -7156,8 +7360,10 @@
         "value": 1200.0,
         "unit": "m\u00b2",
         "confidence": 0.6468,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29304445178907,
+        "lon": 44.400390820234605,
         "delta_ndvi": -0.3891,
         "delta_ndbi": 0.1851,
         "delta_brightness": 603.0,
@@ -7220,8 +7426,10 @@
         "value": 1000.0,
         "unit": "m\u00b2",
         "confidence": 0.6465,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29563882368387,
+        "lon": 44.40722017569437,
         "delta_ndvi": -0.4401,
         "delta_ndbi": 0.1849,
         "delta_brightness": 869.67,
@@ -7380,8 +7588,10 @@
         "value": 7100.0,
         "unit": "m\u00b2",
         "confidence": 0.6405,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29395397192645,
+        "lon": 44.400901572157046,
         "delta_ndvi": -0.0704,
         "delta_ndbi": 0.079,
         "delta_brightness": 185.0,
@@ -7508,8 +7718,10 @@
         "value": 2900.0,
         "unit": "m\u00b2",
         "confidence": 0.64,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.308731691961505,
+        "lon": 44.41985735993502,
         "delta_ndvi": -0.352,
         "delta_ndbi": 0.18,
         "delta_brightness": 922.0,
@@ -7540,6 +7752,8 @@
         "related_ids": [
           "nova-73d3098ca3b79150"
         ],
+        "lat": 33.31603208132669,
+        "lon": 44.40835161313056,
         "surveyor": "Ahmed al-Saadi"
       }
     },
@@ -7565,6 +7779,8 @@
         "confidence": 0.63,
         "timestamp": "2026-06-12T05:18:00+00:00",
         "related_ids": [],
+        "lat": 33.29958240956684,
+        "lon": 44.40537661142276,
         "text_en": "Construction everywhere in Karrada Kharij these days, so much dust and noise",
         "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
         "sentiment": -0.4,
@@ -7636,8 +7852,10 @@
         "value": 1700.0,
         "unit": "m\u00b2",
         "confidence": 0.6283,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31113556280273,
+        "lon": 44.39028443405557,
         "delta_ndvi": -0.3485,
         "delta_ndbi": 0.1712,
         "delta_brightness": 460.0,
@@ -7788,8 +8006,10 @@
         "value": 1800.0,
         "unit": "m\u00b2",
         "confidence": 0.6211,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29986182006603,
+        "lon": 44.41244280444464,
         "delta_ndvi": -0.3036,
         "delta_ndbi": 0.1658,
         "delta_brightness": 22.0,
@@ -7820,6 +8040,8 @@
         "related_ids": [
           "nova-7cbaa65e21cb0e39"
         ],
+        "lat": 33.292107404005534,
+        "lon": 44.40140508196816,
         "text_en": "Rents in Karrada Maryam are getting crazy, landlords asking double now",
         "text_ar": "\u0625\u064a\u062c\u0627\u0631\u0627\u062a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645 \u0635\u0627\u0631\u062a \u062e\u064a\u0627\u0644\u064a\u0629\u060c \u0623\u0635\u062d\u0627\u0628 \u0627\u0644\u0645\u0644\u0643 \u064a\u0637\u0644\u0628\u0648\u0646 \u0627\u0644\u0636\u0639\u0641",
         "sentiment": -0.5,
@@ -7851,6 +8073,8 @@
         "related_ids": [
           "nova-3e9fb4e076adefb0"
         ],
+        "lat": 33.3083426211145,
+        "lon": 44.420328719619796,
         "text_en": "Heard a big new tower is coming to Kahramana, anyone know the developer?",
         "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0643\u0647\u0631\u0645\u0627\u0646\u0629\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
         "sentiment": 0.2,
@@ -7882,6 +8106,8 @@
         "related_ids": [
           "nova-826a988e49ec7ce2"
         ],
+        "lat": 33.29588392386043,
+        "lon": 44.40140250314175,
         "surveyor": "Maryam al-Obeidi"
       }
     },
@@ -7909,6 +8135,8 @@
         "related_ids": [
           "nova-7cbaa65e21cb0e39"
         ],
+        "lat": 33.29197970164977,
+        "lon": 44.400523259203496,
         "text_en": "Love the new caf\u00e9s popping up around Al-Wahda, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0648\u062d\u062f\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -7988,8 +8216,10 @@
         "value": 1300.0,
         "unit": "m\u00b2",
         "confidence": 0.5966,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.307518250672544,
+        "lon": 44.3905268809767,
         "delta_ndvi": -0.2089,
         "delta_ndbi": 0.1475,
         "delta_brightness": -9.0,
@@ -8434,8 +8664,10 @@
         "value": 12000.0,
         "unit": "m\u00b2",
         "confidence": 0.5823,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31208609009873,
+        "lon": 44.41846290239436,
         "delta_ndvi": -0.1238,
         "delta_ndbi": 0.1653,
         "delta_brightness": 78.67,
@@ -8546,8 +8778,10 @@
         "value": 2000.0,
         "unit": "m\u00b2",
         "confidence": 0.581,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29647844749455,
+        "lon": 44.39336442272667,
         "delta_ndvi": -0.3616,
         "delta_ndbi": 0.1357,
         "delta_brightness": 260.33,
@@ -8578,6 +8812,8 @@
         "related_ids": [
           "nova-0ec55d591af5cb27"
         ],
+        "lat": 33.29317158568885,
+        "lon": 44.39276692929499,
         "text_en": "Construction everywhere in Karrada Maryam these days, so much dust and noise",
         "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645 \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
         "sentiment": -0.4,
@@ -8607,6 +8843,8 @@
         "confidence": 0.58,
         "timestamp": "2026-06-15T09:58:00+00:00",
         "related_ids": [],
+        "lat": 33.30323355143988,
+        "lon": 44.427617733564965,
         "text_en": "Love the new caf\u00e9s popping up around Masbah, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -8636,6 +8874,8 @@
         "confidence": 0.58,
         "timestamp": "2026-06-08T23:34:00+00:00",
         "related_ids": [],
+        "lat": 33.31951252663651,
+        "lon": 44.38790759700871,
         "text_en": "New money exchange just opened in Masbah, the area is really changing \ud83d\udc40",
         "text_ar": "\u0627\u0641\u062a\u062a\u062d \u0645\u0643\u062a\u0628 \u0635\u0631\u0627\u0641\u0629 \u062c\u062f\u064a\u062f \u0641\u064a \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0627\u0644\u0645\u0646\u0637\u0642\u0629 \u062a\u062a\u063a\u064a\u0631 \u0628\u0633\u0631\u0639\u0629 \ud83d\udc40",
         "sentiment": 0.6,
@@ -8665,6 +8905,8 @@
         "confidence": 0.58,
         "timestamp": "2026-06-11T12:36:00+00:00",
         "related_ids": [],
+        "lat": 33.31305810567724,
+        "lon": 44.399619005516364,
         "hashtag_en": "#BaghdadRealEstate",
         "hashtag_ar": "#\u0639\u0642\u0627\u0631\u0627\u062a_\u0628\u063a\u062f\u0627\u062f"
       }
@@ -8765,8 +9007,10 @@
         "value": 1500.0,
         "unit": "m\u00b2",
         "confidence": 0.5663,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.30269647547138,
+        "lon": 44.41828981086313,
         "delta_ndvi": -0.2184,
         "delta_ndbi": 0.1247,
         "delta_brightness": 414.0,
@@ -8821,8 +9065,10 @@
         "value": 1100.0,
         "unit": "m\u00b2",
         "confidence": 0.5657,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.29411489871779,
+        "lon": 44.39961946710266,
         "delta_ndvi": -0.4297,
         "delta_ndbi": 0.1242,
         "delta_brightness": 828.33,
@@ -8851,6 +9097,8 @@
         "confidence": 0.56,
         "timestamp": "2026-06-15T10:17:00+00:00",
         "related_ids": [],
+        "lat": 33.31119525915662,
+        "lon": 44.40826050033652,
         "text_en": "Heard a big new tower is coming to Karrada Maryam, anyone know the developer?",
         "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0643\u0631\u0627\u062f\u0629 \u0645\u0631\u064a\u0645\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
         "sentiment": 0.2,
@@ -8880,6 +9128,8 @@
         "confidence": 0.55,
         "timestamp": "2026-06-10T09:57:00+00:00",
         "related_ids": [],
+        "lat": 33.30114028011542,
+        "lon": 44.41728449153083,
         "hashtag_en": "#KarradaDevelopment",
         "hashtag_ar": "#\u062a\u0637\u0648\u064a\u0631_\u0627\u0644\u0643\u0631\u0627\u062f\u0629"
       }
@@ -8972,8 +9222,10 @@
         "value": 2400.0,
         "unit": "m\u00b2",
         "confidence": 0.5354,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.31952229490632,
+        "lon": 44.41322710191438,
         "delta_ndvi": -0.2372,
         "delta_ndbi": 0.1016,
         "delta_brightness": 376.67,
@@ -9002,6 +9254,8 @@
         "confidence": 0.51,
         "timestamp": "2026-06-16T05:38:00+00:00",
         "related_ids": [],
+        "lat": 33.29486580056355,
+        "lon": 44.39711033439505,
         "text_en": "Traffic on Al-Sadoun Street is unbearable since the new building works started",
         "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0627\u0644\u0633\u0639\u062f\u0648\u0646 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
         "sentiment": -0.6,
@@ -9031,6 +9285,8 @@
         "confidence": 0.5,
         "timestamp": "2026-06-09T23:05:00+00:00",
         "related_ids": [],
+        "lat": 33.314342729712926,
+        "lon": 44.38984657524839,
         "text_en": "Heard a big new tower is coming to Masbah, anyone know the developer?",
         "text_ar": "\u0633\u0645\u0639\u062a \u0628\u0631\u062c \u062c\u062f\u064a\u062f \u0643\u0628\u064a\u0631 \u0631\u0627\u062d \u064a\u0646\u0628\u0646\u064a \u0641\u064a \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0623\u062d\u062f \u064a\u0639\u0631\u0641 \u0627\u0644\u0645\u0637\u0648\u0631\u061f",
         "sentiment": 0.2,
@@ -9134,8 +9390,10 @@
         "value": 2100.0,
         "unit": "m\u00b2",
         "confidence": 0.4949,
-        "timestamp": "2026-06-18T13:55:50.453650+00:00",
+        "timestamp": "2026-06-18T13:56:29.427226+00:00",
         "related_ids": [],
+        "lat": 33.28734324581429,
+        "lon": 44.420892479766366,
         "delta_ndvi": -0.4442,
         "delta_ndbi": 0.0712,
         "delta_brightness": 1338.33,
@@ -9164,6 +9422,8 @@
         "confidence": 0.48,
         "timestamp": "2026-06-09T16:01:00+00:00",
         "related_ids": [],
+        "lat": 33.30672707813129,
+        "lon": 44.41724712148346,
         "hashtag_en": "#ArasatNights",
         "hashtag_ar": "#\u0644\u064a\u0627\u0644\u064a_\u0639\u0631\u0635\u0627\u062a"
       }
@@ -9190,6 +9450,8 @@
         "confidence": 0.48,
         "timestamp": "2026-06-08T09:53:00+00:00",
         "related_ids": [],
+        "lat": 33.3062223324286,
+        "lon": 44.39283277281749,
         "text_en": "Love the new caf\u00e9s popping up around Karrada Dakhil, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062f\u0627\u062e\u0644\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -9221,6 +9483,8 @@
         "related_ids": [
           "nova-61967f29b5e345f8"
         ],
+        "lat": 33.30998435094255,
+        "lon": 44.41830798366317,
         "text_en": "Love the new caf\u00e9s popping up around Kahramana, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0643\u0647\u0631\u0645\u0627\u0646\u0629\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -9250,6 +9514,8 @@
         "confidence": 0.47,
         "timestamp": "2026-06-11T00:12:00+00:00",
         "related_ids": [],
+        "lat": 33.290971155962524,
+        "lon": 44.41338584050578,
         "text_en": "Construction everywhere in Karrada Kharij these days, so much dust and noise",
         "text_ar": "\u0625\u0646\u0634\u0627\u0621\u0627\u062a \u0641\u064a \u0643\u0644 \u0645\u0643\u0627\u0646 \u0641\u064a \u0627\u0644\u0643\u0631\u0627\u062f\u0629 \u062e\u0627\u0631\u062c \u0647\u0627\u064a \u0627\u0644\u0623\u064a\u0627\u0645\u060c \u063a\u0628\u0627\u0631 \u0648\u0636\u062c\u064a\u062c",
         "sentiment": -0.4,
@@ -9279,6 +9545,8 @@
         "confidence": 0.46,
         "timestamp": "2026-06-14T20:02:00+00:00",
         "related_ids": [],
+        "lat": 33.29527824896701,
+        "lon": 44.40427407199787,
         "text_en": "Traffic on Al-Nidhal Street is unbearable since the new building works started",
         "text_ar": "\u0627\u0644\u0632\u062d\u0627\u0645 \u0641\u064a \u0634\u0627\u0631\u0639 \u0627\u0644\u0646\u0636\u0627\u0644 \u0644\u0627 \u064a\u0637\u0627\u0642 \u0645\u0646 \u0628\u062f\u062a \u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0628\u0646\u0627\u0621 \u0627\u0644\u062c\u062f\u064a\u062f\u0629",
         "sentiment": -0.6,
@@ -9310,6 +9578,8 @@
         "related_ids": [
           "nova-65cec4b45045cd2d"
         ],
+        "lat": 33.3127655443439,
+        "lon": 44.409527186495815,
         "text_en": "Love the new caf\u00e9s popping up around Masbah, great vibe lately",
         "text_ar": "\u0623\u062d\u0628 \u0627\u0644\u0645\u0642\u0627\u0647\u064a \u0627\u0644\u062c\u062f\u064a\u062f\u0629 \u062d\u0648\u0644 \u0627\u0644\u0645\u0633\u0628\u062d\u060c \u0627\u0644\u0623\u062c\u0648\u0627\u0621 \u062d\u0644\u0648\u0629 \u0645\u0624\u062e\u0631\u0627\u064b",
         "sentiment": 0.7,
@@ -9339,6 +9609,8 @@
         "confidence": 0.45,
         "timestamp": "2026-06-07T10:17:00+00:00",
         "related_ids": [],
+        "lat": 33.30265319309394,
+        "lon": 44.39805595002908,
         "hashtag_en": "#KarradaTraffic",
         "hashtag_ar": "#\u0632\u062d\u0627\u0645_\u0627\u0644\u0643\u0631\u0627\u062f\u0629"
       }

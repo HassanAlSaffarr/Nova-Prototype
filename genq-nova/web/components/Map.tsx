@@ -67,7 +67,11 @@ export default function Map() {
   const activeAgents = useStore((s) => s.activeAgents);
   const selectedId = useStore((s) => s.selectedId);
   const select = useStore((s) => s.select);
+  const setFlyToFn = useStore((s) => s.setFlyToFn);
   const loadAll = useStore((s) => s.loadAll);
+
+  // Guards against an empty-map click deselecting right after a feature click.
+  const featureClickRef = useRef(0);
 
   useEffect(() => {
     loadAll();
@@ -76,6 +80,24 @@ export default function Map() {
       .then(setIraq)
       .catch(() => {});
   }, [loadAll]);
+
+  useEffect(() => {
+    setFlyToFn((lon, lat) =>
+      mapRef.current?.flyTo({
+        center: [lon, lat],
+        zoom: 15.5,
+        duration: 1500,
+        essential: true,
+      }),
+    );
+  }, [setFlyToFn]);
+
+  const handlePick = (info: { object?: Feature }) => {
+    if (info.object) {
+      featureClickRef.current = Date.now();
+      select(info.object.properties.id);
+    }
+  };
 
   const flyTo = (target: "karrada" | "iraq") => {
     const map = mapRef.current;
@@ -133,8 +155,7 @@ export default function Map() {
         getLineWidth: 2,
         lineWidthMinPixels: 1.5,
         pickable: true,
-        onClick: (info: { object?: Feature }) =>
-          info.object && select(info.object.properties.id),
+        onClick: handlePick,
         updateTriggers: { getFillColor: [selectedId] },
       }),
     new ScatterplotLayer({
@@ -152,8 +173,7 @@ export default function Map() {
       getLineColor: [10, 14, 26, 255],
       lineWidthMinPixels: 1,
       pickable: true,
-      onClick: (info: { object?: Feature }) =>
-        info.object && select(info.object.properties.id),
+      onClick: handlePick,
       updateTriggers: { getRadius: [selectedId] },
     }),
   ].filter(Boolean);
@@ -166,6 +186,10 @@ export default function Map() {
         mapStyle={CARTO_DARK}
         style={{ width: "100%", height: "100%" }}
         attributionControl={{ compact: true }}
+        onClick={() => {
+          // Empty-map click (not a feature) closes the panel.
+          if (Date.now() - featureClickRef.current > 150) select(null);
+        }}
       >
         <DeckOverlay layers={layers} />
       </MapGL>

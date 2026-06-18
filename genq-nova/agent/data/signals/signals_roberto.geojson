@@ -23,6 +23,8 @@
         "confidence": 0.89,
         "timestamp": "2026-06-04T01:01:00+00:00",
         "related_ids": [],
+        "lat": 33.30362215458023,
+        "lon": 44.413733447273984,
         "surveyor": "Hassan al-Dulaimi"
       }
     },
@@ -48,6 +50,8 @@
         "confidence": 0.87,
         "timestamp": "2026-05-29T11:51:00+00:00",
         "related_ids": [],
+        "lat": 33.294909675887986,
+        "lon": 44.426967867982846,
         "surveyor": "Maryam al-Dulaimi"
       }
     },
@@ -73,6 +77,8 @@
         "confidence": 0.85,
         "timestamp": "2026-06-09T22:07:00+00:00",
         "related_ids": [],
+        "lat": 33.29578780219437,
+        "lon": 44.418613629368835,
         "surveyor": "Haider al-Janabi"
       }
     },
@@ -98,6 +104,8 @@
         "confidence": 0.84,
         "timestamp": "2026-06-06T14:57:00+00:00",
         "related_ids": [],
+        "lat": 33.29275193767864,
+        "lon": 44.39017560278741,
         "surveyor": "Hassan al-Obeidi"
       }
     },
@@ -125,6 +133,8 @@
         "related_ids": [
           "nova-3ec26516ab7bbf84"
         ],
+        "lat": 33.31785818439152,
+        "lon": 44.41488292180481,
         "surveyor": "Sara al-Baghdadi"
       }
     },
@@ -152,6 +162,8 @@
         "related_ids": [
           "nova-1ada5651d5822835"
         ],
+        "lat": 33.30818268234181,
+        "lon": 44.39856773174567,
         "surveyor": "Ali al-Dulaimi"
       }
     },
@@ -179,6 +191,8 @@
         "related_ids": [
           "nova-ab9c41dfbbf3efec"
         ],
+        "lat": 33.30743187854209,
+        "lon": 44.39640964813489,
         "surveyor": "Ahmed al-Janabi"
       }
     },
@@ -206,6 +220,8 @@
         "related_ids": [
           "nova-826a988e49ec7ce2"
         ],
+        "lat": 33.2959629817823,
+        "lon": 44.40038636660468,
         "surveyor": "Ali al-Tamimi"
       }
     },
@@ -233,6 +249,8 @@
         "related_ids": [
           "nova-61967f29b5e345f8"
         ],
+        "lat": 33.309749059956,
+        "lon": 44.41840608323321,
         "surveyor": "Mustafa al-Karkhi"
       }
     },
@@ -258,6 +276,8 @@
         "confidence": 0.76,
         "timestamp": "2026-06-05T19:22:00+00:00",
         "related_ids": [],
+        "lat": 33.30697629501539,
+        "lon": 44.42880405849105,
         "surveyor": "Omar al-Saadi"
       }
     },
@@ -283,6 +303,8 @@
         "confidence": 0.76,
         "timestamp": "2026-06-07T17:49:00+00:00",
         "related_ids": [],
+        "lat": 33.29644371831193,
+        "lon": 44.4299110965391,
         "surveyor": "Ahmed al-Tamimi"
       }
     },
@@ -308,6 +330,8 @@
         "confidence": 0.75,
         "timestamp": "2026-06-08T18:08:00+00:00",
         "related_ids": [],
+        "lat": 33.30751825258171,
+        "lon": 44.38744178993815,
         "surveyor": "Omar al-Janabi"
       }
     },
@@ -333,6 +357,8 @@
         "confidence": 0.75,
         "timestamp": "2026-06-05T19:33:00+00:00",
         "related_ids": [],
+        "lat": 33.30878814800184,
+        "lon": 44.4053941954337,
         "surveyor": "Mustafa al-Baghdadi"
       }
     },
@@ -358,6 +384,8 @@
         "confidence": 0.74,
         "timestamp": "2026-06-16T02:22:00+00:00",
         "related_ids": [],
+        "lat": 33.29819490419451,
+        "lon": 44.38685789211356,
         "surveyor": "Haider al-Obeidi"
       }
     },
@@ -383,6 +411,8 @@
         "confidence": 0.74,
         "timestamp": "2026-06-12T08:06:00+00:00",
         "related_ids": [],
+        "lat": 33.31043827586146,
+        "lon": 44.395735288156665,
         "surveyor": "Sajjad al-Saadi"
       }
     },
@@ -410,6 +440,8 @@
         "related_ids": [
           "nova-893e88e456d471d2"
         ],
+        "lat": 33.28709153681715,
+        "lon": 44.402844742262076,
         "surveyor": "Sajjad al-Dulaimi"
       }
     },
@@ -435,6 +467,8 @@
         "confidence": 0.72,
         "timestamp": "2026-06-13T07:16:00+00:00",
         "related_ids": [],
+        "lat": 33.30233269069418,
+        "lon": 44.38879301413535,
         "surveyor": "Ali al-Saadi"
       }
     },
@@ -460,6 +494,8 @@
         "confidence": 0.72,
         "timestamp": "2026-06-07T16:16:00+00:00",
         "related_ids": [],
+        "lat": 33.28838644461472,
+        "lon": 44.39911510342942,
         "surveyor": "Ali al-Baghdadi"
       }
     },
@@ -487,6 +523,8 @@
         "related_ids": [
           "nova-cfab8a773951feee"
         ],
+        "lat": 33.29418544391551,
+        "lon": 44.40056978029516,
         "surveyor": "Noor al-Karkhi"
       }
     },
@@ -514,6 +552,8 @@
         "related_ids": [
           "nova-92c2b73b7d4ae80f"
         ],
+        "lat": 33.29856717961807,
+        "lon": 44.41383162241804,
         "surveyor": "Zainab al-Baghdadi"
       }
     },
@@ -541,6 +581,8 @@
         "related_ids": [
           "nova-73d3098ca3b79150"
         ],
+        "lat": 33.31603208132669,
+        "lon": 44.40835161313056,
         "surveyor": "Ahmed al-Saadi"
       }
     },
@@ -568,6 +610,8 @@
         "related_ids": [
           "nova-826a988e49ec7ce2"
         ],
+        "lat": 33.29588392386043,
+        "lon": 44.40140250314175,
         "surveyor": "Maryam al-Obeidi"
       }
     }
