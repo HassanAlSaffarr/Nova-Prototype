@@ -74,12 +74,12 @@ def detection_feature_to_signal(feat: dict) -> Signal:
     p = feat["properties"]
     dtype = p["detection_type"]
     title_en = (
-        "New structure detected" if dtype == "new_structure"
-        else "Surface change detected"
+        "Confirmed change detected" if dtype == "confirmed_change"
+        else "Candidate change detected"
     )
     title_ar = (
-        "رصد إنشاء جديد" if dtype == "new_structure"
-        else "رصد تغيّر سطحي"
+        "رصد تغيّر مؤكَّد" if dtype == "confirmed_change"
+        else "رصد تغيّر محتمل"
     )
     area = p.get("area_m2", 0.0)
     return Signal(

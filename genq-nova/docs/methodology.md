@@ -112,10 +112,13 @@ After finding a changed site, Nova checks it against **Microsoft's Building Foot
 a free global dataset of building outlines traced from imagery. The label depends on
 whether a footprint sits on the changed spot:
 
-- **new_structure** — the change overlaps a known building footprint, so there is now a
-  building there. (20 of our 50.)
-- **surface_change** — the change has no building on it. This is cleared ground, a new
-  road, a parking lot, or a site mid-construction. (30 of our 50.)
+- **confirmed_change** — the change overlaps a known building footprint, so the change is
+  corroborated by independent building data and a building exists at the site. Note Nova does
+  *not* claim a brand-new vertical building — only that the change is confirmed by a footprint.
+  (20 of our 50.)
+- **candidate_change** — the change has no building on it. This is bare-ground change that may
+  or may not be construction: graded land, a new road, a parking lot, or a site mid-construction.
+  (30 of our 50.)
 
 One honest caveat: the footprint dataset is a **single snapshot** with no "before" version,
 so it confirms a building *exists today* but can't prove it's brand new on its own. The

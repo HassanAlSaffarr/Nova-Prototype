@@ -118,8 +118,8 @@ def make_nova_run_event(
 ) -> Event:
     """Build a 'Nova scanned X, detected N changes' event from type counts."""
     total = sum(counts.values())
-    new_s = counts.get("new_structure", 0)
-    surf = counts.get("surface_change", 0)
+    confirmed = counts.get("confirmed_change", 0)
+    candidate = counts.get("candidate_change", 0)
     hhmm = timestamp.strftime("%H:%M")
     return Event(
         id=_new_id(),
@@ -129,12 +129,12 @@ def make_nova_run_event(
         aoi=aoi,
         message=(
             f"Nova ran at {hhmm} — scanned {aoi.title()}, detected {total} "
-            f"changes ({new_s} new structures, {surf} surface changes)."
+            f"changes ({confirmed} confirmed, {candidate} candidate)."
         ),
         payload={
             "detections": total,
-            "new_structure": new_s,
-            "surface_change": surf,
+            "confirmed_change": confirmed,
+            "candidate_change": candidate,
             "duration_s": 41,
         },
     )

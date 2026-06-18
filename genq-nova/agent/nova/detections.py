@@ -15,16 +15,19 @@ Confidence heuristic (documented here so it can be tuned):
   ndvi_score       = min(|ΔNDVI| / 0.20, 1.0)         — corroborating vegetation loss
 
 Detection type assignment:
-  "new_structure"  — change polygon overlaps a building footprint
-                     (MS footprints confirm a building exists here now)
-  "surface_change" — no footprint overlap; could be road, cleared ground, etc.
+  "confirmed_change" — change polygon overlaps a Microsoft building footprint, so
+                       the change is corroborated by independent building data.
+                       Nova does NOT claim a brand-new vertical building — only
+                       that a building exists at this changed site.
+  "candidate_change" — no footprint overlap; bare-ground change that may or may
+                       not be construction (graded land, road, cleared lot, etc.)
 
 Note: MS Global Building Footprints is a single static snapshot with no temporal
-dimension, so footprint overlap cannot prove a structure is *new* or *expanded* —
-only that a building exists here now. The temporal signal lives entirely in the
-raster diff. We therefore only distinguish "footprint present" (new_structure) vs
-"no footprint" (surface_change). Genuine expansion detection would need baseline
-(before-date) footprints — deferred for v2.
+dimension, so footprint overlap cannot prove a structure is *new* — only that a
+building exists here now. The temporal signal lives entirely in the raster diff.
+We therefore only distinguish "footprint present" (confirmed_change) vs "no
+footprint" (candidate_change). Distinguishing genuinely new vertical buildings
+would need baseline (before-date) footprints — deferred for v2.
 """
 
 import uuid
@@ -44,7 +47,7 @@ class Detection(BaseModel):
     lat: float
     lon: float
     geometry: dict                          # GeoJSON geometry (WGS84)
-    detection_type: Literal["new_structure", "surface_change"]
+    detection_type: Literal["confirmed_change", "candidate_change"]
     confidence: float                       # 0.0 – 1.0
     detected_at: datetime
     source_dates: dict                      # {"before": [start, end], "after": [start, end]}
@@ -83,10 +86,11 @@ def _confidence(
 
 def _assign_type(
     overlaps_footprint: bool,
-) -> Literal["new_structure", "surface_change"]:
-    """A change polygon overlapping any building footprint is a structure;
-    otherwise it's a generic surface change (road, cleared lot, etc.)."""
-    return "new_structure" if overlaps_footprint else "surface_change"
+) -> Literal["confirmed_change", "candidate_change"]:
+    """A change polygon overlapping a building footprint is a confirmed change
+    (corroborated by Microsoft building data); otherwise it's a candidate
+    change (bare-ground change that may or may not be construction)."""
+    return "confirmed_change" if overlaps_footprint else "candidate_change"
 
 
 # ---------------------------------------------------------------------------
