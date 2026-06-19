@@ -22,8 +22,6 @@ export default function EventLog() {
   const events = useStore((s) => s.events);
   const open = useStore((s) => s.eventLogOpen);
   const toggle = useStore((s) => s.toggleEventLog);
-  const runNova = useStore((s) => s.runNova);
-  const runningNova = useStore((s) => s.runningNova);
   const newEventId = useStore((s) => s.newEventId);
   const flyToFn = useStore((s) => s.flyToFn);
 
@@ -53,19 +51,8 @@ export default function EventLog() {
 
       {open && (
         <>
-          {/* Run Nova */}
-          <div className="border-b border-border p-2">
-            <button
-              onClick={runNova}
-              disabled={runningNova}
-              className="w-full rounded-md border border-accent/40 bg-accent/15 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {runningNova ? "Running Nova…" : "▶  Run Nova"}
-            </button>
-          </div>
-
-          {/* Events */}
-          <div className="max-h-[300px] overflow-y-auto">
+          {/* Events — Nova runs its loop autonomously; this is the live feed */}
+          <div className="max-h-[340px] overflow-y-auto">
             {events.slice(0, 15).map((ev) => {
               const agent = agentOf(ev.agent);
               const color = AGENT_COLOR[agent];
