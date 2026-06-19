@@ -20,3 +20,16 @@ body {
 .maplibregl-ctrl-attrib a {
   color: #8a94ad !important;
 }
+
+/* New-event flash: neon-green glow fading over 2s */
+@keyframes flashGlow {
+  from {
+    background-color: rgba(0, 255, 157, 0.22);
+  }
+  to {
+    background-color: rgba(0, 255, 157, 0);
+  }
+}
+.event-flash {
+  animation: flashGlow 2s ease-out;
+}

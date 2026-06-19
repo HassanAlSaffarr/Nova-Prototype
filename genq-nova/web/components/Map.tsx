@@ -13,19 +13,11 @@ import "maplibre-gl/dist/maplibre-gl.css";
 
 import { useStore } from "@/lib/store";
 import { AGENT_COLOR, hexToRgb } from "@/lib/colors";
+import { KARRADA_BBOX, KARRADA_CENTER } from "@/lib/aoi";
 import type { Feature, FeatureCollection, SourceAgent } from "@/lib/types";
 
 const CARTO_DARK =
   "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
-
-// Karrada AOI [west, south, east, north]
-const KARRADA: [number, number, number, number] = [
-  44.385, 33.285, 44.43, 33.32,
-];
-const KARRADA_CENTER: [number, number] = [
-  (KARRADA[0] + KARRADA[2]) / 2,
-  (KARRADA[1] + KARRADA[3]) / 2,
-];
 
 const IRAQ_VIEW = { longitude: 43.7, latitude: 33.2, zoom: 5.2, pitch: 0 };
 
@@ -42,7 +34,7 @@ function DeckOverlay(props: MapboxOverlayProps) {
 }
 
 function karradaOutline(): FeatureCollection {
-  const [w, s, e, n] = KARRADA;
+  const [w, s, e, n] = KARRADA_BBOX;
   return {
     type: "FeatureCollection",
     features: [
