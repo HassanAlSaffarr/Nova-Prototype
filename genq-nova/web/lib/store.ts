@@ -129,7 +129,7 @@ export const useStore = create<NovaState>((set, get) => ({
   buildings: null,
   events: [],
   byId: {},
-  detectionSet: "full",
+  detectionSet: "highres", // demo opens on the validated v2 detector
   activeAgents: allOn(),
   showBuildings: true,
   selectedId: null,
