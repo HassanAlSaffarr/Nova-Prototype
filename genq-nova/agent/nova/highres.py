@@ -22,7 +22,10 @@ is the natural upgrade from this classical structure signal.
 """
 
 import io
+import json
 import math
+from collections import deque
+from pathlib import Path
 
 import httpx
 import numpy as np
@@ -157,3 +160,123 @@ def detect_new_construction(
         "flagged_pct": round(100 * float(new.mean()), 1),
         "detections": dets,
     }
+
+
+# ---------------------------------------------------------------------------
+# Full-AOI scan: tile the AOI, detect per tile, cluster cells into project sites
+# ---------------------------------------------------------------------------
+
+
+def _connected_components(occ: np.ndarray) -> list[list[tuple[int, int]]]:
+    """8-connected components of a boolean grid (BFS, no scipy)."""
+    seen = np.zeros_like(occ, dtype=bool)
+    comps: list[list[tuple[int, int]]] = []
+    ny, nx = occ.shape
+    for y in range(ny):
+        for x in range(nx):
+            if occ[y, x] and not seen[y, x]:
+                q = deque([(y, x)])
+                seen[y, x] = True
+                cells = []
+                while q:
+                    cy, cx = q.popleft()
+                    cells.append((cy, cx))
+                    for dy in (-1, 0, 1):
+                        for dx in (-1, 0, 1):
+                            ny2, nx2 = cy + dy, cx + dx
+                            if 0 <= ny2 < ny and 0 <= nx2 < nx and occ[ny2, nx2] and not seen[ny2, nx2]:
+                                seen[ny2, nx2] = True
+                                q.append((ny2, nx2))
+                comps.append(cells)
+    return comps
+
+
+def scan_aoi(
+    bbox: list[float],
+    date_before: str,
+    date_after: str,
+    tile_deg: float = 0.009,   # ~1 km tiles
+    zoom: int = 18,
+    grid_m: float = 10.0,
+    min_cells: int = 3,        # >= ~300 m² of flagged area to count as a site
+    progress: bool = True,
+) -> list[dict]:
+    """
+    Scan a whole AOI for new construction: tile it, run the high-res detector on
+    each tile, then cluster all flagged cells into discrete project sites.
+
+    Returns sites [{lat, lon, n_cells, area_m2, mean_delta}] sorted by size.
+    """
+    w, s, e, n = bbox
+    cos = math.cos(math.radians((s + n) / 2))
+    all_dets: list[dict] = []
+
+    lat = s
+    nrows = max(1, math.ceil((n - s) / tile_deg))
+    ncols = max(1, math.ceil((e - w) / tile_deg))
+    t = 0
+    while lat < n:
+        lon = w
+        while lon < e:
+            tb = [lon, lat, min(lon + tile_deg, e), min(lat + tile_deg, n)]
+            try:
+                res = detect_new_construction(tb, date_before, date_after, zoom=zoom)
+                all_dets.extend(res["detections"])
+            except Exception as exc:  # one bad tile shouldn't kill the scan
+                if progress:
+                    print(f"    tile {t} failed: {exc}")
+            t += 1
+            if progress:
+                print(f"    tile {t}/{nrows * ncols}: {len(all_dets)} flagged cells so far")
+            lon += tile_deg
+        lat += tile_deg
+
+    if not all_dets:
+        return []
+
+    # Global occupancy grid → connected components = project sites.
+    ny = int((n - s) * 111_000 / grid_m) + 1
+    nx = int((e - w) * 111_320 * cos / grid_m) + 1
+    occ = np.zeros((ny, nx), dtype=bool)
+    cell_delta: dict[tuple[int, int], float] = {}
+    for d in all_dets:
+        gy = int((n - d["lat"]) * 111_000 / grid_m)
+        gx = int((d["lon"] - w) * 111_320 * cos / grid_m)
+        if 0 <= gy < ny and 0 <= gx < nx:
+            occ[gy, gx] = True
+            cell_delta[(gy, gx)] = max(cell_delta.get((gy, gx), 0.0), d["delta"])
+
+    sites: list[dict] = []
+    for comp in _connected_components(occ):
+        if len(comp) < min_cells:
+            continue
+        cy = np.mean([c[0] for c in comp])
+        cx = np.mean([c[1] for c in comp])
+        lat_c = n - (cy + 0.5) * grid_m / 111_000
+        lon_c = w + (cx + 0.5) * grid_m / (111_320 * cos)
+        deltas = [cell_delta[c] for c in comp]
+        sites.append({
+            "lat": round(lat_c, 6), "lon": round(lon_c, 6),
+            "n_cells": len(comp),
+            "area_m2": round(len(comp) * grid_m * grid_m),
+            "mean_delta": round(float(np.mean(deltas)), 1),
+        })
+    sites.sort(key=lambda x: -x["n_cells"])
+    return sites
+
+
+def sites_to_geojson(sites: list[dict], date_before: str, date_after: str) -> dict:
+    return {
+        "type": "FeatureCollection",
+        "properties": {"detector": "highres-structural-change",
+                       "before": date_before, "after": date_after},
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {"type": "Point", "coordinates": [s["lon"], s["lat"]]},
+                "properties": s,
+            }
+            for s in sites
+        ],
+    }
+
