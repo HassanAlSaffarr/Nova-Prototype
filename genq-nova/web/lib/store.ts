@@ -35,6 +35,7 @@ interface NovaState {
   loadAll: () => Promise<void>;
   setDetectionSet: (s: DetectionSet) => Promise<void>;
   toggleAgent: (a: SourceAgent) => void;
+  setAllAgents: (on: boolean) => void;
   select: (id: string | null) => void;
   selectRelated: (id: string) => void;
   setFlyToFn: (fn: (lon: number, lat: number) => void) => void;
@@ -146,6 +147,14 @@ export const useStore = create<NovaState>((set, get) => ({
     set((st) => ({
       activeAgents: { ...st.activeAgents, [a]: !st.activeAgents[a] },
     })),
+
+  setAllAgents: (on) =>
+    set({
+      activeAgents: AGENTS.reduce(
+        (acc, a) => ({ ...acc, [a]: on }),
+        {} as Record<SourceAgent, boolean>,
+      ),
+    }),
 
   select: (id) => set({ selectedId: id }),
 

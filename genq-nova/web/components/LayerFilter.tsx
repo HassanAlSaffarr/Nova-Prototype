@@ -13,16 +13,27 @@ const SETS: { key: DetectionSet; label: string }[] = [
 export default function LayerFilter() {
   const activeAgents = useStore((s) => s.activeAgents);
   const toggleAgent = useStore((s) => s.toggleAgent);
+  const setAllAgents = useStore((s) => s.setAllAgents);
   const detectionSet = useStore((s) => s.detectionSet);
   const setDetectionSet = useStore((s) => s.setDetectionSet);
 
+  const allOn = AGENTS.every((a) => activeAgents[a]);
+
   return (
-    <div className="fixed left-5 top-16 z-20 w-[210px] rounded-lg border border-border bg-surface/95 p-3 backdrop-blur">
-      {/* Agent layers */}
-      <div className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted">
-        Layers
+    <div className="fixed left-5 top-16 z-20 w-[196px] rounded-lg border border-border bg-surface/95 p-2.5 backdrop-blur">
+      {/* Agent layers as compact toggle chips */}
+      <div className="mb-1.5 flex items-center justify-between">
+        <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">
+          Layers
+        </span>
+        <button
+          onClick={() => setAllAgents(!allOn)}
+          className="text-[10px] font-semibold text-muted hover:text-text"
+        >
+          {allOn ? "None" : "All"}
+        </button>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-wrap gap-1.5">
         {AGENTS.map((a) => {
           const on = activeAgents[a];
           const color = AGENT_COLOR[a];
@@ -30,38 +41,41 @@ export default function LayerFilter() {
             <button
               key={a}
               onClick={() => toggleAgent(a)}
-              className="flex items-center gap-2 rounded px-1.5 py-1.5 hover:bg-surface-2"
+              title={`Toggle ${AGENT_LABEL[a]}`}
+              className={`flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs transition-opacity ${
+                on ? "" : "opacity-40"
+              }`}
+              style={{
+                borderColor: on ? color : "#3a445e",
+                color: on ? color : "#8a94ad",
+              }}
             >
               <span
-                className="h-3 w-3 shrink-0 rounded-full"
+                className="h-2 w-2 rounded-full"
                 style={{
                   background: on ? color : "transparent",
-                  border: `1.5px solid ${on ? color : "#3a445e"}`,
+                  border: `1px solid ${color}`,
                 }}
               />
-              <span
-                className={`text-sm ${on ? "text-text" : "text-muted"}`}
-              >
-                {AGENT_LABEL[a]}
-              </span>
+              {AGENT_LABEL[a]}
             </button>
           );
         })}
       </div>
 
       {/* Detection set */}
-      <div className="mt-3 border-t border-border pt-3">
-        <div className="mb-1.5 text-[11px] font-semibold uppercase tracking-wide text-muted">
-          Nova detections
-        </div>
-        <div className="flex gap-1">
+      <div className="mt-2.5 flex items-center gap-1.5 border-t border-border pt-2.5">
+        <span className="text-[10px] font-semibold uppercase tracking-wide text-muted">
+          Nova
+        </span>
+        <div className="flex flex-1 gap-1">
           {SETS.map(({ key, label }) => {
             const active = detectionSet === key;
             return (
               <button
                 key={key}
                 onClick={() => setDetectionSet(key)}
-                className={`flex-1 rounded-md border px-2 py-1.5 text-xs font-semibold transition-colors ${
+                className={`flex-1 rounded border px-1 py-1 text-[11px] font-semibold transition-colors ${
                   active
                     ? "border-accent bg-accent/20 text-accent"
                     : "border-border text-muted hover:bg-surface-2"
