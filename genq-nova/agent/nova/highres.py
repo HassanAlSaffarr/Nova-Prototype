@@ -25,6 +25,7 @@ import io
 import json
 import math
 from collections import deque
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import httpx
@@ -77,20 +78,37 @@ def _deg2tile(lat: float, lon: float, z: int) -> tuple[float, float]:
     return x, y
 
 
-def wayback_mosaic(bbox: list[float], release: str, zoom: int = 18) -> Image.Image:
-    """Stitch a Wayback high-res RGB mosaic for bbox [w,s,e,n] at a given release."""
+def wayback_mosaic(
+    bbox: list[float], release: str, zoom: int = 18, workers: int = 16
+) -> Image.Image:
+    """Stitch a Wayback high-res RGB mosaic for bbox [w,s,e,n] at a given release.
+    Tiles are fetched concurrently (a full-AOI scan is thousands of tiles)."""
     w, s, e, n = bbox
     x0f, y0f = _deg2tile(n, w, zoom)
     x1f, y1f = _deg2tile(s, e, zoom)
     x0, y0, x1, y1 = int(x0f), int(y0f), int(x1f), int(y1f)
     mos = Image.new("RGB", ((x1 - x0 + 1) * 256, (y1 - y0 + 1) * 256))
-    with httpx.Client(timeout=30, follow_redirects=True) as c:
-        for ty in range(y0, y1 + 1):
-            for tx in range(x0, x1 + 1):
-                resp = c.get(WAYBACK_TILE.format(release=release, z=zoom, y=ty, x=tx))
-                if resp.status_code == 200:
-                    tile = Image.open(io.BytesIO(resp.content)).convert("RGB")
+
+    coords = [(tx, ty) for ty in range(y0, y1 + 1) for tx in range(x0, x1 + 1)]
+    client = httpx.Client(timeout=30, follow_redirects=True)
+
+    def fetch(c):
+        tx, ty = c
+        try:
+            r = client.get(WAYBACK_TILE.format(release=release, z=zoom, y=ty, x=tx))
+            return (tx, ty, r.content if r.status_code == 200 else None)
+        except httpx.HTTPError:
+            return (tx, ty, None)
+
+    try:
+        with ThreadPoolExecutor(max_workers=workers) as ex:
+            for tx, ty, content in ex.map(fetch, coords):
+                if content:
+                    tile = Image.open(io.BytesIO(content)).convert("RGB")
                     mos.paste(tile, ((tx - x0) * 256, (ty - y0) * 256))
+    finally:
+        client.close()
+
     left, top = int((x0f - x0) * 256), int((y0f - y0) * 256)
     right, bot = int((x1f - x0) * 256), int((y1f - y0) * 256)
     return mos.crop((left, top, right, bot))
@@ -198,7 +216,9 @@ def scan_aoi(
     tile_deg: float = 0.009,   # ~1 km tiles
     zoom: int = 18,
     grid_m: float = 10.0,
-    min_cells: int = 3,        # >= ~300 m² of flagged area to count as a site
+    min_cells: int = 50,       # >= ~5000 m² "project" floor; smaller = noisy.
+                               # On ground truth, this floor gives ~14x Bismayah/
+                               # Karrada discrimination vs ~2.6x at 300 m².
     progress: bool = True,
 ) -> list[dict]:
     """

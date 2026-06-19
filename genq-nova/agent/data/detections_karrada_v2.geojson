@@ -1,0 +1,112 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "detector": "highres-structural-change",
+    "before": "2023-12-31",
+    "after": "2026-06-01"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.410702,
+          33.296691
+        ]
+      },
+      "properties": {
+        "lat": 33.296691,
+        "lon": 44.410702,
+        "n_cells": 242,
+        "area_m2": 24200,
+        "mean_delta": 27.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.412835,
+          33.31302
+        ]
+      },
+      "properties": {
+        "lat": 33.31302,
+        "lon": 44.412835,
+        "n_cells": 112,
+        "area_m2": 11200,
+        "mean_delta": 15.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.390492,
+          33.294779
+        ]
+      },
+      "properties": {
+        "lat": 33.294779,
+        "lon": 44.390492,
+        "n_cells": 70,
+        "area_m2": 7000,
+        "mean_delta": 12.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.386903,
+          33.302154
+        ]
+      },
+      "properties": {
+        "lat": 33.302154,
+        "lon": 44.386903,
+        "n_cells": 68,
+        "area_m2": 6800,
+        "mean_delta": 29.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.387222,
+          33.313283
+        ]
+      },
+      "properties": {
+        "lat": 33.313283,
+        "lon": 44.387222,
+        "n_cells": 65,
+        "area_m2": 6500,
+        "mean_delta": 42.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.398867,
+          33.296052
+        ]
+      },
+      "properties": {
+        "lat": 33.296052,
+        "lon": 44.398867,
+        "n_cells": 58,
+        "area_m2": 5800,
+        "mean_delta": 14.8
+      }
+    }
+  ]
+}
