@@ -41,6 +41,7 @@ interface NovaState {
   setFlyToFn: (fn: (lon: number, lat: number) => void) => void;
   toggleEventLog: () => void;
   runNova: () => Promise<void>;
+  clearError: () => void;
 }
 
 const allOn = () =>
@@ -168,6 +169,8 @@ export const useStore = create<NovaState>((set, get) => ({
   setFlyToFn: (fn) => set({ flyToFn: fn }),
 
   toggleEventLog: () => set((st) => ({ eventLogOpen: !st.eventLogOpen })),
+
+  clearError: () => set({ error: null }),
 
   runNova: async () => {
     set({ runningNova: true });

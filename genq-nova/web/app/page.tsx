@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import SidePanel from "@/components/SidePanel";
 import EventLog from "@/components/EventLog";
 import LayerFilter from "@/components/LayerFilter";
+import Overlays from "@/components/Overlays";
 
 // Map uses maplibre/deck.gl (browser-only) — load without SSR.
 const Map = dynamic(() => import("@/components/Map"), { ssr: false });
@@ -17,6 +18,7 @@ export default function Page() {
       <LayerFilter />
       <EventLog />
       <SidePanel />
+      <Overlays />
     </main>
   );
 }
