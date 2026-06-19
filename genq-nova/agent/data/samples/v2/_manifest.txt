@@ -1,0 +1,12 @@
+releases: before=56102 after=10842
+  karrada 1: karrada_01_507ddb8b.png  (24,200 m²)
+  karrada 2: karrada_02_8cca2dcf.png  (11,200 m²)
+  karrada 3: karrada_03_ee763721.png  (7,000 m²)
+  karrada 4: karrada_04_ec402d1e.png  (6,800 m²)
+  karrada 5: karrada_05_d79e3137.png  (6,500 m²)
+  karrada 6: karrada_06_02826588.png  (5,800 m²)
+  bismayah 1: bismayah_01_5f47c3c3.png  (89,900 m²)
+  bismayah 2: bismayah_02_43208ec8.png  (66,600 m²)
+  bismayah 3: bismayah_03_bb628bfd.png  (39,900 m²)
+  bismayah 4: bismayah_04_2d28a100.png  (36,200 m²)
+  bismayah 5: bismayah_05_7a8e8816.png  (35,400 m²)

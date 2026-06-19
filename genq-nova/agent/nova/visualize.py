@@ -4,11 +4,11 @@ Visual sample artifacts for review.
 Produces, for the canonical Karrada change-detection run (summer 2022 vs summer
 2024):
 
-    data/samples/composite_2022.png       true-colour RGB, before composite
-    data/samples/composite_2024.png       true-colour RGB, after composite
-    data/samples/diff_visualisation.png   ΔNDBI (red) / ΔNDVI-gain (blue) heatmap
-    data/samples/detections_overlay.png   after composite + 50 yellow polygons
-    data/samples/top10_crops/             top-10 detection sites, 3-panel montages:
+    data/samples/v1/composite_2022.png    true-colour RGB, before composite
+    data/samples/v1/composite_2024.png    true-colour RGB, after composite
+    data/samples/v1/diff_visualisation.png ΔNDBI (red) / ΔNDVI-gain (blue) heatmap
+    data/samples/v1/detections_overlay.png after composite + 50 yellow polygons
+    data/samples/v1/top10_crops/          top-10 detection sites, 3-panel montages:
                                           [S2 before | S2 after | Esri hi-res]
 
 Sentinel-2 is what Nova detects on (10 m, what the band math sees). Esri World
@@ -42,7 +42,7 @@ AFTER = ("2024-06-01", "2024-09-01")
 CLOUD = 20
 RGB_MAX = 3000.0  # S2 SR reflectance value that maps to white
 
-SAMPLES_DIR = DATA_DIR / "samples"
+SAMPLES_DIR = DATA_DIR / "samples" / "v1"   # v1 optical artifacts (v2 → samples/v2)
 CROPS_DIR = SAMPLES_DIR / "top10_crops"
 RASTER_DIR = DATA_DIR / "rasters"
 DETECTIONS = DATA_DIR / "detections_karrada.geojson"

@@ -57,8 +57,15 @@ for the falsification story (see methodology).
 | `footprints/karrada.geojson` | raw MS source | no (large) |
 | `nova.db` | signals + events (SQLite) | no (regenerable) |
 
+**Sample artifacts** are split the same way:
+- `samples/v1/` — v1 optical evidence: Sentinel-2 composites, the NDVI/NDBI/MNDWI
+  `bands/`, and `top10_crops/` (S2 before | S2 after | Esri hi-res montages).
+- `samples/v2/` — v2 evidence: before/after ~0.5m Wayback crops at detected
+  sites, showing the actual bare→built transition (Karrada ×6, Bismayah ×5).
+
 `scripts/` holds the derive-once helpers: `slim_footprints.py` (raw → served
-footprints), `bake_v2_ids.py` (stamp v2 sites with stable ids), `test_loop.py`
+footprints), `bake_v2_ids.py` (stamp v2 sites with stable ids),
+`sample_v2_crops.py` (generate the v2 before/after samples), `test_loop.py`
 (loop smoke test).
 
 > **Note on organisation.** v1 and v2 modules share `agent/nova/` rather than

@@ -2,7 +2,7 @@
 Spectral band sample renders — what each Sentinel-2 band and index "sees".
 
 For the 2024 (after) composite over Karrada, export grayscale/viridis PNGs to
-data/samples/bands/ so the band math in the methodology is tangible:
+data/samples/v1/bands/ so the band math in the methodology is tangible:
 
     b04_red.png    b08_nir.png    b11_swir.png    (raw bands, grayscale)
     ndvi.png       ndbi.png       mndwi.png       (derived indices, viridis)

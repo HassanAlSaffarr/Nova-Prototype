@@ -17,6 +17,8 @@ agent/data/rasters/
 agent/data/*.db
 # Autonomous-loop runtime state (regenerate: python -m nova.loop --once)
 agent/data/detections_live.geojson
+# API server log (background process)
+agent/data/api.out
 
 # Agent credentials
 agent/credentials/
