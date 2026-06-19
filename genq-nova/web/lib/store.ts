@@ -2,6 +2,7 @@ import { create } from "zustand";
 import {
   fetchDetections,
   fetchEvents,
+  fetchFootprints,
   fetchSignals,
   triggerNovaRun,
 } from "./api";
@@ -10,6 +11,7 @@ import type {
   DetectionSet,
   EventItem,
   Feature,
+  FeatureCollection,
   SourceAgent,
 } from "./types";
 
@@ -19,11 +21,13 @@ interface NovaState {
 
   detections: Feature[]; // Nova polygons for the active set
   points: Feature[]; // the 86 non-Nova agent signals
+  buildings: FeatureCollection | null; // existing-building footprints base layer
   events: EventItem[];
   byId: Record<string, Feature>;
 
   detectionSet: DetectionSet;
   activeAgents: Record<SourceAgent, boolean>;
+  showBuildings: boolean; // base "all buildings" layer toggle
   selectedId: string | null;
   eventLogOpen: boolean;
   runningNova: boolean;
@@ -36,6 +40,7 @@ interface NovaState {
   setDetectionSet: (s: DetectionSet) => Promise<void>;
   toggleAgent: (a: SourceAgent) => void;
   setAllAgents: (on: boolean) => void;
+  toggleBuildings: () => void;
   select: (id: string | null) => void;
   selectRelated: (id: string) => void;
   setFlyToFn: (fn: (lon: number, lat: number) => void) => void;
@@ -98,10 +103,12 @@ export const useStore = create<NovaState>((set, get) => ({
   error: null,
   detections: [],
   points: [],
+  buildings: null,
   events: [],
   byId: {},
   detectionSet: "full",
   activeAgents: allOn(),
+  showBuildings: true,
   selectedId: null,
   eventLogOpen: true,
   runningNova: false,
@@ -126,6 +133,11 @@ export const useStore = create<NovaState>((set, get) => ({
         byId: indexById(detections.features, points),
         loading: false,
       });
+      // Buildings are a heavy, non-critical base layer — load them after the
+      // core data so a slow/absent footprints file never blanks the demo.
+      fetchFootprints()
+        .then((fc) => set({ buildings: fc }))
+        .catch(() => {});
     } catch (e) {
       set({ error: (e as Error).message, loading: false });
     }
@@ -156,6 +168,8 @@ export const useStore = create<NovaState>((set, get) => ({
         {} as Record<SourceAgent, boolean>,
       ),
     }),
+
+  toggleBuildings: () => set((st) => ({ showBuildings: !st.showBuildings })),
 
   select: (id) => set({ selectedId: id }),
 

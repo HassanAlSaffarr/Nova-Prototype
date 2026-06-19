@@ -18,6 +18,10 @@ export const fetchSignals = () => getJSON<FeatureCollection>("/signals");
 export const fetchDetections = (set: DetectionSet = "full") =>
   getJSON<FeatureCollection>(`/detections?set=${set}`);
 
+/** Existing building footprints for the AOI — the "all buildings" base layer. */
+export const fetchFootprints = (aoi = "karrada") =>
+  getJSON<FeatureCollection>(`/footprints?aoi=${aoi}`);
+
 export const fetchEvents = (limit = 50) =>
   getJSON<{ count: number; events: EventItem[] }>(`/events?limit=${limit}`);
 

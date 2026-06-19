@@ -10,6 +10,7 @@ Endpoints:
     GET  /signals           all signals (GeoJSON FeatureCollection)
     GET  /signals/{agent}   one source's signals (GeoJSON)
     GET  /detections        Nova's raw CV detections — polygons + deltas (GeoJSON)
+    GET  /footprints        existing building footprints base layer (GeoJSON)
     GET  /events            agent event log (JSON), ?agent= &limit=
     GET  /summary           counts by source + latest run (JSON)
     POST /nova/run          stubbed Nova run — appends a fresh event, returns it
@@ -92,7 +93,7 @@ def root() -> dict:
         "service": "Nova API",
         "status": "ok",
         "endpoints": [
-            "/signals", "/signals/{agent}", "/detections",
+            "/signals", "/signals/{agent}", "/detections", "/footprints",
             "/events", "/summary", "POST /nova/run",
         ],
     }
@@ -140,6 +141,36 @@ def get_detections(set: str = "full") -> dict:
             status_code=503,
             detail=f"Detection set '{set}' not found at {path.name}. "
                    "Run: python -m nova.run",
+        )
+    return json.loads(path.read_text())
+
+
+_FOOTPRINT_SETS = {
+    "karrada": "footprints/karrada.min.geojson",
+}
+
+
+@app.get("/footprints")
+def get_footprints(aoi: str = "karrada") -> dict:
+    """
+    Existing building footprints for an AOI — the base "all buildings" map layer.
+
+    These are Microsoft Global ML Building Footprints (a single snapshot, ~24k
+    polygons over Karrada), slimmed for the web. They are *context*, not a Nova
+    detection: the map stages as base → buildings → Nova changes → agent signals,
+    so an analyst sees every building first, then what Nova flags as changed.
+    """
+    if aoi not in _FOOTPRINT_SETS:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Unknown AOI '{aoi}'. Valid: {', '.join(_FOOTPRINT_SETS)}",
+        )
+    path = DATA_DIR / _FOOTPRINT_SETS[aoi]
+    if not path.exists():
+        raise HTTPException(
+            status_code=503,
+            detail=f"Footprints for '{aoi}' not found at {path.name}. "
+                   "Run: python scripts/slim_footprints.py",
         )
     return json.loads(path.read_text())
 

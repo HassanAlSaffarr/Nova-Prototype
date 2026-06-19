@@ -64,9 +64,12 @@ export default function Map() {
   const [zoomed, setZoomed] = useState(false);
   const [pulse, setPulse] = useState(0); // 0..1, drives selection pulse
   const [denseFill, setDenseFill] = useState(false); // true past zoom 15
+  const [buildingsZoom, setBuildingsZoom] = useState(false); // true past zoom 12.5
 
   const detections = useStore((s) => s.detections);
   const points = useStore((s) => s.points);
+  const buildings = useStore((s) => s.buildings);
+  const showBuildings = useStore((s) => s.showBuildings);
   const activeAgents = useStore((s) => s.activeAgents);
   const selectedId = useStore((s) => s.selectedId);
   const select = useStore((s) => s.select);
@@ -163,6 +166,26 @@ export default function Map() {
         getLineWidth: 1,
         lineWidthMinPixels: 1,
       }),
+    // Base "all buildings" layer: every existing Karrada footprint, drawn as a
+    // faint blue-grey wash beneath everything. Only past zoom ~12.5, where the
+    // ~24k polygons are actually legible (and worth the GPU). This is the stage
+    // between an empty basemap and Nova's flagged *changes*.
+    showBuildings &&
+      buildingsZoom &&
+      buildings &&
+      new GeoJsonLayer({
+        id: "buildings",
+        data: buildings,
+        stroked: true,
+        filled: true,
+        getFillColor: [90, 110, 150, 28],
+        getLineColor: [120, 140, 180, 90],
+        getLineWidth: 0.5,
+        lineWidthMinPixels: 0.5,
+        lineWidthMaxPixels: 1.5,
+        pickable: false,
+        parameters: { depthTest: false },
+      }),
     // Halo beneath the detections — a wide, soft green stroke approximating an
     // outer glow so Nova reads as primary. The selected polygon's halo pulses.
     novaActive &&
@@ -233,7 +256,10 @@ export default function Map() {
           // Empty-map click (not a feature) closes the panel.
           if (Date.now() - featureClickRef.current > 150) select(null);
         }}
-        onMove={(e) => setDenseFill(e.viewState.zoom > 15)}
+        onMove={(e) => {
+          setDenseFill(e.viewState.zoom > 15);
+          setBuildingsZoom(e.viewState.zoom > 12.5);
+        }}
       >
         {/* Karrada AOI: subtle dashed marker of place; fades out past zoom 13 */}
         <Source id="karrada-aoi" type="geojson" data={karradaOutline()}>

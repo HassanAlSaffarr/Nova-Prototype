@@ -9,7 +9,10 @@ dist/
 
 # Agent data (local only, can be large)
 agent/data/imagery/
-agent/data/footprints/
+# Footprints: ignore the raw MS source, but track the slimmed served artifact
+# (the web buildings base layer depends on it; regenerate via scripts/slim_footprints.py)
+agent/data/footprints/*
+!agent/data/footprints/karrada.min.geojson
 agent/data/rasters/
 agent/data/*.db
 

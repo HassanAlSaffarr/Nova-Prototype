@@ -16,11 +16,40 @@ export default function LayerFilter() {
   const setAllAgents = useStore((s) => s.setAllAgents);
   const detectionSet = useStore((s) => s.detectionSet);
   const setDetectionSet = useStore((s) => s.setDetectionSet);
+  const showBuildings = useStore((s) => s.showBuildings);
+  const toggleBuildings = useStore((s) => s.toggleBuildings);
 
   const allOn = AGENTS.every((a) => activeAgents[a]);
 
   return (
     <div className="fixed left-5 top-16 z-20 w-[196px] rounded-lg border border-border bg-surface/95 p-2.5 backdrop-blur">
+      {/* Base layer: every existing building (context beneath Nova's changes) */}
+      <div className="mb-2.5 flex items-center justify-between border-b border-border pb-2.5">
+        <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">
+          Base
+        </span>
+        <button
+          onClick={toggleBuildings}
+          title="Toggle existing-building footprints (visible when zoomed in)"
+          className={`flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-xs transition-opacity ${
+            showBuildings ? "" : "opacity-40"
+          }`}
+          style={{
+            borderColor: showBuildings ? "#7891c4" : "#3a445e",
+            color: showBuildings ? "#9fb4dd" : "#8a94ad",
+          }}
+        >
+          <span
+            className="h-2 w-2 rounded-[2px]"
+            style={{
+              background: showBuildings ? "#7891c4" : "transparent",
+              border: "1px solid #7891c4",
+            }}
+          />
+          Buildings
+        </button>
+      </div>
+
       {/* Agent layers as compact toggle chips */}
       <div className="mb-1.5 flex items-center justify-between">
         <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">
