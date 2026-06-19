@@ -35,6 +35,7 @@ from pyproj import Transformer
 
 from nova.change_detection import _merge_zip_to_tif
 from nova.config import CRS_UTM, DATA_DIR, KARRADA_BBOX
+from nova.esri import esri_crop
 
 BEFORE = ("2022-06-01", "2022-09-01")
 AFTER = ("2024-06-01", "2024-09-01")
@@ -48,11 +49,6 @@ DETECTIONS = DATA_DIR / "detections_karrada.geojson"
 DIFF_TIF = RASTER_DIR / "diff_20220601_20220901_vs_20240601_20240901_c20_w.tif"
 
 CROP_HALF_M = 160.0   # 320 m ground window per crop
-ESRI_ZOOM = 18
-ESRI_URL = (
-    "https://server.arcgisonline.com/ArcGIS/rest/services/"
-    "World_Imagery/MapServer/tile/{z}/{y}/{x}"
-)
 
 
 # ---------------------------------------------------------------------------
@@ -191,50 +187,8 @@ def save_detections_overlay(after_tif: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Esri World Imagery crops (visual confirmation only)
+# S2 crops (Esri hi-res crops come from nova.esri.esri_crop)
 # ---------------------------------------------------------------------------
-
-
-def _deg2tile(lat: float, lon: float, z: int) -> tuple[float, float]:
-    n = 2 ** z
-    x = (lon + 180.0) / 360.0 * n
-    y = (1 - math.log(math.tan(math.radians(lat)) + 1 / math.cos(math.radians(lat))) / math.pi) / 2 * n
-    return x, y
-
-
-def _esri_crop(lat: float, lon: float, half_m: float, size: int = 256) -> Image.Image | None:
-    """Fetch + stitch Esri World Imagery around a point, crop to the window."""
-    dlat = half_m / 111_000.0
-    dlon = half_m / (111_000.0 * math.cos(math.radians(lat)))
-    north, south = lat + dlat, lat - dlat
-    west, east = lon - dlon, lon + dlon
-
-    x0f, y0f = _deg2tile(north, west, ESRI_ZOOM)   # top-left
-    x1f, y1f = _deg2tile(south, east, ESRI_ZOOM)   # bottom-right
-    x0, y0, x1, y1 = int(x0f), int(y0f), int(x1f), int(y1f)
-
-    cols, rows = (x1 - x0 + 1), (y1 - y0 + 1)
-    mosaic = Image.new("RGB", (cols * 256, rows * 256))
-    try:
-        with httpx.Client(timeout=20) as client:
-            for ty in range(y0, y1 + 1):
-                for tx in range(x0, x1 + 1):
-                    url = ESRI_URL.format(z=ESRI_ZOOM, x=tx, y=ty)
-                    resp = client.get(url)
-                    resp.raise_for_status()
-                    tile = Image.open(io.BytesIO(resp.content)).convert("RGB")
-                    mosaic.paste(tile, ((tx - x0) * 256, (ty - y0) * 256))
-    except (httpx.HTTPError, OSError) as exc:
-        print(f"      esri fetch failed ({exc}); skipping hi-res panel")
-        return None
-
-    # crop mosaic to the exact window pixel box, then resize to `size`
-    left = int((x0f - x0) * 256)
-    top = int((y0f - y0) * 256)
-    right = int((x1f - x0) * 256)
-    bottom = int((y1f - y0) * 256)
-    crop = mosaic.crop((left, top, right, bottom))
-    return crop.resize((size, size), Image.LANCZOS)
 
 
 def _s2_crop(rgb: np.ndarray, transform, lat: float, lon: float,
@@ -290,7 +244,7 @@ def save_top10_crops(before_tif: Path, after_tif: Path) -> int:
             ("S2 BEFORE 2022", s2_before),
             ("S2 AFTER 2024", s2_after),
         ]
-        hires = _esri_crop(lat, lon, CROP_HALF_M)
+        hires = esri_crop(lat, lon, CROP_HALF_M)
         if hires is not None:
             panels.append(("ESRI HI-RES (now)", hires))
 

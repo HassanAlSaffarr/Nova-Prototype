@@ -37,3 +37,6 @@ Thumbs.db
 .vscode/
 .idea/
 .claude/
+
+# Cached Esri thumbnails (regenerable)
+agent/data/cache/

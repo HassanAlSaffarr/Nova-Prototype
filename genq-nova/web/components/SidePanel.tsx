@@ -1,13 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "@/lib/store";
+import { API_BASE } from "@/lib/api";
 import {
   AGENT_COLOR,
   AGENT_LABEL,
   AGENT_LAYER_NAME,
 } from "@/lib/colors";
 import type { Feature, SourceAgent } from "@/lib/types";
+
+const CONFIDENCE_HELP =
+  "Confidence = agent's certainty in this signal. Nova uses NDBI/NDVI strength + area + footprint overlap. Synthetic agents use source-typical reliability.";
 
 function titleCase(s: string): string {
   return s.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
@@ -44,13 +48,61 @@ function AgentBadge({ agent }: { agent: SourceAgent }) {
   );
 }
 
-function Meta({ label, value }: { label: string; value: string }) {
+function Via({ agent }: { agent: SourceAgent }) {
+  return (
+    <span className="text-[10px]" style={{ color: `${AGENT_COLOR[agent]}cc` }}>
+      via {AGENT_LABEL[agent]}
+    </span>
+  );
+}
+
+function Meta({
+  label,
+  value,
+  agent,
+}: {
+  label: string;
+  value: string;
+  agent: SourceAgent;
+}) {
   return (
     <div>
-      <div className="text-[11px] uppercase tracking-wide text-muted">
-        {label}
+      <div className="flex items-baseline justify-between gap-2">
+        <span className="text-[11px] uppercase tracking-wide text-muted">
+          {label}
+        </span>
+        <Via agent={agent} />
       </div>
       <div className="text-sm text-text">{value}</div>
+    </div>
+  );
+}
+
+function EsriThumb({ lat, lon }: { lat: number; lon: number }) {
+  const [state, setState] = useState<"loading" | "ok" | "err">("loading");
+  const src = `${API_BASE}/thumbnail?lat=${lat}&lon=${lon}`;
+
+  useEffect(() => setState("loading"), [src]);
+
+  if (state === "err") return null;
+  return (
+    <div className="relative h-[200px] w-full overflow-hidden rounded-lg border border-border bg-surface-2">
+      {state === "loading" && (
+        <div className="absolute inset-0 animate-pulse bg-surface-2" />
+      )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt="High-resolution view of this location"
+        onLoad={() => setState("ok")}
+        onError={() => setState("err")}
+        className={`h-full w-full object-cover transition-opacity duration-300 ${
+          state === "ok" ? "opacity-100" : "opacity-0"
+        }`}
+      />
+      <span className="absolute bottom-1 right-1.5 rounded bg-black/50 px-1 text-[9px] text-white/70">
+        Esri World Imagery
+      </span>
     </div>
   );
 }
@@ -75,6 +127,7 @@ export default function SidePanel() {
   const agent = p?.source_agent as SourceAgent | undefined;
   const color = agent ? AGENT_COLOR[agent] : "#fff";
   const pct = p ? Math.round(p.confidence * 100) : 0;
+  const isReal = agent === "nova";
 
   const related = (p?.related_ids ?? [])
     .map((id) => byId[id])
@@ -86,10 +139,7 @@ export default function SidePanel() {
           ["ΔNDVI", p?.delta_ndvi],
           ["ΔNDBI", p?.delta_ndbi],
           ["ΔBrightness", p?.delta_brightness],
-          [
-            "Overlaps footprint",
-            p?.overlaps_footprint ? "Yes" : "No",
-          ],
+          ["Overlaps footprint", p?.overlaps_footprint ? "Yes" : "No"],
         ]
       : [];
 
@@ -101,7 +151,7 @@ export default function SidePanel() {
     >
       {feature && p && agent && (
         <div className="flex flex-col gap-5 p-5">
-          {/* Top row */}
+          {/* Top row: badge + type + close */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <AgentBadge agent={agent} />
@@ -118,7 +168,7 @@ export default function SidePanel() {
             </button>
           </div>
 
-          {/* Title */}
+          {/* Title + provenance */}
           <div>
             <h2 className="text-xl font-bold leading-tight text-text">
               {p.title_en}
@@ -126,7 +176,21 @@ export default function SidePanel() {
             <p dir="rtl" className="mt-1 text-right text-sm text-muted">
               {p.title_ar}
             </p>
+            <div className="mt-2 flex items-center gap-1.5">
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: isReal ? AGENT_COLOR.nova : "#8a94ad" }}
+              />
+              <span className="text-[11px] uppercase tracking-wide text-muted">
+                {isReal
+                  ? "Satellite-derived · real detection"
+                  : "Synthetic signal · demo data"}
+              </span>
+            </div>
           </div>
+
+          {/* Esri high-res thumbnail of the exact location */}
+          <EsriThumb lat={p.lat} lon={p.lon} />
 
           {/* Hero metric */}
           {p.value !== null && p.value !== undefined && (
@@ -139,13 +203,26 @@ export default function SidePanel() {
                   </span>
                 )}
               </div>
+              <div className="mt-1">
+                <Via agent={agent} />
+              </div>
             </div>
           )}
 
-          {/* Confidence */}
-          <div>
-            <div className="mb-1 flex justify-between text-xs text-muted">
-              <span>Confidence</span>
+          {/* Confidence — separated from the metric */}
+          <div className="border-t border-border pt-4">
+            <div className="mb-1 flex items-center justify-between text-xs text-muted">
+              <span className="flex items-center gap-1.5">
+                Confidence
+                <span className="group relative inline-flex">
+                  <span className="flex h-3.5 w-3.5 cursor-help items-center justify-center rounded-full border border-muted text-[9px] text-muted">
+                    ?
+                  </span>
+                  <span className="pointer-events-none invisible absolute left-0 top-5 z-10 w-64 rounded-md border border-border bg-surface-2 p-2 text-[11px] leading-relaxed text-text/90 opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100">
+                    {CONFIDENCE_HELP}
+                  </span>
+                </span>
+              </span>
               <span style={{ color }}>{pct}%</span>
             </div>
             <div className="h-2 w-full overflow-hidden rounded-full bg-surface-2">
@@ -161,18 +238,20 @@ export default function SidePanel() {
 
           {/* Metadata grid */}
           <div className="grid grid-cols-2 gap-4 border-t border-border pt-4">
-            <Meta label="Detected" value={fmtDate(p.timestamp)} />
+            <Meta label="Detected" value={fmtDate(p.timestamp)} agent={agent} />
             <Meta
               label="Coordinates"
               value={`${p.lat.toFixed(5)}, ${p.lon.toFixed(5)}`}
+              agent={agent}
             />
             {p.area_m2 !== undefined && (
               <Meta
                 label="Area"
                 value={`${Number(p.area_m2).toLocaleString()} m²`}
+                agent={agent}
               />
             )}
-            <Meta label="Layer" value={AGENT_LAYER_NAME[agent]} />
+            <Meta label="Layer" value={AGENT_LAYER_NAME[agent]} agent={agent} />
           </div>
 
           {/* Nova extras */}
@@ -183,6 +262,7 @@ export default function SidePanel() {
                   key={String(label)}
                   label={String(label)}
                   value={String(val)}
+                  agent={agent}
                 />
               ))}
             </div>

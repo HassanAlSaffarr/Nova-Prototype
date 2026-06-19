@@ -29,9 +29,10 @@ import json
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 
+from nova.esri import esri_crop
 from nova.signals import (
     AGENT_LAYER,
     DATA_DIR,
@@ -39,6 +40,8 @@ from nova.signals import (
     signals_to_geojson,
 )
 from nova.events import EventStore, make_nova_run_event, seed_events
+
+THUMB_CACHE = DATA_DIR / "cache" / "thumbs"
 
 _signals = SignalStore()
 _events = EventStore()
@@ -139,6 +142,27 @@ def get_detections(set: str = "full") -> dict:
                    "Run: python -m nova.run",
         )
     return json.loads(path.read_text())
+
+
+@app.get("/thumbnail")
+def get_thumbnail(lat: float, lon: float) -> Response:
+    """
+    256x256 Esri World Imagery crop centred exactly on (lat, lon) — the
+    high-resolution view of a signal's location. Cached to disk so repeat
+    clicks are instant. Visual confirmation only, not a detection source.
+    """
+    THUMB_CACHE.mkdir(parents=True, exist_ok=True)
+    path = THUMB_CACHE / f"{lat:.5f}_{lon:.5f}.png"
+    if not path.exists():
+        img = esri_crop(lat, lon)
+        if img is None:
+            raise HTTPException(status_code=502, detail="Esri imagery unavailable")
+        img.save(path)
+    return Response(
+        content=path.read_bytes(),
+        media_type="image/png",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
 
 
 @app.get("/events")
