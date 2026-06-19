@@ -4,7 +4,9 @@ import { useStore } from "@/lib/store";
 import { AGENT_COLOR, AGENT_LABEL, AGENTS } from "@/lib/colors";
 import type { DetectionSet } from "@/lib/types";
 
-const SETS: { key: DetectionSet; label: string }[] = [
+// v1 = 10m optical index change sets (superseded). v2 = the validated high-res
+// structural-change detector. Surfaced separately so the method story is clear.
+const V1_SETS: { key: DetectionSet; label: string }[] = [
   { key: "full", label: "Full" },
   { key: "inland", label: "Inland" },
   { key: "recent", label: "Recent" },
@@ -93,27 +95,54 @@ export default function LayerFilter() {
       </div>
 
       {/* Detection set */}
-      <div className="mt-2.5 flex items-center gap-1.5 border-t border-border pt-2.5">
+      <div className="mt-2.5 border-t border-border pt-2.5">
         <span className="text-[10px] font-semibold uppercase tracking-wide text-muted">
-          Nova
+          Nova detections
         </span>
-        <div className="flex flex-1 gap-1">
-          {SETS.map(({ key, label }) => {
-            const active = detectionSet === key;
-            return (
-              <button
-                key={key}
-                onClick={() => setDetectionSet(key)}
-                className={`flex-1 rounded border px-1 py-1 text-[11px] font-semibold transition-colors ${
-                  active
-                    ? "border-accent bg-accent/20 text-accent"
-                    : "border-border text-muted hover:bg-surface-2"
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
+
+        {/* v2: the validated high-res method, given primacy */}
+        <button
+          onClick={() => setDetectionSet("highres")}
+          title="High-resolution structural-change detection (validated method)"
+          className={`mt-1.5 flex w-full items-center justify-between rounded border px-2 py-1.5 text-[11px] font-semibold transition-colors ${
+            detectionSet === "highres"
+              ? "border-accent bg-accent/20 text-accent"
+              : "border-border text-muted hover:bg-surface-2"
+          }`}
+        >
+          <span className="flex items-center gap-1.5">
+            <span className="text-[13px] leading-none">◎</span>
+            High-res change
+          </span>
+          <span className="rounded-sm bg-accent/15 px-1 text-[8px] uppercase tracking-wide text-accent">
+            validated
+          </span>
+        </button>
+
+        {/* v1: the superseded optical-index sets, kept for the method story */}
+        <div className="mt-2 flex items-center gap-1.5">
+          <span className="text-[9px] uppercase tracking-wide text-muted/70">
+            v1 indices
+          </span>
+          <div className="flex flex-1 gap-1">
+            {V1_SETS.map(({ key, label }) => {
+              const active = detectionSet === key;
+              return (
+                <button
+                  key={key}
+                  onClick={() => setDetectionSet(key)}
+                  title="10m optical index change (superseded by high-res)"
+                  className={`flex-1 rounded border px-1 py-0.5 text-[10px] font-semibold transition-colors ${
+                    active
+                      ? "border-muted bg-surface-2 text-text"
+                      : "border-border/60 text-muted/80 hover:bg-surface-2"
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ export type SourceAgent =
   | "peter"
   | "data_chef";
 
-export type DetectionSet = "full" | "inland" | "recent";
+export type DetectionSet = "full" | "inland" | "recent" | "highres";
 
 export interface SignalProps {
   id: string;

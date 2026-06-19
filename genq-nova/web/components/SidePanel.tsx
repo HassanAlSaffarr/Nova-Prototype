@@ -11,7 +11,7 @@ import {
 import type { Feature, SourceAgent } from "@/lib/types";
 
 const CONFIDENCE_HELP =
-  "Confidence = agent's certainty in this signal. Nova uses NDBI/NDVI strength + area + footprint overlap. Synthetic agents use source-typical reliability.";
+  "Confidence = agent's certainty in this signal. Nova's high-res detector scores it from the strength of the structural-density jump; the older index method used NDBI/NDVI strength + area + footprint overlap. Synthetic agents use source-typical reliability.";
 
 function titleCase(s: string): string {
   return s.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
@@ -133,15 +133,24 @@ export default function SidePanel() {
     .map((id) => byId[id])
     .filter(Boolean) as Feature[];
 
+  const isHighres = (p as Record<string, unknown> | undefined)?.method ===
+    "highres";
   const novaExtras =
-    agent === "nova"
-      ? [
-          ["ΔNDVI", p?.delta_ndvi],
-          ["ΔNDBI", p?.delta_ndbi],
-          ["ΔBrightness", p?.delta_brightness],
-          ["Overlaps footprint", p?.overlaps_footprint ? "Yes" : "No"],
-        ]
-      : [];
+    agent !== "nova"
+      ? []
+      : isHighres
+        ? [
+            ["Δ structure", p?.mean_delta],
+            ["Cells flagged", p?.n_cells],
+            ["Compared", `${p?.before} → ${p?.after}`],
+            ["Method", "High-res structural"],
+          ]
+        : [
+            ["ΔNDVI", p?.delta_ndvi],
+            ["ΔNDBI", p?.delta_ndbi],
+            ["ΔBrightness", p?.delta_brightness],
+            ["Overlaps footprint", p?.overlaps_footprint ? "Yes" : "No"],
+          ];
 
   return (
     <aside

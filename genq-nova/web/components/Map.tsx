@@ -154,6 +154,13 @@ export default function Map() {
     (f) => activeAgents[f.properties.source_agent as SourceAgent],
   );
 
+  // The v2 (high-res) detector emits site *points*; v1 emits change *polygons*.
+  // Render each in its own idiom: polygons get the glow/fill treatment, points
+  // get a distinct hollow target-ring so a Nova "change" never looks like an
+  // agent's solid dot.
+  const novaArePoints =
+    detections.length > 0 && detections[0].geometry.type === "Point";
+
   const layers = [
     iraq &&
       new GeoJsonLayer({
@@ -189,6 +196,7 @@ export default function Map() {
     // Halo beneath the detections — a wide, soft green stroke approximating an
     // outer glow so Nova reads as primary. The selected polygon's halo pulses.
     novaActive &&
+      !novaArePoints &&
       new GeoJsonLayer({
         id: "nova-glow",
         data: { type: "FeatureCollection", features: detections },
@@ -208,6 +216,7 @@ export default function Map() {
         },
       }),
     novaActive &&
+      !novaArePoints &&
       new GeoJsonLayer({
         id: "nova-detections",
         data: { type: "FeatureCollection", features: detections },
@@ -223,6 +232,41 @@ export default function Map() {
         pickable: true,
         onClick: handlePick,
         updateTriggers: { getFillColor: [selectedId, denseFill] },
+      }),
+    // v2 high-res sites: a hollow neon target-ring, radius scaled by site area,
+    // pulsing when selected. Deliberately unlike the agents' solid dots.
+    novaActive &&
+      novaArePoints &&
+      new ScatterplotLayer({
+        id: "nova-sites",
+        data: detections,
+        getPosition: (f: Feature) =>
+          (f.geometry as { coordinates: [number, number] }).coordinates,
+        getRadius: (f: Feature) =>
+          Math.sqrt(Number(f.properties.area_m2) || 0) / 2 + 12,
+        radiusMinPixels: 9,
+        radiusMaxPixels: 60,
+        stroked: true,
+        filled: true,
+        getFillColor: (f: Feature) =>
+          f.properties.id === selectedId
+            ? ([...ACCENT, 70] as [number, number, number, number])
+            : ([...ACCENT, 28] as [number, number, number, number]),
+        getLineColor: (f: Feature) =>
+          f.properties.id === selectedId
+            ? ([...ACCENT, 255] as [number, number, number, number])
+            : ([...ACCENT, 200] as [number, number, number, number]),
+        getLineWidth: (f: Feature) =>
+          f.properties.id === selectedId ? 3 + pulse * 3 : 2.5,
+        lineWidthMinPixels: 2,
+        lineWidthMaxPixels: 6,
+        pickable: true,
+        onClick: handlePick,
+        updateTriggers: {
+          getFillColor: [selectedId],
+          getLineColor: [selectedId],
+          getLineWidth: [selectedId, pulse],
+        },
       }),
     new ScatterplotLayer({
       id: "agent-points",

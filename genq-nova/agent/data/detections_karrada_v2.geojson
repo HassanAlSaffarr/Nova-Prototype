@@ -20,7 +20,15 @@
         "lon": 44.410702,
         "n_cells": 242,
         "area_m2": 24200,
-        "mean_delta": 27.8
+        "mean_delta": 27.8,
+        "id": "nova-hr-507ddb8b79477610",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.93,
+        "related_ids": []
       }
     },
     {
@@ -37,7 +45,15 @@
         "lon": 44.412835,
         "n_cells": 112,
         "area_m2": 11200,
-        "mean_delta": 15.7
+        "mean_delta": 15.7,
+        "id": "nova-hr-8cca2dcf24cd9b76",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.52,
+        "related_ids": []
       }
     },
     {
@@ -54,7 +70,15 @@
         "lon": 44.390492,
         "n_cells": 70,
         "area_m2": 7000,
-        "mean_delta": 12.6
+        "mean_delta": 12.6,
+        "id": "nova-hr-ee763721de49128d",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.5,
+        "related_ids": []
       }
     },
     {
@@ -71,7 +95,15 @@
         "lon": 44.386903,
         "n_cells": 68,
         "area_m2": 6800,
-        "mean_delta": 29.3
+        "mean_delta": 29.3,
+        "id": "nova-hr-ec402d1e3bd766ae",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.98,
+        "related_ids": []
       }
     },
     {
@@ -88,7 +120,15 @@
         "lon": 44.387222,
         "n_cells": 65,
         "area_m2": 6500,
-        "mean_delta": 42.5
+        "mean_delta": 42.5,
+        "id": "nova-hr-d79e313755b22b01",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.99,
+        "related_ids": []
       }
     },
     {
@@ -105,7 +145,15 @@
         "lon": 44.398867,
         "n_cells": 58,
         "area_m2": 5800,
-        "mean_delta": 14.8
+        "mean_delta": 14.8,
+        "id": "nova-hr-02826588d3e54ef4",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.5,
+        "related_ids": []
       }
     }
   ]

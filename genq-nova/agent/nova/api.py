@@ -118,17 +118,23 @@ _DETECTION_SETS = {
     "full": "detections_karrada.geojson",
     "inland": "detections_karrada_inland.geojson",
     "recent": "detections_karrada_recent.geojson",
+    "highres": "detections_karrada_v2.geojson",
 }
 
 
 @app.get("/detections")
 def get_detections(set: str = "full") -> dict:
     """
-    Nova's raw CV output: change polygons + ΔNDVI/ΔNDBI/area metadata.
+    Nova's detections.
 
-    ?set=full   (default) 2022→2024 canonical set
-    ?set=inland           canonical set with riverbank detections excluded
-    ?set=recent           2023→2026 comparison set
+    The v1 sets are 10m optical change polygons (ΔNDVI/ΔNDBI/area). The highres
+    set is the *validated* v2 method — site centroids from ~0.5m structural-change
+    detection. (See docs/methodology.md: v1 is superseded by v2.)
+
+    ?set=full     (default) v1 2022→2024 canonical polygons
+    ?set=inland             v1 canonical set, riverbank excluded
+    ?set=recent             v1 2023→2026 comparison polygons
+    ?set=highres            v2 high-resolution structural-change sites (points)
     """
     if set not in _DETECTION_SETS:
         raise HTTPException(

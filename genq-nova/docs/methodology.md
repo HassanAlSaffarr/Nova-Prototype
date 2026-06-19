@@ -7,8 +7,9 @@ a market-intelligence map. This explains how, written for a non-technical reader
 > **Status note.** Nova's detection method was rebuilt after the first prototype.
 > This document describes the **current method (v2)**. The original approach (v1,
 > vegetation/built-up indices) is documented at the end as *superseded*, with the
-> evidence for why we moved on. The live demo may still display v1 prototype
-> detections until v2 is wired into the map.
+> evidence for why we moved on. Both are now selectable in the live demo (Nova
+> detections → "High-res change" for v2, "v1 indices" for the superseded sets),
+> on top of the existing-buildings base layer.
 
 ## The current method (v2): high-resolution structural change
 

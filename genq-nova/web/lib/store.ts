@@ -57,21 +57,46 @@ const allOn = () =>
 
 // Raw /detections features lack the Signal envelope (title/summary/etc).
 // Normalise one into the same shape the panel expects for every agent.
+// Two detector families flow through here: v1 (10m optical polygons, with
+// delta_ndbi/ndvi) and v2 (high-res structural-change point sites, with
+// mean_delta/n_cells). Branch on the v2 `method` marker.
 function detectionToFeature(f: Feature): Feature {
-  const p = f.properties;
-  const confirmed = p.signal_type === "confirmed_change" ||
-    (p as Record<string, unknown>).detection_type === "confirmed_change";
-  const dndbi = (p as Record<string, unknown>).delta_ndbi;
-  const dndvi = (p as Record<string, unknown>).delta_ndvi;
+  const p = f.properties as Record<string, unknown>;
+
+  if (p.method === "highres") {
+    const area = Number(p.area_m2);
+    return {
+      ...f,
+      properties: {
+        ...(p as Feature["properties"]),
+        source_agent: "nova",
+        layer: "Geo-mapping",
+        signal_type: "confirmed_change",
+        title_en: "New construction (high-res)",
+        title_ar: "إنشاءات جديدة (دقة عالية)",
+        summary: `High-resolution structural-change detection flagged a ${area.toLocaleString()} m² site where smooth, bare ground became built structure between ${String(
+          p.before,
+        )} and ${String(p.after)} (Δstructure ${String(p.mean_delta)}).`,
+        value: area,
+        unit: "m²",
+        timestamp: (p.detected_at as string) ?? (p.timestamp as string),
+        related_ids: (p.related_ids as string[]) ?? [],
+      } as Feature["properties"],
+    };
+  }
+
+  const confirmed =
+    p.signal_type === "confirmed_change" ||
+    p.detection_type === "confirmed_change";
+  const dndbi = p.delta_ndbi;
+  const dndvi = p.delta_ndvi;
   return {
     ...f,
     properties: {
-      ...p,
+      ...(p as Feature["properties"]),
       source_agent: "nova",
       layer: "Geo-mapping",
-      signal_type:
-        (p.signal_type as string) ??
-        ((p as Record<string, unknown>).detection_type as string),
+      signal_type: (p.signal_type as string) ?? (p.detection_type as string),
       title_en: confirmed
         ? "Confirmed change detected"
         : "Candidate change detected",
@@ -81,9 +106,7 @@ function detectionToFeature(f: Feature): Feature {
       ).toLocaleString()} m² site (ΔNDBI ${dndbi}, ΔNDVI ${dndvi}).`,
       value: Number(p.area_m2),
       unit: "m²",
-      timestamp:
-        ((p as Record<string, unknown>).detected_at as string) ??
-        p.timestamp,
+      timestamp: (p.detected_at as string) ?? (p.timestamp as string),
       related_ids: (p.related_ids as string[]) ?? [],
     } as Feature["properties"],
   };
