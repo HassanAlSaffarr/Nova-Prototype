@@ -62,6 +62,8 @@ export default function Map() {
   const mapRef = useRef<MapRef>(null);
   const [iraq, setIraq] = useState<FeatureCollection | null>(null);
   const [zoomed, setZoomed] = useState(false);
+  const [pulse, setPulse] = useState(0); // 0..1, drives selection pulse
+  const [denseFill, setDenseFill] = useState(false); // true past zoom 15
 
   const detections = useStore((s) => s.detections);
   const points = useStore((s) => s.points);
@@ -99,6 +101,24 @@ export default function Map() {
       select(info.object.properties.id);
     }
   };
+
+  // Pulse only while a Nova polygon is selected (not always — too busy).
+  const novaSelected =
+    !!selectedId && detections.some((d) => d.properties.id === selectedId);
+  useEffect(() => {
+    if (!novaSelected) {
+      setPulse(0);
+      return;
+    }
+    let raf = 0;
+    const start = performance.now();
+    const loop = (t: number) => {
+      setPulse((Math.sin((t - start) / 320) + 1) / 2);
+      raf = requestAnimationFrame(loop);
+    };
+    raf = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(raf);
+  }, [novaSelected]);
 
   const flyTo = (target: "karrada" | "iraq") => {
     const map = mapRef.current;
@@ -143,6 +163,27 @@ export default function Map() {
         getLineWidth: 1,
         lineWidthMinPixels: 1,
       }),
+    // Halo beneath the detections — a wide, soft green stroke approximating an
+    // outer glow so Nova reads as primary. The selected polygon's halo pulses.
+    novaActive &&
+      new GeoJsonLayer({
+        id: "nova-glow",
+        data: { type: "FeatureCollection", features: detections },
+        stroked: true,
+        filled: false,
+        getLineColor: (f: Feature) =>
+          f.properties.id === selectedId
+            ? ([...ACCENT, 60 + pulse * 120] as [number, number, number, number])
+            : ([...ACCENT, 55] as [number, number, number, number]),
+        getLineWidth: (f: Feature) =>
+          f.properties.id === selectedId ? 9 + pulse * 9 : 6,
+        lineWidthMinPixels: 4,
+        lineWidthMaxPixels: 22,
+        updateTriggers: {
+          getLineColor: [selectedId, pulse],
+          getLineWidth: [selectedId, pulse],
+        },
+      }),
     novaActive &&
       new GeoJsonLayer({
         id: "nova-detections",
@@ -151,14 +192,14 @@ export default function Map() {
         filled: true,
         getFillColor: (f: Feature) =>
           f.properties.id === selectedId
-            ? [...ACCENT, 200]
-            : [...ACCENT, 90],
+            ? [...ACCENT, 210]
+            : [...ACCENT, denseFill ? 102 : 90], // denser past zoom 15
         getLineColor: [...ACCENT, 255] as [number, number, number, number],
         getLineWidth: 2,
         lineWidthMinPixels: 1.5,
         pickable: true,
         onClick: handlePick,
-        updateTriggers: { getFillColor: [selectedId] },
+        updateTriggers: { getFillColor: [selectedId, denseFill] },
       }),
     new ScatterplotLayer({
       id: "agent-points",
@@ -192,6 +233,7 @@ export default function Map() {
           // Empty-map click (not a feature) closes the panel.
           if (Date.now() - featureClickRef.current > 150) select(null);
         }}
+        onMove={(e) => setDenseFill(e.viewState.zoom > 15)}
       >
         {/* Karrada AOI: subtle dashed marker of place; fades out past zoom 13 */}
         <Source id="karrada-aoi" type="geojson" data={karradaOutline()}>
