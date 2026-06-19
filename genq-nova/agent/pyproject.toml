@@ -34,6 +34,7 @@ nova-footprints = "nova.footprints:main"
 nova-run = "nova.run:main"
 nova-generate = "nova.generate:main"
 nova-api = "nova.api:main"
+nova-loop = "nova.loop:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -15,6 +15,8 @@ agent/data/footprints/*
 !agent/data/footprints/karrada.min.geojson
 agent/data/rasters/
 agent/data/*.db
+# Autonomous-loop runtime state (regenerate: python -m nova.loop --once)
+agent/data/detections_live.geojson
 
 # Agent credentials
 agent/credentials/
@@ -43,3 +45,7 @@ Thumbs.db
 
 # Cached Esri thumbnails (regenerable)
 agent/data/cache/
+
+# Local script scratch (temp stores, logs)
+scripts/_tmp_loop/
+scripts/*.log

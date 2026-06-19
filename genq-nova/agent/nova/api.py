@@ -119,6 +119,7 @@ _DETECTION_SETS = {
     "inland": "detections_karrada_inland.geojson",
     "recent": "detections_karrada_recent.geojson",
     "highres": "detections_karrada_v2.geojson",
+    "live": "detections_live.geojson",   # written by the autonomous loop
 }
 
 
@@ -135,6 +136,8 @@ def get_detections(set: str = "full") -> dict:
     ?set=inland             v1 canonical set, riverbank excluded
     ?set=recent             v1 2023→2026 comparison polygons
     ?set=highres            v2 high-resolution structural-change sites (points)
+    ?set=live               the autonomous loop's idempotent live store
+                            (with per-site first_seen/last_seen lifecycle)
     """
     if set not in _DETECTION_SETS:
         raise HTTPException(
