@@ -228,7 +228,7 @@ export default function Map() {
         initialViewState={IRAQ_VIEW}
         mapStyle={CARTO_DARK}
         style={{ width: "100%", height: "100%" }}
-        attributionControl={{ compact: true }}
+        attributionControl={false}
         onClick={() => {
           // Empty-map click (not a feature) closes the panel.
           if (Date.now() - featureClickRef.current > 150) select(null);
@@ -267,6 +267,18 @@ export default function Map() {
       >
         {zoomed ? "← Back to Iraq" : "Zoom to Karrada →"}
       </button>
+
+      {/* Minimal attribution — required by CARTO/OSM, expands on hover */}
+      <div className="group absolute bottom-1 right-1 z-10">
+        <div className="flex items-center gap-1 rounded-full border border-border bg-bg/70 px-1.5 py-0.5 text-[10px] text-muted backdrop-blur">
+          <span className="flex h-3 w-3 items-center justify-center rounded-full border border-muted text-[8px] italic">
+            i
+          </span>
+          <span className="hidden whitespace-nowrap group-hover:inline">
+            © CARTO · © OpenStreetMap
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
