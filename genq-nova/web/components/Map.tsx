@@ -26,6 +26,11 @@ const easeInOutCubic = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
 const ACCENT = hexToRgb(AGENT_COLOR.nova);
+const LAND_EMERGENCE: [number, number, number] = [56, 189, 248]; // sky blue
+
+// Construction reads in the brand green; river land-emergence in sky blue.
+const siteColor = (f: Feature): [number, number, number] =>
+  f.properties.category === "land_emergence" ? LAND_EMERGENCE : ACCENT;
 
 function DeckOverlay(props: MapboxOverlayProps) {
   const overlay = useControl(() => new MapboxOverlay(props));
@@ -247,8 +252,10 @@ export default function Map() {
         onClick: handlePick,
         updateTriggers: { getFillColor: [selectedId, denseFill] },
       }),
-    // v2 high-res sites: a hollow neon target-ring, radius scaled by site area,
+    // v2 high-res sites: a hollow target-ring, radius scaled by site area,
     // pulsing when selected. Deliberately unlike the agents' solid dots.
+    // Construction → neon green (a real building change); land_emergence → sky
+    // blue (riverbed land exposed as water dropped) so the two read apart.
     novaActive &&
       novaArePoints &&
       new ScatterplotLayer({
@@ -262,14 +269,18 @@ export default function Map() {
         radiusMaxPixels: 60,
         stroked: true,
         filled: true,
-        getFillColor: (f: Feature) =>
-          f.properties.id === selectedId
-            ? ([...ACCENT, 70] as [number, number, number, number])
-            : ([...ACCENT, 28] as [number, number, number, number]),
-        getLineColor: (f: Feature) =>
-          f.properties.id === selectedId
-            ? ([...ACCENT, 255] as [number, number, number, number])
-            : ([...ACCENT, 200] as [number, number, number, number]),
+        getFillColor: (f: Feature) => {
+          const c = siteColor(f);
+          return [...c, f.properties.id === selectedId ? 70 : 28] as [
+            number, number, number, number,
+          ];
+        },
+        getLineColor: (f: Feature) => {
+          const c = siteColor(f);
+          return [...c, f.properties.id === selectedId ? 255 : 200] as [
+            number, number, number, number,
+          ];
+        },
         getLineWidth: (f: Feature) =>
           f.properties.id === selectedId ? 3 + pulse * 3 : 2.5,
         lineWidthMinPixels: 2,

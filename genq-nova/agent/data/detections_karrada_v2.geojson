@@ -4,6 +4,7 @@
     "detector": "highres-structural-change",
     "before": "2023-12-31",
     "after": "2026-06-01",
+    "floor_m2": 3000,
     "categorised": "construction vs land_emergence (<=70m of a building)"
   },
   "features": [
@@ -167,6 +168,303 @@
         "related_ids": [],
         "nearest_building_m": 102,
         "category": "land_emergence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.418588,
+          33.303924
+        ]
+      },
+      "properties": {
+        "lat": 33.303924,
+        "lon": 44.418588,
+        "n_cells": 49,
+        "area_m2": 4900,
+        "mean_delta": 16.4,
+        "id": "nova-hr-febcf6f7d766d52b",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.55,
+        "related_ids": [],
+        "nearest_building_m": 108,
+        "category": "land_emergence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.393266,
+          33.296997
+        ]
+      },
+      "properties": {
+        "lat": 33.296997,
+        "lon": 44.393266,
+        "n_cells": 49,
+        "area_m2": 4900,
+        "mean_delta": 21.5,
+        "id": "nova-hr-c74166d8b902eab3",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.72,
+        "related_ids": [],
+        "nearest_building_m": 69,
+        "category": "construction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.4044,
+          33.295316
+        ]
+      },
+      "properties": {
+        "lat": 33.295316,
+        "lon": 44.4044,
+        "n_cells": 49,
+        "area_m2": 4900,
+        "mean_delta": 27.8,
+        "id": "nova-hr-e032a8b53f544751",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.93,
+        "related_ids": [],
+        "nearest_building_m": 45,
+        "category": "construction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.391477,
+          33.29499
+        ]
+      },
+      "properties": {
+        "lat": 33.29499,
+        "lon": 44.391477,
+        "n_cells": 46,
+        "area_m2": 4600,
+        "mean_delta": 12.9,
+        "id": "nova-hr-64eea60b50aab701",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.5,
+        "related_ids": [],
+        "nearest_building_m": 203,
+        "category": "land_emergence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.428546,
+          33.288673
+        ]
+      },
+      "properties": {
+        "lat": 33.288673,
+        "lon": 44.428546,
+        "n_cells": 43,
+        "area_m2": 4300,
+        "mean_delta": 18.8,
+        "id": "nova-hr-f826f620846d99fb",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.63,
+        "related_ids": [],
+        "nearest_building_m": 151,
+        "category": "land_emergence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41619,
+          33.303572
+        ]
+      },
+      "properties": {
+        "lat": 33.303572,
+        "lon": 44.41619,
+        "n_cells": 39,
+        "area_m2": 3900,
+        "mean_delta": 12.1,
+        "id": "nova-hr-3945e688e0f57fae",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.5,
+        "related_ids": [],
+        "nearest_building_m": 285,
+        "category": "land_emergence"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.401068,
+          33.293867
+        ]
+      },
+      "properties": {
+        "lat": 33.293867,
+        "lon": 44.401068,
+        "n_cells": 38,
+        "area_m2": 3800,
+        "mean_delta": 16.9,
+        "id": "nova-hr-b57c883f61a2c962",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.56,
+        "related_ids": [],
+        "nearest_building_m": 58,
+        "category": "construction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.409192,
+          33.301315
+        ]
+      },
+      "properties": {
+        "lat": 33.301315,
+        "lon": 44.409192,
+        "n_cells": 31,
+        "area_m2": 3100,
+        "mean_delta": 20.8,
+        "id": "nova-hr-fc6b07eaa37a83e4",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.69,
+        "related_ids": [],
+        "nearest_building_m": 43,
+        "category": "construction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.387141,
+          33.300969
+        ]
+      },
+      "properties": {
+        "lat": 33.300969,
+        "lon": 44.387141,
+        "n_cells": 31,
+        "area_m2": 3100,
+        "mean_delta": 34.0,
+        "id": "nova-hr-3e231d0ff494b879",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.99,
+        "related_ids": [],
+        "nearest_building_m": 30,
+        "category": "construction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.393584,
+          33.309495
+        ]
+      },
+      "properties": {
+        "lat": 33.309495,
+        "lon": 44.393584,
+        "n_cells": 30,
+        "area_m2": 3000,
+        "mean_delta": 22.1,
+        "id": "nova-hr-aa902ef3838d7147",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.74,
+        "related_ids": [],
+        "nearest_building_m": 50,
+        "category": "construction"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.416338,
+          33.299234
+        ]
+      },
+      "properties": {
+        "lat": 33.299234,
+        "lon": 44.416338,
+        "n_cells": 30,
+        "area_m2": 3000,
+        "mean_delta": 22.5,
+        "id": "nova-hr-8a1a4754134c7fe7",
+        "method": "highres",
+        "detector": "highres-structural-change",
+        "before": "2023-12-31",
+        "after": "2026-06-01",
+        "detected_at": "2026-06-01T00:00:00+00:00",
+        "confidence": 0.75,
+        "related_ids": [],
+        "nearest_building_m": 57,
+        "category": "construction"
       }
     }
   ]
