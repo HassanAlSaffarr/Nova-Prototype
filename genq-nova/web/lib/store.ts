@@ -7,6 +7,7 @@ import {
   triggerNovaRun,
 } from "./api";
 import { AGENTS } from "./colors";
+import { AOIS, type AoiKey } from "./aoi";
 import type {
   DetectionSet,
   EventItem,
@@ -25,6 +26,7 @@ interface NovaState {
   events: EventItem[];
   byId: Record<string, Feature>;
 
+  aoi: AoiKey;
   detectionSet: DetectionSet;
   activeAgents: Record<SourceAgent, boolean>;
   showBuildings: boolean; // base "all buildings" layer toggle
@@ -33,10 +35,13 @@ interface NovaState {
   runningNova: boolean;
   newEventId: string | null; // for the flash animation
 
-  // Map registers a fly-to fn so the panel can pan to related signals.
+  // Map registers a fly-to fn so the panel can pan to related signals,
+  // and a fly-to-AOI fn so switching AOI reframes the map.
   flyToFn: ((lon: number, lat: number) => void) | null;
+  flyToAoiFn: ((aoi: AoiKey) => void) | null;
 
   loadAll: () => Promise<void>;
+  setAoi: (aoi: AoiKey) => Promise<void>;
   setDetectionSet: (s: DetectionSet) => Promise<void>;
   toggleAgent: (a: SourceAgent) => void;
   setAllAgents: (on: boolean) => void;
@@ -44,6 +49,7 @@ interface NovaState {
   select: (id: string | null) => void;
   selectRelated: (id: string) => void;
   setFlyToFn: (fn: (lon: number, lat: number) => void) => void;
+  setFlyToAoiFn: (fn: (aoi: AoiKey) => void) => void;
   toggleEventLog: () => void;
   runNova: () => Promise<void>;
   clearError: () => void;
@@ -129,6 +135,7 @@ export const useStore = create<NovaState>((set, get) => ({
   buildings: null,
   events: [],
   byId: {},
+  aoi: "karrada",
   detectionSet: "highres", // demo opens on the validated v2 detector
   activeAgents: allOn(),
   showBuildings: true,
@@ -137,6 +144,7 @@ export const useStore = create<NovaState>((set, get) => ({
   runningNova: false,
   newEventId: null,
   flyToFn: null,
+  flyToAoiFn: null,
 
   loadAll: async () => {
     set({ loading: true, error: null });
@@ -163,6 +171,22 @@ export const useStore = create<NovaState>((set, get) => ({
         .catch(() => {});
     } catch (e) {
       set({ error: (e as Error).message, loading: false });
+    }
+  },
+
+  setAoi: async (aoi) => {
+    if (aoi === get().aoi) return;
+    const def = AOIS[aoi];
+    set({ aoi, detectionSet: def.detectionSet, selectedId: null });
+    get().flyToAoiFn?.(aoi);
+    try {
+      const detections = await fetchDetections(def.detectionSet);
+      set({
+        detections: detections.features,
+        byId: indexById(detections.features, get().points),
+      });
+    } catch (e) {
+      set({ error: (e as Error).message });
     }
   },
 
@@ -204,6 +228,8 @@ export const useStore = create<NovaState>((set, get) => ({
   },
 
   setFlyToFn: (fn) => set({ flyToFn: fn }),
+
+  setFlyToAoiFn: (fn) => set({ flyToAoiFn: fn }),
 
   toggleEventLog: () => set((st) => ({ eventLogOpen: !st.eventLogOpen })),
 

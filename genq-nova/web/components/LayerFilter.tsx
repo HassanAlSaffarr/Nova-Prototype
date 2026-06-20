@@ -2,6 +2,7 @@
 
 import { useStore } from "@/lib/store";
 import { AGENT_COLOR, AGENT_LABEL, AGENTS } from "@/lib/colors";
+import { AOIS, AOI_KEYS } from "@/lib/aoi";
 import type { DetectionSet } from "@/lib/types";
 
 // v1 = 10m optical index change sets (superseded). v2 = the validated high-res
@@ -12,6 +13,8 @@ const V1_SETS: { key: DetectionSet; label: string }[] = [
   { key: "recent", label: "Recent" },
 ];
 
+const HIGHRES_SETS = ["highres", "highres_bismayah"];
+
 export default function LayerFilter() {
   const activeAgents = useStore((s) => s.activeAgents);
   const toggleAgent = useStore((s) => s.toggleAgent);
@@ -20,12 +23,48 @@ export default function LayerFilter() {
   const setDetectionSet = useStore((s) => s.setDetectionSet);
   const showBuildings = useStore((s) => s.showBuildings);
   const toggleBuildings = useStore((s) => s.toggleBuildings);
+  const aoi = useStore((s) => s.aoi);
+  const setAoi = useStore((s) => s.setAoi);
 
   const allOn = AGENTS.every((a) => activeAgents[a]);
+  const isKarrada = aoi === "karrada";
+  const highresActive = HIGHRES_SETS.includes(detectionSet);
 
   return (
     <div className="fixed left-5 top-16 z-20 w-[196px] rounded-lg border border-border bg-surface/95 p-2.5 backdrop-blur">
-      {/* Base layer: every existing building (context beneath Nova's changes) */}
+      {/* AOI switcher — the same detector on two very different areas */}
+      <div className="mb-2.5 border-b border-border pb-2.5">
+        <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">
+          Area
+        </span>
+        <div className="mt-1.5 grid grid-cols-2 gap-1">
+          {AOI_KEYS.map((key) => {
+            const active = aoi === key;
+            return (
+              <button
+                key={key}
+                onClick={() => setAoi(key)}
+                title={AOIS[key].sublabel}
+                className={`rounded border px-1.5 py-1 text-left transition-colors ${
+                  active
+                    ? "border-accent bg-accent/15 text-accent"
+                    : "border-border text-muted hover:bg-surface-2"
+                }`}
+              >
+                <div className="text-[11px] font-semibold leading-tight">
+                  {AOIS[key].label}
+                </div>
+                <div className="text-[8px] uppercase tracking-wide opacity-70">
+                  {AOIS[key].sublabel}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Base layer: every existing building (Karrada only — has footprints) */}
+      {isKarrada && (
       <div className="mb-2.5 flex items-center justify-between border-b border-border pb-2.5">
         <span className="text-[11px] font-semibold uppercase tracking-wide text-muted">
           Base
@@ -51,6 +90,7 @@ export default function LayerFilter() {
           Buildings
         </button>
       </div>
+      )}
 
       {/* Agent layers as compact toggle chips */}
       <div className="mb-1.5 flex items-center justify-between">
@@ -102,10 +142,10 @@ export default function LayerFilter() {
 
         {/* v2: the validated high-res method, given primacy */}
         <button
-          onClick={() => setDetectionSet("highres")}
+          onClick={() => setDetectionSet(AOIS[aoi].detectionSet)}
           title="High-resolution structural-change detection (validated method)"
           className={`mt-1.5 flex w-full items-center justify-between rounded border px-2 py-1.5 text-[11px] font-semibold transition-colors ${
-            detectionSet === "highres"
+            highresActive
               ? "border-accent bg-accent/20 text-accent"
               : "border-border text-muted hover:bg-surface-2"
           }`}
@@ -119,7 +159,8 @@ export default function LayerFilter() {
           </span>
         </button>
 
-        {/* v1: the superseded optical-index sets, kept for the method story */}
+        {/* v1: the superseded optical-index sets (Karrada only) */}
+        {isKarrada && (
         <div className="mt-2 flex items-center gap-1.5">
           <span className="text-[9px] uppercase tracking-wide text-muted/70">
             v1 indices
@@ -144,6 +185,7 @@ export default function LayerFilter() {
             })}
           </div>
         </div>
+        )}
       </div>
     </div>
   );

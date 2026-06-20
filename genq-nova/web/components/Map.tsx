@@ -13,7 +13,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 
 import { useStore } from "@/lib/store";
 import { AGENT_COLOR, hexToRgb } from "@/lib/colors";
-import { KARRADA_BBOX, KARRADA_CENTER } from "@/lib/aoi";
+import { AOIS, KARRADA_CENTER, type AoiKey } from "@/lib/aoi";
 import type { Feature, FeatureCollection, SourceAgent } from "@/lib/types";
 
 const CARTO_DARK =
@@ -33,8 +33,8 @@ function DeckOverlay(props: MapboxOverlayProps) {
   return null;
 }
 
-function karradaOutline(): FeatureCollection {
-  const [w, s, e, n] = KARRADA_BBOX;
+function aoiOutline(bbox: [number, number, number, number]): FeatureCollection {
+  const [w, s, e, n] = bbox;
   return {
     type: "FeatureCollection",
     features: [
@@ -72,8 +72,10 @@ export default function Map() {
   const showBuildings = useStore((s) => s.showBuildings);
   const activeAgents = useStore((s) => s.activeAgents);
   const selectedId = useStore((s) => s.selectedId);
+  const aoi = useStore((s) => s.aoi);
   const select = useStore((s) => s.select);
   const setFlyToFn = useStore((s) => s.setFlyToFn);
+  const setFlyToAoiFn = useStore((s) => s.setFlyToAoiFn);
   const loadAll = useStore((s) => s.loadAll);
 
   // Guards against an empty-map click deselecting right after a feature click.
@@ -123,19 +125,30 @@ export default function Map() {
     return () => cancelAnimationFrame(raf);
   }, [novaSelected]);
 
-  const flyTo = (target: "karrada" | "iraq") => {
+  const flyToAoi = (key: AoiKey, duration = 3000) => {
+    const def = AOIS[key];
+    mapRef.current?.flyTo({
+      center: def.center,
+      zoom: def.zoom,
+      duration,
+      curve: 1.6,
+      easing: easeInOutCubic,
+      essential: true,
+    });
+    setZoomed(true);
+  };
+
+  // Switching AOI from the panel reframes the map.
+  useEffect(() => {
+    setFlyToAoiFn((key) => flyToAoi(key, 2200));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [setFlyToAoiFn]);
+
+  const flyTo = (target: "aoi" | "iraq") => {
     const map = mapRef.current;
     if (!map) return;
-    if (target === "karrada") {
-      map.flyTo({
-        center: KARRADA_CENTER,
-        zoom: 14.2,
-        duration: 3000,
-        curve: 1.6,
-        easing: easeInOutCubic,
-        essential: true,
-      });
-      setZoomed(true);
+    if (target === "aoi") {
+      flyToAoi(aoi);
     } else {
       map.flyTo({
         center: [IRAQ_VIEW.longitude, IRAQ_VIEW.latitude],
@@ -180,6 +193,7 @@ export default function Map() {
     showBuildings &&
       buildingsZoom &&
       buildings &&
+      aoi === "karrada" &&
       new GeoJsonLayer({
         id: "buildings",
         data: buildings,
@@ -306,7 +320,7 @@ export default function Map() {
         }}
       >
         {/* Karrada AOI: subtle dashed marker of place; fades out past zoom 13 */}
-        <Source id="karrada-aoi" type="geojson" data={karradaOutline()}>
+        <Source id="karrada-aoi" type="geojson" data={aoiOutline(AOIS[aoi].bbox)}>
           <Layer
             id="karrada-aoi-line"
             type="line"
@@ -332,10 +346,10 @@ export default function Map() {
       </MapGL>
 
       <button
-        onClick={() => flyTo(zoomed ? "iraq" : "karrada")}
+        onClick={() => flyTo(zoomed ? "iraq" : "aoi")}
         className="absolute bottom-5 right-5 z-20 rounded-md border border-border bg-surface/90 px-4 py-2 text-sm font-semibold text-accent hover:bg-surface-2 transition-colors"
       >
-        {zoomed ? "← Back to Iraq" : "Zoom to Karrada →"}
+        {zoomed ? "← Back to Iraq" : `Zoom to ${AOIS[aoi].label} →`}
       </button>
 
       {/* Minimal attribution — required by CARTO/OSM, expands on hover */}
