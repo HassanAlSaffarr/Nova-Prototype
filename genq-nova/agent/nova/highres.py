@@ -300,3 +300,45 @@ def sites_to_geojson(sites: list[dict], date_before: str, date_after: str) -> di
         ],
     }
 
+
+# ---------------------------------------------------------------------------
+# Precision filter: keep only detections inside the built fabric
+# ---------------------------------------------------------------------------
+
+
+def _building_points(footprints: dict) -> list[tuple[float, float]]:
+    """One representative (lon, lat) per footprint (first ring vertex)."""
+    pts = []
+    for f in footprints.get("features", []):
+        g = f["geometry"]
+        ring = g["coordinates"][0][0] if g["type"] == "MultiPolygon" else g["coordinates"][0]
+        pts.append((ring[0][0], ring[0][1]))
+    return pts
+
+
+def filter_to_built_fabric(
+    features: list[dict], footprints: dict, max_m: float = 70.0
+) -> list[dict]:
+    """
+    Drop detections that aren't near any known building — the structure-density
+    signal also fires on river sandbars, exposed banks, and busy parking lots
+    (vehicles add texture), none of which sit in the built fabric. Requiring a
+    building footprint within `max_m` removes those water/open-ground false
+    positives and gives the footprint layer a real job in the pipeline. Each
+    kept feature is annotated with `nearest_building_m`.
+    """
+    pts = _building_points(footprints)
+    kept = []
+    for feat in features:
+        p = feat["properties"]
+        lat, lon = p["lat"], p["lon"]
+        cosl = math.cos(math.radians(lat))
+        best = min(
+            math.hypot((x - lon) * 111_320 * cosl, (y - lat) * 111_000)
+            for x, y in pts
+        )
+        if best <= max_m:
+            p["nearest_building_m"] = round(best)
+            kept.append(feat)
+    return kept
+

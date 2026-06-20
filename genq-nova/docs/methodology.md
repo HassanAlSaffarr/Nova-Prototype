@@ -50,6 +50,23 @@ City** (a documented 100,000-unit project actively under construction) against
 A valid detector must light up where construction is *known* to be happening and
 stay quiet where it isn't. Only the high-resolution method does.
 
+## Precision filter: keep changes in the built fabric
+
+The structure signal also rises on **river sandbars, exposed banks, and busy
+parking lots** (vehicles add texture) — none of which are construction. Nova
+filters detections to those within ~70 m of a known building footprint, which
+removes those water/open-ground false positives and gives the footprint layer a
+real job in the pipeline. On Karrada this cut a noisy 6 down to 3 defensible,
+building-adjacent sites.
+
+## Two AOIs, one detector
+
+The same detector runs on two very different areas, which is the honest story:
+**Karrada** is a built-out core, so it has *few* real changes (3) — a saturated
+district *should* be quiet. **Bismayah New City** is an active megaproject, so
+the same method finds *many* (80 sites ≥ 5,000 m²). Few-in-the-core and
+many-on-the-edge is exactly what a working detector should show.
+
 ## What it is and isn't
 - It finds **new structures appearing**, not vegetation change.
 - The current version uses a transparent image-texture signal; the natural

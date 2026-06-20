@@ -3,7 +3,8 @@
   "properties": {
     "detector": "highres-structural-change",
     "before": "2023-12-31",
-    "after": "2026-06-01"
+    "after": "2026-06-01",
+    "precision_filter": "built-fabric <=70m of a building footprint"
   },
   "features": [
     {
@@ -28,57 +29,8 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.93,
-        "related_ids": []
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.412835,
-          33.31302
-        ]
-      },
-      "properties": {
-        "lat": 33.31302,
-        "lon": 44.412835,
-        "n_cells": 112,
-        "area_m2": 11200,
-        "mean_delta": 15.7,
-        "id": "nova-hr-8cca2dcf24cd9b76",
-        "method": "highres",
-        "detector": "highres-structural-change",
-        "before": "2023-12-31",
-        "after": "2026-06-01",
-        "detected_at": "2026-06-01T00:00:00+00:00",
-        "confidence": 0.52,
-        "related_ids": []
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.390492,
-          33.294779
-        ]
-      },
-      "properties": {
-        "lat": 33.294779,
-        "lon": 44.390492,
-        "n_cells": 70,
-        "area_m2": 7000,
-        "mean_delta": 12.6,
-        "id": "nova-hr-ee763721de49128d",
-        "method": "highres",
-        "detector": "highres-structural-change",
-        "before": "2023-12-31",
-        "after": "2026-06-01",
-        "detected_at": "2026-06-01T00:00:00+00:00",
-        "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 65
       }
     },
     {
@@ -103,7 +55,8 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.98,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 22
       }
     },
     {
@@ -128,32 +81,8 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.398867,
-          33.296052
-        ]
-      },
-      "properties": {
-        "lat": 33.296052,
-        "lon": 44.398867,
-        "n_cells": 58,
-        "area_m2": 5800,
-        "mean_delta": 14.8,
-        "id": "nova-hr-02826588d3e54ef4",
-        "method": "highres",
-        "detector": "highres-structural-change",
-        "before": "2023-12-31",
-        "after": "2026-06-01",
-        "detected_at": "2026-06-01T00:00:00+00:00",
-        "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 55
       }
     }
   ]

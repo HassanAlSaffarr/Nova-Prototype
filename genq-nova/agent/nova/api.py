@@ -119,6 +119,7 @@ _DETECTION_SETS = {
     "inland": "detections_karrada_inland.geojson",
     "recent": "detections_karrada_recent.geojson",
     "highres": "detections_karrada_v2.geojson",
+    "highres_bismayah": "detections_bismayah_v2.geojson",   # second AOI
     "live": "detections_live.geojson",   # written by the autonomous loop
 }
 
