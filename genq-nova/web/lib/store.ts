@@ -7,7 +7,7 @@ import {
   triggerNovaRun,
 } from "./api";
 import { AGENTS } from "./colors";
-import { AOIS, type AoiKey } from "./aoi";
+import { type AoiKey } from "./aoi";
 import type {
   DetectionSet,
   EventItem,
@@ -41,7 +41,7 @@ interface NovaState {
   flyToAoiFn: ((aoi: AoiKey) => void) | null;
 
   loadAll: () => Promise<void>;
-  setAoi: (aoi: AoiKey) => Promise<void>;
+  focusAoi: (aoi: AoiKey) => void;
   setDetectionSet: (s: DetectionSet) => Promise<void>;
   toggleAgent: (a: SourceAgent) => void;
   setAllAgents: (on: boolean) => void;
@@ -118,6 +118,20 @@ function detectionToFeature(f: Feature): Feature {
   };
 }
 
+// Fetch the detections for a method. "highres" shows EVERY AOI at once — the
+// product scales to all of Iraq, so the map isn't gated to one area at a time;
+// the legacy v1 sets are Karrada-only.
+async function loadDetectionsFor(set: DetectionSet): Promise<Feature[]> {
+  if (set === "highres") {
+    const [kar, bis] = await Promise.all([
+      fetchDetections("highres"),
+      fetchDetections("highres_bismayah"),
+    ]);
+    return [...kar.features, ...bis.features];
+  }
+  return (await fetchDetections(set)).features;
+}
+
 function indexById(detections: Feature[], points: Feature[]) {
   const byId: Record<string, Feature> = {};
   for (const f of points) byId[f.properties.id] = f;
@@ -151,17 +165,17 @@ export const useStore = create<NovaState>((set, get) => ({
     try {
       const [signals, detections, events] = await Promise.all([
         fetchSignals(),
-        fetchDetections(get().detectionSet),
+        loadDetectionsFor(get().detectionSet),
         fetchEvents(),
       ]);
       const points = signals.features.filter(
         (f) => f.properties.source_agent !== "nova",
       );
       set({
-        detections: detections.features,
+        detections,
         points,
         events: events.events,
-        byId: indexById(detections.features, points),
+        byId: indexById(detections, points),
         loading: false,
       });
       // Buildings are a heavy, non-critical base layer — load them after the
@@ -174,29 +188,19 @@ export const useStore = create<NovaState>((set, get) => ({
     }
   },
 
-  setAoi: async (aoi) => {
-    if (aoi === get().aoi) return;
-    const def = AOIS[aoi];
-    set({ aoi, detectionSet: def.detectionSet, selectedId: null });
+  // AOIs all render at once now; "focus" just flies the camera to one.
+  focusAoi: (aoi) => {
+    set({ aoi });
     get().flyToAoiFn?.(aoi);
-    try {
-      const detections = await fetchDetections(def.detectionSet);
-      set({
-        detections: detections.features,
-        byId: indexById(detections.features, get().points),
-      });
-    } catch (e) {
-      set({ error: (e as Error).message });
-    }
   },
 
   setDetectionSet: async (s) => {
     set({ detectionSet: s, selectedId: null });
     try {
-      const detections = await fetchDetections(s);
+      const detections = await loadDetectionsFor(s);
       set({
-        detections: detections.features,
-        byId: indexById(detections.features, get().points),
+        detections,
+        byId: indexById(detections, get().points),
       });
     } catch (e) {
       set({ error: (e as Error).message });

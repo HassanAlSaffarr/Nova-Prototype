@@ -26,9 +26,11 @@ const easeInOutCubic = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
 const ACCENT = hexToRgb(AGENT_COLOR.nova);
-const LAND_EMERGENCE: [number, number, number] = [56, 189, 248]; // sky blue
+// Land-emergence (river land exposed as water drops) reads in neutral slate —
+// deliberately NOT an agent colour and not the brand green, so it's clearly
+// "Nova flagged this, but it isn't construction".
+const LAND_EMERGENCE: [number, number, number] = [156, 163, 175];
 
-// Construction reads in the brand green; river land-emergence in sky blue.
 const siteColor = (f: Feature): [number, number, number] =>
   f.properties.category === "land_emergence" ? LAND_EMERGENCE : ACCENT;
 
@@ -69,7 +71,6 @@ export default function Map() {
   const [zoomed, setZoomed] = useState(false);
   const [pulse, setPulse] = useState(0); // 0..1, drives selection pulse
   const [denseFill, setDenseFill] = useState(false); // true past zoom 15
-  const [buildingsZoom, setBuildingsZoom] = useState(false); // true past zoom 12.5
 
   const detections = useStore((s) => s.detections);
   const points = useStore((s) => s.points);
@@ -191,14 +192,12 @@ export default function Map() {
         getLineWidth: 1,
         lineWidthMinPixels: 1,
       }),
-    // Base "all buildings" layer: every existing Karrada footprint, drawn as a
-    // faint blue-grey wash beneath everything. Only past zoom ~12.5, where the
-    // ~24k polygons are actually legible (and worth the GPU). This is the stage
-    // between an empty basemap and Nova's flagged *changes*.
+    // Base "all buildings" layer: every existing Karrada footprint, a faint
+    // blue-grey wash beneath everything (24k polygons — trivial for deck.gl, so
+    // no zoom gate; they're sub-pixel specks when zoomed out anyway). This is the
+    // stage between an empty basemap and Nova's flagged *changes*.
     showBuildings &&
-      buildingsZoom &&
       buildings &&
-      aoi === "karrada" &&
       new GeoJsonLayer({
         id: "buildings",
         data: buildings,
@@ -325,10 +324,7 @@ export default function Map() {
           // Empty-map click (not a feature) closes the panel.
           if (Date.now() - featureClickRef.current > 150) select(null);
         }}
-        onMove={(e) => {
-          setDenseFill(e.viewState.zoom > 15);
-          setBuildingsZoom(e.viewState.zoom > 12.5);
-        }}
+        onMove={(e) => setDenseFill(e.viewState.zoom > 15)}
       >
         {/* Karrada AOI: subtle dashed marker of place; fades out past zoom 13 */}
         <Source id="karrada-aoi" type="geojson" data={aoiOutline(AOIS[aoi].bbox)}>
