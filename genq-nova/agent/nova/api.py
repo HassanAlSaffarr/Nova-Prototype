@@ -26,7 +26,9 @@ Reads from SQLite (nova.db) as the single source of truth; /detections reads the
 canonical detections_karrada.geojson for full polygon + delta detail.
 """
 
+import functools
 import json
+import math
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 
@@ -34,6 +36,7 @@ from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from nova.esri import esri_crop
+from nova.highres import wayback_mosaic, wayback_releases
 from nova.signals import (
     AGENT_LAYER,
     DATA_DIR,
@@ -198,6 +201,48 @@ def get_thumbnail(lat: float, lon: float) -> Response:
         img = esri_crop(lat, lon)
         if img is None:
             raise HTTPException(status_code=502, detail="Esri imagery unavailable")
+        img.save(path)
+    return Response(
+        content=path.read_bytes(),
+        media_type="image/png",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
+
+
+WAYBACK_CACHE = DATA_DIR / "cache" / "wayback"
+
+
+@functools.lru_cache(maxsize=1)
+def _wayback_releases_cached() -> tuple[tuple[str, str], ...]:
+    return tuple(wayback_releases())
+
+
+def _release_for(date: str) -> str:
+    rels = [r for r in _wayback_releases_cached() if r[1] <= date]
+    if not rels:
+        raise HTTPException(status_code=404, detail=f"No Wayback release on/before {date}")
+    return rels[-1][0]
+
+
+@app.get("/wayback")
+def get_wayback(lat: float, lon: float, date: str, half_m: float = 130.0) -> Response:
+    """
+    A ~0.5 m Esri World Imagery Wayback crop centred on (lat, lon) as it looked
+    on `date` (YYYY-MM-DD) — the archived version on or before that date. Calling
+    it with a detection's `before` and `after` dates gives the before/after pair
+    that *is* the evidence for a high-res change. Cached to disk.
+    """
+    WAYBACK_CACHE.mkdir(parents=True, exist_ok=True)
+    rel = _release_for(date)
+    path = WAYBACK_CACHE / f"{lat:.5f}_{lon:.5f}_{rel}.png"
+    if not path.exists():
+        dlat = half_m / 111_000.0
+        dlon = half_m / (111_320.0 * math.cos(math.radians(lat)))
+        bbox = [lon - dlon, lat - dlat, lon + dlon, lat + dlat]
+        try:
+            img = wayback_mosaic(bbox, rel, zoom=18).resize((320, 320))
+        except Exception:
+            raise HTTPException(status_code=502, detail="Wayback imagery unavailable")
         img.save(path)
     return Response(
         content=path.read_bytes(),

@@ -107,6 +107,74 @@ function EsriThumb({ lat, lon }: { lat: number; lon: number }) {
   );
 }
 
+function WaybackImg({
+  lat,
+  lon,
+  date,
+  label,
+}: {
+  lat: number;
+  lon: number;
+  date: string;
+  label: string;
+}) {
+  const [state, setState] = useState<"loading" | "ok" | "err">("loading");
+  const src = `${API_BASE}/wayback?lat=${lat}&lon=${lon}&date=${date}`;
+  useEffect(() => setState("loading"), [src]);
+  return (
+    <div className="relative h-[150px] overflow-hidden rounded-lg border border-border bg-surface-2">
+      {state !== "ok" && (
+        <div className="absolute inset-0 grid place-items-center bg-surface-2 text-[10px] text-muted">
+          {state === "loading" ? (
+            <span className="animate-pulse">loading…</span>
+          ) : (
+            "imagery unavailable"
+          )}
+        </div>
+      )}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={label}
+        onLoad={() => setState("ok")}
+        onError={() => setState("err")}
+        className={`h-full w-full object-cover transition-opacity duration-300 ${
+          state === "ok" ? "opacity-100" : "opacity-0"
+        }`}
+      />
+      <span className="absolute left-1.5 top-1.5 rounded bg-black/55 px-1.5 py-0.5 text-[9px] font-semibold text-white">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+// Before/after ~0.5m Wayback crops — the actual evidence behind a high-res
+// detection (smooth/bare land → built structure).
+function BeforeAfter({
+  lat,
+  lon,
+  before,
+  after,
+}: {
+  lat: number;
+  lon: number;
+  before: string;
+  after: string;
+}) {
+  return (
+    <div>
+      <div className="grid grid-cols-2 gap-1.5">
+        <WaybackImg lat={lat} lon={lon} date={before} label={`Before · ${before}`} />
+        <WaybackImg lat={lat} lon={lon} date={after} label={`After · ${after}`} />
+      </div>
+      <div className="mt-1 text-right text-[9px] text-muted">
+        Esri World Imagery Wayback
+      </div>
+    </div>
+  );
+}
+
 export default function SidePanel() {
   const selectedId = useStore((s) => s.selectedId);
   const byId = useStore((s) => s.byId);
@@ -203,8 +271,18 @@ export default function SidePanel() {
             </div>
           </div>
 
-          {/* Esri high-res thumbnail of the exact location */}
-          <EsriThumb lat={p.lat} lon={p.lon} />
+          {/* High-res detections show the before/after evidence; everything
+              else shows a single current high-res crop of the location. */}
+          {isHighres && p.before && p.after ? (
+            <BeforeAfter
+              lat={Number(p.lat)}
+              lon={Number(p.lon)}
+              before={String(p.before)}
+              after={String(p.after)}
+            />
+          ) : (
+            <EsriThumb lat={Number(p.lat)} lon={Number(p.lon)} />
+          )}
 
           {/* Hero metric */}
           {p.value !== null && p.value !== undefined && (
