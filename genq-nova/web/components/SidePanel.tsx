@@ -140,10 +140,15 @@ export default function SidePanel() {
       ? []
       : isHighres
         ? [
+            [
+              "Type",
+              (p as Record<string, unknown>)?.category === "land_emergence"
+                ? "Land emergence (river)"
+                : "Construction",
+            ],
             ["Δ structure", p?.mean_delta],
             ["Cells flagged", p?.n_cells],
             ["Compared", `${p?.before} → ${p?.after}`],
-            ["Method", "High-res structural"],
           ]
         : [
             ["ΔNDVI", p?.delta_ndvi],

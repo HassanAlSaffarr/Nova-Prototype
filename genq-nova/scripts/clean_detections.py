@@ -1,10 +1,15 @@
-"""Clean the v2 detection sets for the demo.
+"""Clean / categorise the v2 detection sets for the demo.
 
-Karrada (built-out): the raw scan also flags river sandbars / exposed banks /
-busy parking lots, because the structure-density signal responds to *any* texture
-increase. Filter to detections that sit in the built fabric (a building footprint
-within 70 m) — this removes the water/open-ground false positives and leaves only
-defensible, building-adjacent changes.
+Karrada (built-out): the structure-density signal responds to *any* texture
+increase, so the raw scan mixes two genuinely different things:
+  - "construction"     — a change sitting in the built fabric (a building
+                         footprint within 70 m). New / rebuilt structures.
+  - "land_emergence"   — a change with no nearby buildings: a river sandbar or
+                         bank exposed as the water dropped. NOT construction, but
+                         not noise either — newly usable riverfront land can be
+                         commercially meaningful. We keep and *tag* these rather
+                         than delete them, so the call on their usefulness is the
+                         analyst's, not the filter's.
 
 Bismayah (new city): keep the >= 5,000 m2 "project" floor so the demo shows the
 large, real bare->built sites rather than thousands of small noisy cells.
@@ -17,7 +22,7 @@ import sys
 
 sys.path.insert(0, "agent")
 
-from nova.highres import filter_to_built_fabric  # noqa: E402
+from nova.highres import tag_by_built_fabric  # noqa: E402
 
 KARRADA = "agent/data/detections_karrada_v2.geojson"
 BISMAYAH = "agent/data/detections_bismayah_v2.geojson"
@@ -28,11 +33,14 @@ FLOOR_M2 = 5000
 def clean_karrada() -> str:
     fc = json.load(open(KARRADA))
     fp = json.load(open(FOOTPRINTS))
-    before = len(fc["features"])
-    fc["features"] = filter_to_built_fabric(fc["features"], fp, max_m=70.0)
-    fc["properties"]["precision_filter"] = "built-fabric <=70m of a building footprint"
+    fc["features"] = tag_by_built_fabric(fc["features"], fp, max_m=70.0)
+    cats: dict[str, int] = {}
+    for f in fc["features"]:
+        c = f["properties"]["category"]
+        cats[c] = cats.get(c, 0) + 1
+    fc["properties"]["categorised"] = "construction vs land_emergence (<=70m of a building)"
     json.dump(fc, open(KARRADA, "w"), indent=2, ensure_ascii=False)
-    return f"karrada: {before} -> {len(fc['features'])} (water/open FPs removed)"
+    return f"karrada: {len(fc['features'])} tagged {cats}"
 
 
 def clean_bismayah() -> str:

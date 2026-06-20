@@ -316,29 +316,43 @@ def _building_points(footprints: dict) -> list[tuple[float, float]]:
     return pts
 
 
-def filter_to_built_fabric(
+def _nearest_building_m(feat: dict, pts: list[tuple[float, float]]) -> float:
+    p = feat["properties"]
+    lat, lon = p["lat"], p["lon"]
+    cosl = math.cos(math.radians(lat))
+    return min(
+        math.hypot((x - lon) * 111_320 * cosl, (y - lat) * 111_000)
+        for x, y in pts
+    )
+
+
+def tag_by_built_fabric(
     features: list[dict], footprints: dict, max_m: float = 70.0
 ) -> list[dict]:
     """
-    Drop detections that aren't near any known building — the structure-density
-    signal also fires on river sandbars, exposed banks, and busy parking lots
-    (vehicles add texture), none of which sit in the built fabric. Requiring a
-    building footprint within `max_m` removes those water/open-ground false
-    positives and gives the footprint layer a real job in the pipeline. Each
-    kept feature is annotated with `nearest_building_m`.
+    Categorise detections by whether they sit in the built fabric. The
+    structure-density signal fires on *any* texture increase, which conflates
+    two different things: new/rebuilt structures (near buildings) and land
+    emerging from the river as the water drops (a sandbar/bank, far from any
+    building). We don't discard the latter — newly usable riverfront land can be
+    commercially relevant — we *tag* it so the analyst decides. Each feature gets
+    `nearest_building_m` and `category` in {"construction", "land_emergence"}.
     """
     pts = _building_points(footprints)
-    kept = []
     for feat in features:
-        p = feat["properties"]
-        lat, lon = p["lat"], p["lon"]
-        cosl = math.cos(math.radians(lat))
-        best = min(
-            math.hypot((x - lon) * 111_320 * cosl, (y - lat) * 111_000)
-            for x, y in pts
+        d = _nearest_building_m(feat, pts)
+        feat["properties"]["nearest_building_m"] = round(d)
+        feat["properties"]["category"] = (
+            "construction" if d <= max_m else "land_emergence"
         )
-        if best <= max_m:
-            p["nearest_building_m"] = round(best)
-            kept.append(feat)
-    return kept
+    return features
+
+
+def filter_to_built_fabric(
+    features: list[dict], footprints: dict, max_m: float = 70.0
+) -> list[dict]:
+    """Keep only built-fabric detections (drops land_emergence). Kept for callers
+    that want a construction-only set; the demo tags instead (tag_by_built_fabric)."""
+    tagged = tag_by_built_fabric(features, footprints, max_m)
+    return [f for f in tagged if f["properties"]["category"] == "construction"]
 
