@@ -285,17 +285,14 @@ def trigger_nova_run() -> dict:
     the log so the UI shows live agent activity.
     """
     store = _require_signals()
-    nova_sigs = store.by_agent("nova")
-    type_counts: dict[str, int] = {}
-    for s in nova_sigs:
-        type_counts[s.signal_type] = type_counts.get(s.signal_type, 0) + 1
+    sites = len(store.by_agent("nova"))
 
-    event = make_nova_run_event(datetime.now(tz=timezone.utc), type_counts)
+    event = make_nova_run_event(datetime.now(tz=timezone.utc), sites)
     _events.add(event)
     return {
         "status": "completed",
         "stub": True,
-        "detections": sum(type_counts.values()),
+        "detections": sites,
         "event": event.model_dump(mode="json"),
     }
 

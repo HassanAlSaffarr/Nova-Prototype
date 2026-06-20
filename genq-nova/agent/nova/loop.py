@@ -112,11 +112,12 @@ def run_cycle(aoi: str = "karrada", *, live: bool = False,
 
     features = _scan_sites(aoi, live)
     summary = store.upsert(features, now=now, aoi=aoi)
+    scanned = len(features)  # this AOI's site count (summary['total'] is store-wide)
 
     hhmm = now.strftime("%H:%M")
     msg = (
         f"Nova ran at {hhmm} — scanned {aoi.title()} (high-res), "
-        f"{summary['total']} active sites "
+        f"{scanned} active sites "
         f"({summary['new']} new, {summary['updated']} re-confirmed)."
     )
     ev = Event(
@@ -125,9 +126,10 @@ def run_cycle(aoi: str = "karrada", *, live: bool = False,
         payload={
             "mode": "live" if live else "demo",
             "trigger": trig,
-            "sites": summary["total"],
+            "sites": scanned,
             "new": summary["new"],
             "updated": summary["updated"],
+            "store_total": summary["total"],
             "method": "highres-structural-change",
         },
     )

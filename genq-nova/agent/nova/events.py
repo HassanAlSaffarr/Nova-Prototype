@@ -15,7 +15,7 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from nova.signals import DB_PATH, SignalStore, AGENT_LABEL
+from nova.signals import DB_PATH, DATA_DIR, SignalStore, AGENT_LABEL
 
 # Demo "now" — matches the synthetic agents' clock
 NOW = datetime(2026, 6, 17, 9, 0, tzinfo=timezone.utc)
@@ -112,14 +112,11 @@ def _new_id() -> str:
 
 def make_nova_run_event(
     timestamp: datetime,
-    counts: dict,
+    sites: int,
     *,
     aoi: str = "karrada",
 ) -> Event:
-    """Build a 'Nova scanned X, detected N changes' event from type counts."""
-    total = sum(counts.values())
-    confirmed = counts.get("confirmed_change", 0)
-    candidate = counts.get("candidate_change", 0)
+    """Build a high-res 'Nova scanned {aoi}, N active sites' run event."""
     hhmm = timestamp.strftime("%H:%M")
     return Event(
         id=_new_id(),
@@ -128,14 +125,13 @@ def make_nova_run_event(
         timestamp=timestamp,
         aoi=aoi,
         message=(
-            f"Nova ran at {hhmm} — scanned {aoi.title()}, detected {total} "
-            f"changes ({confirmed} confirmed, {candidate} candidate)."
+            f"Nova ran at {hhmm} — scanned {aoi.title()} (high-res), "
+            f"{sites} active sites."
         ),
         payload={
-            "detections": total,
-            "confirmed_change": confirmed,
-            "candidate_change": candidate,
-            "duration_s": 41,
+            "sites": sites,
+            "method": "highres-structural-change",
+            "duration_s": 240,
         },
     )
 
@@ -149,11 +145,16 @@ def seed_events(store: EventStore, *, force: bool = False) -> int:
 
     sig_counts = SignalStore().counts_by_agent()
 
-    # Nova's by-type split, for run messages
-    nova_sigs = SignalStore().by_agent("nova")
-    nova_types: dict[str, int] = {}
-    for s in nova_sigs:
-        nova_types[s.signal_type] = nova_types.get(s.signal_type, 0) + 1
+    # Real per-AOI high-res site counts, so the seeded Nova runs match the map.
+    def _highres_count(name: str) -> int:
+        path = DATA_DIR / f"detections_{name}_v2.geojson"
+        try:
+            return len(json.loads(path.read_text())["features"])
+        except Exception:
+            return 0
+
+    aoi_sites = {"karrada": _highres_count("karrada"),
+                 "bismayah": _highres_count("bismayah")}
 
     events: list[Event] = []
 
@@ -168,10 +169,10 @@ def seed_events(store: EventStore, *, force: bool = False) -> int:
     for day in range(3, 0, -1):
         base = NOW - timedelta(days=day)
 
-        # Nova morning + evening run
-        for hour in (8, 20):
+        # Nova scans Karrada in the morning, Bismayah in the evening.
+        for hour, name in ((8, "karrada"), (20, "bismayah")):
             ts = base.replace(hour=hour, minute=15)
-            events.append(make_nova_run_event(ts, nova_types))
+            events.append(make_nova_run_event(ts, aoi_sites[name], aoi=name))
 
         # Support agents mid-morning
         for i, (agent, (label, verb, noun)) in enumerate(support.items()):
@@ -196,7 +197,9 @@ def seed_events(store: EventStore, *, force: bool = False) -> int:
         ))
 
     # One most-recent Nova run, a few hours before 'now'
-    events.append(make_nova_run_event(NOW - timedelta(hours=3), nova_types))
+    events.append(
+        make_nova_run_event(NOW - timedelta(hours=3), aoi_sites["karrada"])
+    )
 
     for e in events:
         store.add(e)
