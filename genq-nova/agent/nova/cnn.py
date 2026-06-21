@@ -142,3 +142,22 @@ def building_prob_at(
     if not crops:
         return 0.0
     return float(predict_crops(model, meta, np.stack(crops)).max())
+
+
+def building_prob_live(
+    model, meta, lat: float, lon: float, after_date: str, area_m2: float = 0.0
+) -> float:
+    """
+    Building probability at a site with no pre-cached mosaic — fetches a small
+    Wayback crop around it on the fly. This is the path the autonomous loop uses
+    when it scans live, so a hosted cycle needs no cached imagery, only network.
+    """
+    from nova.highres import release_for, wayback_mosaic
+
+    r_m = max(60.0, math.sqrt(max(area_m2, 1.0)) / 2 + 40.0)
+    cosl = math.cos(math.radians(lat))
+    dlat, dlon = r_m / 111_000, r_m / (111_320 * cosl)
+    bbox = [lon - dlon, lat - dlat, lon + dlon, lat + dlat]
+    img = wayback_mosaic(bbox, release_for(after_date), zoom=18, workers=12)
+    mosaic = np.asarray(img.convert("RGB"), np.uint8)
+    return building_prob_at(model, meta, mosaic, bbox, lat, lon, area_m2)

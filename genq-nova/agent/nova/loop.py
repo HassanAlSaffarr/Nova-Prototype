@@ -37,6 +37,9 @@ from nova.events import Event, EventStore, _new_id
 BEFORE_DATE = "2023-12-31"
 AFTER_DATE = "2026-06-01"
 
+# Per-AOI label for sites the CNN judges are NOT buildings (kept, shown grey).
+FAR_CATEGORY = {"karrada": "land_emergence", "bismayah": "open_land"}
+
 
 def _site_id(lat: float, lon: float, after: str) -> str:
     """Stable high-res site id — mirrors scripts/bake_v2_ids.py so demo (baked)
@@ -51,11 +54,13 @@ def _site_id(lat: float, lon: float, after: str) -> str:
 # ---------------------------------------------------------------------------
 
 
-def _trigger(aoi: str, live: bool) -> dict:
+def _trigger(aoi: str, live: bool, force: bool = False) -> dict:
     """Cheap coarse trigger. Live mode counts Sentinel-1 scenes over the AOI;
-    demo mode simulates a positive trigger so the loop runs end-to-end."""
-    if not live:
-        return {"source": "simulated", "triggered": True}
+    demo mode simulates a positive trigger so the loop runs end-to-end. `force`
+    bypasses the Sentinel check (and its GEE dependency) entirely — used when the
+    loop is hosted somewhere without GEE credentials but can still scan Wayback."""
+    if not live or force:
+        return {"source": "forced" if force else "simulated", "triggered": True}
     from nova.sar import scene_counts  # lazy: avoids ee import in demo mode
 
     bounds = AOI_PRESETS[aoi]
@@ -86,10 +91,35 @@ def _scan_sites(aoi: str, live: bool) -> list[dict]:
         p = f["properties"]
         p["id"] = _site_id(p["lat"], p["lon"], AFTER_DATE)
         p["method"] = "highres"
+    _classify(fc["features"], aoi)
     return fc["features"]
 
 
-def run_cycle(aoi: str = "karrada", *, live: bool = False,
+def _classify(features: list[dict], aoi: str) -> None:
+    """Run the building CNN over a live scan's sites, setting `category` and
+    `cnn_prob` in place. The detector says *where* structure appeared; this says
+    *whether it's a building* (green) or other change (grey). No-op (everything
+    stays construction) if the model isn't present, so the loop still runs."""
+    if not features:
+        return
+    try:
+        from nova import cnn  # lazy: torch only loaded for live+classify
+        model, meta = cnn.load_model()
+    except Exception as exc:  # no torch / no trained model — degrade gracefully
+        print(f"    CNN classify skipped: {exc}")
+        return
+
+    far_cat = FAR_CATEGORY.get(aoi, "open_land")
+    for f in features:
+        p = f["properties"]
+        prob = cnn.building_prob_live(
+            model, meta, p["lat"], p["lon"], AFTER_DATE, float(p.get("area_m2", 0))
+        )
+        p["cnn_prob"] = round(prob, 3)
+        p["category"] = "construction" if prob >= 0.5 else far_cat
+
+
+def run_cycle(aoi: str = "karrada", *, live: bool = False, force: bool = False,
               store: DetectionStore | None = None,
               events: EventStore | None = None,
               now: datetime | None = None) -> dict:
@@ -99,7 +129,7 @@ def run_cycle(aoi: str = "karrada", *, live: bool = False,
     events.init_db()
     now = now or datetime.now(tz=timezone.utc)
 
-    trig = _trigger(aoi, live)
+    trig = _trigger(aoi, live, force)
     if not trig["triggered"]:
         ev = Event(
             id=_new_id(), agent="nova", event_type="scan_skipped",
@@ -157,12 +187,15 @@ def main() -> None:
     parser.add_argument("--live", action="store_true",
                         help="run a real GEE/Wayback scan instead of replaying "
                              "the cached high-res result")
+    parser.add_argument("--force", action="store_true",
+                        help="bypass the Sentinel trigger (and GEE) — always scan. "
+                             "Used when hosted without GEE credentials.")
     args = parser.parse_args()
 
     mode = "live" if args.live else "demo"
 
     def cycle(n: int) -> None:
-        res = run_cycle(args.aoi, live=args.live)
+        res = run_cycle(args.aoi, live=args.live, force=args.force)
         if res.get("triggered"):
             print(f"  cycle {n}: {res['total']} sites "
                   f"({res['new']} new, {res['updated']} re-confirmed)")
