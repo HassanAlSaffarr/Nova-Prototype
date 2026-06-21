@@ -85,7 +85,9 @@ def _scan_sites(aoi: str, live: bool) -> list[dict]:
 
     from nova.highres import scan_aoi, sites_to_geojson  # lazy import
 
-    sites = scan_aoi(AOI_PRESETS[aoi], BEFORE_DATE, AFTER_DATE, progress=False)
+    # min_cells=30 (~3000 m²) matches the committed demo floor (detections_*_v2).
+    sites = scan_aoi(AOI_PRESETS[aoi], BEFORE_DATE, AFTER_DATE,
+                     min_cells=30, progress=False)
     fc = sites_to_geojson(sites, BEFORE_DATE, AFTER_DATE)
     for f in fc["features"]:
         p = f["properties"]

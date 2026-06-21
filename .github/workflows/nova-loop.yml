@@ -1,0 +1,63 @@
+name: Nova autonomous loop
+
+# Nova runs itself. Every 6 hours GitHub's servers (not anyone's laptop) run one
+# real high-res cycle: scan Wayback imagery, classify sites with the building CNN,
+# upsert into the idempotent live store, and commit the result back. Each commit
+# is the run's event-log entry, so the repo history is an auditable autonomy trail.
+on:
+  schedule:
+    - cron: "0 */6 * * *" # 00:00 / 06:00 / 12:00 / 18:00 UTC
+  workflow_dispatch:
+    inputs:
+      aoi:
+        description: "AOI to scan (blank = auto-rotate karrada/bismayah)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nova-loop
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: astral-sh/setup-uv@v5
+
+      # Lean runtime: only what the live loop imports (no GEE/GDAL). CPU torch
+      # wheel keeps the install small and fast.
+      - name: Install runtime deps
+        run: |
+          uv pip install --system "numpy<2" httpx pillow pydantic
+          uv pip install --system torch==2.2.2+cpu torchvision==0.17.2+cpu \
+            --extra-index-url https://download.pytorch.org/whl/cpu
+
+      - name: Run one autonomous cycle
+        id: cycle
+        env:
+          NOVA_AOI: ${{ github.event.inputs.aoi }}
+        run: python genq-nova/scripts/hosted_cycle.py
+
+      - name: Commit the cycle's result
+        run: |
+          cd genq-nova
+          git config user.name "nova-bot"
+          git config user.email "nova-bot@users.noreply.github.com"
+          git add -f agent/data/detections_live.geojson
+          if git diff --cached --quiet; then
+            echo "No detection changes this cycle — nothing to commit."
+          else
+            git commit -m "${{ steps.cycle.outputs.commit_message }} [skip ci]"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
