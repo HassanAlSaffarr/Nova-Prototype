@@ -29,7 +29,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.76,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 140,
+        "category": "construction"
       }
     },
     {
@@ -54,7 +56,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.79,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 787,
+        "category": "open_land"
       }
     },
     {
@@ -79,7 +83,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.81,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 89,
+        "category": "construction"
       }
     },
     {
@@ -104,7 +110,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.77,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 157,
+        "category": "construction"
       }
     },
     {
@@ -129,7 +137,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.85,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 160,
+        "category": "construction"
       }
     },
     {
@@ -154,7 +164,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 46,
+        "category": "construction"
       }
     },
     {
@@ -179,7 +191,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 791,
+        "category": "open_land"
       }
     },
     {
@@ -204,7 +218,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.71,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 24,
+        "category": "construction"
       }
     },
     {
@@ -229,7 +245,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.66,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 73,
+        "category": "construction"
       }
     },
     {
@@ -254,7 +272,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.63,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 104,
+        "category": "construction"
       }
     },
     {
@@ -279,7 +299,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 51,
+        "category": "construction"
       }
     },
     {
@@ -304,7 +326,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.57,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 588,
+        "category": "open_land"
       }
     },
     {
@@ -329,7 +353,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.77,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 40,
+        "category": "construction"
       }
     },
     {
@@ -354,7 +380,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.97,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 53,
+        "category": "construction"
       }
     },
     {
@@ -379,7 +407,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.96,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 98,
+        "category": "construction"
       }
     },
     {
@@ -404,7 +434,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 19,
+        "category": "construction"
       }
     },
     {
@@ -429,7 +461,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.51,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 55,
+        "category": "construction"
       }
     },
     {
@@ -454,7 +488,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.85,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 67,
+        "category": "construction"
       }
     },
     {
@@ -479,7 +515,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 603,
+        "category": "open_land"
       }
     },
     {
@@ -504,7 +542,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.88,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 58,
+        "category": "construction"
       }
     },
     {
@@ -529,7 +569,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.57,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 93,
+        "category": "construction"
       }
     },
     {
@@ -554,7 +596,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.8,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 35,
+        "category": "construction"
       }
     },
     {
@@ -579,7 +623,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.6,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 153,
+        "category": "construction"
       }
     },
     {
@@ -604,7 +650,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.56,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 160,
+        "category": "construction"
       }
     },
     {
@@ -629,7 +677,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.78,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 31,
+        "category": "construction"
       }
     },
     {
@@ -654,7 +704,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.75,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 70,
+        "category": "construction"
       }
     },
     {
@@ -679,7 +731,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.8,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 30,
+        "category": "construction"
       }
     },
     {
@@ -704,7 +758,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.63,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 89,
+        "category": "construction"
       }
     },
     {
@@ -729,7 +785,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.81,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 58,
+        "category": "construction"
       }
     },
     {
@@ -754,7 +812,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 131,
+        "category": "construction"
       }
     },
     {
@@ -779,7 +839,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.75,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 52,
+        "category": "construction"
       }
     },
     {
@@ -804,7 +866,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.8,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 52,
+        "category": "construction"
       }
     },
     {
@@ -829,7 +893,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.57,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 270,
+        "category": "open_land"
       }
     },
     {
@@ -854,7 +920,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.78,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 94,
+        "category": "construction"
       }
     },
     {
@@ -879,7 +947,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.77,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 23,
+        "category": "construction"
       }
     },
     {
@@ -904,7 +974,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.85,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 155,
+        "category": "construction"
       }
     },
     {
@@ -929,7 +1001,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.92,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 26,
+        "category": "construction"
       }
     },
     {
@@ -954,7 +1028,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.86,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 130,
+        "category": "construction"
       }
     },
     {
@@ -979,7 +1055,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.7,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 72,
+        "category": "construction"
       }
     },
     {
@@ -1004,7 +1082,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.59,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 91,
+        "category": "construction"
       }
     },
     {
@@ -1029,7 +1109,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.78,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 105,
+        "category": "construction"
       }
     },
     {
@@ -1054,7 +1136,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.67,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 109,
+        "category": "construction"
       }
     },
     {
@@ -1079,7 +1163,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.79,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 79,
+        "category": "construction"
       }
     },
     {
@@ -1104,7 +1190,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 66,
+        "category": "construction"
       }
     },
     {
@@ -1129,7 +1217,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 445,
+        "category": "open_land"
       }
     },
     {
@@ -1154,7 +1244,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 198,
+        "category": "open_land"
       }
     },
     {
@@ -1179,7 +1271,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.59,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 75,
+        "category": "construction"
       }
     },
     {
@@ -1204,7 +1298,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 422,
+        "category": "open_land"
       }
     },
     {
@@ -1229,7 +1325,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.55,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 62,
+        "category": "construction"
       }
     },
     {
@@ -1254,7 +1352,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 145,
+        "category": "construction"
       }
     },
     {
@@ -1279,7 +1379,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.89,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 18,
+        "category": "construction"
       }
     },
     {
@@ -1304,7 +1406,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.79,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 53,
+        "category": "construction"
       }
     },
     {
@@ -1329,7 +1433,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.62,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 192,
+        "category": "open_land"
       }
     },
     {
@@ -1354,7 +1460,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.63,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 40,
+        "category": "construction"
       }
     },
     {
@@ -1379,7 +1487,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.96,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 51,
+        "category": "construction"
       }
     },
     {
@@ -1404,7 +1514,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.94,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 169,
+        "category": "construction"
       }
     },
     {
@@ -1429,7 +1541,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.97,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 109,
+        "category": "construction"
       }
     },
     {
@@ -1454,7 +1568,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 159,
+        "category": "construction"
       }
     },
     {
@@ -1479,7 +1595,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.83,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 171,
+        "category": "open_land"
       }
     },
     {
@@ -1504,7 +1622,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.68,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 123,
+        "category": "construction"
       }
     },
     {
@@ -1529,7 +1649,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.54,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 115,
+        "category": "construction"
       }
     },
     {
@@ -1554,7 +1676,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 54,
+        "category": "construction"
       }
     },
     {
@@ -1579,7 +1703,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.77,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 90,
+        "category": "construction"
       }
     },
     {
@@ -1604,7 +1730,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.55,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 407,
+        "category": "open_land"
       }
     },
     {
@@ -1629,7 +1757,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 153,
+        "category": "construction"
       }
     },
     {
@@ -1654,7 +1784,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 51,
+        "category": "construction"
       }
     },
     {
@@ -1679,7 +1811,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.91,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 73,
+        "category": "construction"
       }
     },
     {
@@ -1704,7 +1838,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.84,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 326,
+        "category": "open_land"
       }
     },
     {
@@ -1729,7 +1865,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.77,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 89,
+        "category": "construction"
       }
     },
     {
@@ -1754,7 +1892,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.53,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 52,
+        "category": "construction"
       }
     },
     {
@@ -1779,7 +1919,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 275,
+        "category": "open_land"
       }
     },
     {
@@ -1804,7 +1946,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.82,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 257,
+        "category": "open_land"
       }
     },
     {
@@ -1829,7 +1973,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 82,
+        "category": "construction"
       }
     },
     {
@@ -1854,7 +2000,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.53,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 110,
+        "category": "construction"
       }
     },
     {
@@ -1879,7 +2027,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.82,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 711,
+        "category": "open_land"
       }
     },
     {
@@ -1904,7 +2054,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.99,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 98,
+        "category": "construction"
       }
     },
     {
@@ -1929,7 +2081,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.5,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 65,
+        "category": "construction"
       }
     },
     {
@@ -1954,7 +2108,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.84,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 139,
+        "category": "construction"
       }
     },
     {
@@ -1979,7 +2135,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.9,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 19,
+        "category": "construction"
       }
     },
     {
@@ -2004,7 +2162,9 @@
         "after": "2026-06-01",
         "detected_at": "2026-06-01T00:00:00+00:00",
         "confidence": 0.71,
-        "related_ids": []
+        "related_ids": [],
+        "nearest_building_m": 64,
+        "category": "construction"
       }
     }
   ]

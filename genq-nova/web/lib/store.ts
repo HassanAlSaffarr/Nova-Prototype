@@ -30,6 +30,7 @@ interface NovaState {
   detectionSet: DetectionSet;
   activeAgents: Record<SourceAgent, boolean>;
   showBuildings: boolean; // base "all buildings" layer toggle
+  constructionOnly: boolean; // hide non-construction (open-land / land-emergence)
   selectedId: string | null;
   eventLogOpen: boolean;
   runningNova: boolean;
@@ -46,6 +47,7 @@ interface NovaState {
   toggleAgent: (a: SourceAgent) => void;
   setAllAgents: (on: boolean) => void;
   toggleBuildings: () => void;
+  toggleConstructionOnly: () => void;
   select: (id: string | null) => void;
   selectRelated: (id: string) => void;
   setFlyToFn: (fn: (lon: number, lat: number) => void) => void;
@@ -153,6 +155,7 @@ export const useStore = create<NovaState>((set, get) => ({
   detectionSet: "highres", // demo opens on the validated v2 detector
   activeAgents: allOn(),
   showBuildings: true,
+  constructionOnly: false,
   selectedId: null,
   eventLogOpen: true,
   runningNova: false,
@@ -180,8 +183,16 @@ export const useStore = create<NovaState>((set, get) => ({
       });
       // Buildings are a heavy, non-critical base layer — load them after the
       // core data so a slow/absent footprints file never blanks the demo.
-      fetchFootprints()
-        .then((fc) => set({ buildings: fc }))
+      // Both AOIs' footprints are merged into one layer.
+      Promise.all([fetchFootprints("karrada"), fetchFootprints("bismayah")])
+        .then(([k, b]) =>
+          set({
+            buildings: {
+              type: "FeatureCollection",
+              features: [...k.features, ...b.features],
+            },
+          }),
+        )
         .catch(() => {});
     } catch (e) {
       set({ error: (e as Error).message, loading: false });
@@ -221,6 +232,9 @@ export const useStore = create<NovaState>((set, get) => ({
     }),
 
   toggleBuildings: () => set((st) => ({ showBuildings: !st.showBuildings })),
+
+  toggleConstructionOnly: () =>
+    set((st) => ({ constructionOnly: !st.constructionOnly })),
 
   select: (id) => set({ selectedId: id }),
 

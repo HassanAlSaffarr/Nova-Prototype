@@ -327,23 +327,26 @@ def _nearest_building_m(feat: dict, pts: list[tuple[float, float]]) -> float:
 
 
 def tag_by_built_fabric(
-    features: list[dict], footprints: dict, max_m: float = 70.0
+    features: list[dict],
+    footprints: dict,
+    max_m: float = 70.0,
+    far_category: str = "land_emergence",
 ) -> list[dict]:
     """
     Categorise detections by whether they sit in the built fabric. The
     structure-density signal fires on *any* texture increase, which conflates
-    two different things: new/rebuilt structures (near buildings) and land
-    emerging from the river as the water drops (a sandbar/bank, far from any
-    building). We don't discard the latter — newly usable riverfront land can be
-    commercially relevant — we *tag* it so the analyst decides. Each feature gets
-    `nearest_building_m` and `category` in {"construction", "land_emergence"}.
+    new/rebuilt structures (near buildings) with non-construction change far from
+    any building. What "far" means depends on the AOI: by the Tigris it's land
+    emerging as the water drops (`land_emergence`); in a desert new-city it's bare
+    scrub/sand texture (`open_land`). Caller sets `far_category`. Each feature
+    gets `nearest_building_m` and `category` in {"construction", far_category}.
     """
     pts = _building_points(footprints)
     for feat in features:
         d = _nearest_building_m(feat, pts)
         feat["properties"]["nearest_building_m"] = round(d)
         feat["properties"]["category"] = (
-            "construction" if d <= max_m else "land_emergence"
+            "construction" if d <= max_m else far_category
         )
     return features
 

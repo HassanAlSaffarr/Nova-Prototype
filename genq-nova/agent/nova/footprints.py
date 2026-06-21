@@ -1,18 +1,18 @@
 """
-Microsoft Global ML Building Footprints loader for Karrada, Baghdad.
+Microsoft Global ML Building Footprints loader, per AOI.
 
 The MS dataset is split by Bing Maps quadkey at zoom level 9. We compute
-which tile(s) cover the Karrada AOI, download only those, stream-filter to
-the AOI bbox, and save a clipped GeoJSON. All of Karrada falls in tile
-122113313 (~120 MB compressed, one-time download).
+which tile(s) cover an AOI bbox, download only those, stream-filter to the
+bbox, and save a clipped GeoJSON (one ~120 MB compressed tile per download).
 
-Usage (one-time setup):
-    python -m nova.footprints          # downloads + clips + prints stats
-    nova-footprints                     # same via installed script
+Usage (one-time setup, per AOI):
+    python -m nova.footprints --aoi karrada
+    python -m nova.footprints --aoi bismayah
 
-After setup, call load_karrada_footprints() from other modules.
+After setup, call load_footprints(aoi) from other modules.
 """
 
+import argparse
 import csv
 import gzip
 import io
@@ -26,15 +26,19 @@ import httpx
 from shapely.geometry import box as shapely_box
 from shapely.geometry import shape
 
-from nova.config import CRS_UTM, DATA_DIR as _DATA_DIR, KARRADA_BBOX
+from nova.config import AOI_PRESETS, CRS_UTM, DATA_DIR as _DATA_DIR
 
 DATA_DIR = _DATA_DIR / "footprints"
-CLIPPED_PATH = DATA_DIR / "karrada.geojson"
+CLIPPED_PATH = DATA_DIR / "karrada.geojson"  # back-compat default
 
 _DATASET_CSV_URL = (
     "https://minedbuildings.z5.web.core.windows.net/global-buildings/dataset-links.csv"
 )
 _QUADKEY_ZOOM = 9
+
+
+def _clipped_path(aoi: str) -> Path:
+    return DATA_DIR / f"{aoi}.geojson"
 
 
 # ---------------------------------------------------------------------------
@@ -69,9 +73,9 @@ def _quadkeys_overlap(qk_tile: str, qk_target: str) -> bool:
     return qk_tile.startswith(qk_target) or qk_target.startswith(qk_tile)
 
 
-def _karrada_quadkeys(zoom: int = _QUADKEY_ZOOM) -> set[str]:
-    """Compute the set of quadkeys that cover the Karrada AOI bbox."""
-    W, S, E, N = KARRADA_BBOX
+def _aoi_quadkeys(bbox: list[float], zoom: int = _QUADKEY_ZOOM) -> set[str]:
+    """Compute the set of quadkeys that cover an AOI bbox [W,S,E,N]."""
+    W, S, E, N = bbox
     # Sample bbox corners and midpoints to catch tile boundaries
     return {
         _lat_lon_to_quadkey(lat, lon, zoom)
@@ -85,14 +89,14 @@ def _karrada_quadkeys(zoom: int = _QUADKEY_ZOOM) -> set[str]:
 # ---------------------------------------------------------------------------
 
 
-def _get_karrada_tile_urls() -> list[str]:
-    """Fetch the MS dataset CSV and return URLs for tiles covering Karrada."""
+def _get_tile_urls(bbox: list[float]) -> list[str]:
+    """Fetch the MS dataset CSV and return URLs for tiles covering the bbox."""
     print(f"  fetching tile index from MS Building Footprints...")
     with httpx.Client(timeout=30) as client:
         r = client.get(_DATASET_CSV_URL)
         r.raise_for_status()
 
-    relevant_qks = _karrada_quadkeys()
+    relevant_qks = _aoi_quadkeys(bbox)
     reader = csv.DictReader(io.StringIO(r.text))
     urls: list[str] = []
 
@@ -112,12 +116,12 @@ def _get_karrada_tile_urls() -> list[str]:
 # ---------------------------------------------------------------------------
 
 
-def _stream_tile_features(url: str, label: str) -> list[dict]:
+def _stream_tile_features(url: str, label: str, bbox: list[float]) -> list[dict]:
     """
     Download one .csv.gz tile (content is GeoJSONL despite the extension),
-    stream-filter to the Karrada AOI bbox, return matching GeoJSON features.
+    stream-filter to the AOI bbox, return matching GeoJSON features.
     """
-    W, S, E, N = KARRADA_BBOX
+    W, S, E, N = bbox
     karrada_box = shapely_box(W, S, E, N)
 
     print(f"  downloading tile {label}  (may take ~10-30s)...")
@@ -177,59 +181,60 @@ def _stream_tile_features(url: str, label: str) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 
-def load_karrada_footprints() -> gpd.GeoDataFrame:
-    """Load the pre-clipped Karrada building footprints GeoDataFrame (EPSG:4326).
-
-    Raises FileNotFoundError if the one-time setup hasn't been run.
-    Run: python -m nova.footprints
-    """
-    if not CLIPPED_PATH.exists():
+def load_footprints(aoi: str = "karrada") -> gpd.GeoDataFrame:
+    """Load the pre-clipped building footprints for an AOI (EPSG:4326)."""
+    path = _clipped_path(aoi)
+    if not path.exists():
         raise FileNotFoundError(
-            f"Karrada footprints not found at {CLIPPED_PATH}.\n"
-            "Run: python -m nova.footprints"
+            f"{aoi} footprints not found at {path}.\n"
+            f"Run: python -m nova.footprints --aoi {aoi}"
         )
-    return gpd.read_file(CLIPPED_PATH)
+    return gpd.read_file(path)
 
 
-def setup_karrada_footprints() -> gpd.GeoDataFrame:
+# Back-compat alias.
+def load_karrada_footprints() -> gpd.GeoDataFrame:
+    return load_footprints("karrada")
+
+
+def setup_footprints(aoi: str = "karrada") -> gpd.GeoDataFrame:
     """
-    One-time setup: find the relevant MS Building Footprints tile(s),
-    download them, filter to Karrada, and save karrada.geojson.
-
-    Skips the download if karrada.geojson already exists.
+    One-time setup for an AOI: find the MS Building Footprints tile(s) covering
+    its bbox, download, stream-filter to the bbox, and save <aoi>.geojson.
     """
-    if CLIPPED_PATH.exists():
-        size_kb = CLIPPED_PATH.stat().st_size / 1e3
-        print(f"  footprints already set up ({size_kb:.0f} KB): {CLIPPED_PATH}")
-        return load_karrada_footprints()
+    bbox = AOI_PRESETS[aoi]
+    path = _clipped_path(aoi)
+    if path.exists():
+        size_kb = path.stat().st_size / 1e3
+        print(f"  footprints already set up ({size_kb:.0f} KB): {path}")
+        return load_footprints(aoi)
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    tile_urls = _get_karrada_tile_urls()
+    tile_urls = _get_tile_urls(bbox)
     if not tile_urls:
         sys.exit(
-            "No tiles found covering Karrada AOI in the MS dataset CSV.\n"
-            f"Expected quadkeys: {_karrada_quadkeys()}\n"
+            f"No tiles found covering {aoi} AOI.\n"
+            f"Expected quadkeys: {_aoi_quadkeys(bbox)}\n"
             f"CSV URL: {_DATASET_CSV_URL}"
         )
-    print(f"  {len(tile_urls)} tile(s) cover Karrada")
+    print(f"  {len(tile_urls)} tile(s) cover {aoi}")
 
     all_features: list[dict] = []
     for i, url in enumerate(tile_urls, 1):
         qk_label = url.split("quadkey=")[-1].split("/")[0] if "quadkey=" in url else str(i)
-        all_features.extend(_stream_tile_features(url, f"{qk_label} ({i}/{len(tile_urls)})"))
-
-    if not all_features:
-        sys.exit(
-            "No footprints found in Karrada bbox. "
-            f"Check bbox {KARRADA_BBOX} is correct."
+        all_features.extend(
+            _stream_tile_features(url, f"{qk_label} ({i}/{len(tile_urls)})", bbox)
         )
 
-    gdf = gpd.GeoDataFrame.from_features(all_features, crs="EPSG:4326")
-    gdf = gdf.clip(shapely_box(*KARRADA_BBOX))
+    if not all_features:
+        sys.exit(f"No footprints found in {aoi} bbox {bbox}.")
 
-    gdf.to_file(CLIPPED_PATH, driver="GeoJSON")
-    print(f"  saved → {CLIPPED_PATH}  ({CLIPPED_PATH.stat().st_size/1e3:.0f} KB)")
+    gdf = gpd.GeoDataFrame.from_features(all_features, crs="EPSG:4326")
+    gdf = gdf.clip(shapely_box(*bbox))
+
+    gdf.to_file(path, driver="GeoJSON")
+    print(f"  saved → {path}  ({path.stat().st_size/1e3:.0f} KB)")
     return gdf
 
 
@@ -250,15 +255,19 @@ def _print_stats(gdf: gpd.GeoDataFrame) -> None:
 
 
 def main() -> None:
-    print("=== Microsoft Building Footprints — Karrada setup ===\n")
+    parser = argparse.ArgumentParser(prog="nova-footprints")
+    parser.add_argument("--aoi", default="karrada", choices=list(AOI_PRESETS),
+                        help="AOI preset (default: karrada)")
+    args = parser.parse_args()
 
+    print(f"=== Microsoft Building Footprints — {args.aoi} setup ===\n")
     print("Step 1: Download and clip footprints")
-    gdf = setup_karrada_footprints()
+    gdf = setup_footprints(args.aoi)
 
     print("\nStep 2: Summary stats")
     _print_stats(gdf)
 
-    print(f"\nDone. Footprints ready at: {CLIPPED_PATH.resolve()}")
+    print(f"\nDone. Footprints ready at: {_clipped_path(args.aoi).resolve()}")
 
 
 if __name__ == "__main__":

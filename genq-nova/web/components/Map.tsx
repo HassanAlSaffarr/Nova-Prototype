@@ -26,13 +26,17 @@ const easeInOutCubic = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
 const ACCENT = hexToRgb(AGENT_COLOR.nova);
-// Land-emergence (river land exposed as water drops) reads in neutral slate —
-// deliberately NOT an agent colour and not the brand green, so it's clearly
-// "Nova flagged this, but it isn't construction".
-const LAND_EMERGENCE: [number, number, number] = [156, 163, 175];
+// Non-construction change (river land-emergence, or bare desert/open-land texture)
+// reads in neutral slate — deliberately not an agent colour and not the brand
+// green, so it's clearly "Nova flagged this, but it isn't a building change".
+const NON_CONSTRUCTION: [number, number, number] = [156, 163, 175];
+const SECONDARY_CATS = ["land_emergence", "open_land"];
+
+const isConstruction = (f: Feature) =>
+  !SECONDARY_CATS.includes(f.properties.category as string);
 
 const siteColor = (f: Feature): [number, number, number] =>
-  f.properties.category === "land_emergence" ? LAND_EMERGENCE : ACCENT;
+  isConstruction(f) ? ACCENT : NON_CONSTRUCTION;
 
 function DeckOverlay(props: MapboxOverlayProps) {
   const overlay = useControl(() => new MapboxOverlay(props));
@@ -76,6 +80,7 @@ export default function Map() {
   const points = useStore((s) => s.points);
   const buildings = useStore((s) => s.buildings);
   const showBuildings = useStore((s) => s.showBuildings);
+  const constructionOnly = useStore((s) => s.constructionOnly);
   const activeAgents = useStore((s) => s.activeAgents);
   const selectedId = useStore((s) => s.selectedId);
   const aoi = useStore((s) => s.aoi);
@@ -180,6 +185,11 @@ export default function Map() {
   const novaArePoints =
     detections.length > 0 && detections[0].geometry.type === "Point";
 
+  // "Construction only" hides the secondary (land-emergence / open-land) sites.
+  const visibleDetections = constructionOnly
+    ? detections.filter(isConstruction)
+    : detections;
+
   const layers = [
     iraq &&
       new GeoJsonLayer({
@@ -217,7 +227,7 @@ export default function Map() {
       !novaArePoints &&
       new GeoJsonLayer({
         id: "nova-glow",
-        data: { type: "FeatureCollection", features: detections },
+        data: { type: "FeatureCollection", features: visibleDetections },
         stroked: true,
         filled: false,
         getLineColor: (f: Feature) =>
@@ -237,7 +247,7 @@ export default function Map() {
       !novaArePoints &&
       new GeoJsonLayer({
         id: "nova-detections",
-        data: { type: "FeatureCollection", features: detections },
+        data: { type: "FeatureCollection", features: visibleDetections },
         stroked: true,
         filled: true,
         getFillColor: (f: Feature) =>
@@ -259,7 +269,7 @@ export default function Map() {
       novaArePoints &&
       new ScatterplotLayer({
         id: "nova-sites",
-        data: detections,
+        data: visibleDetections,
         getPosition: (f: Feature) =>
           (f.geometry as { coordinates: [number, number] }).coordinates,
         getRadius: (f: Feature) =>

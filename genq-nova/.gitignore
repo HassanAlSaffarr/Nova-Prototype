@@ -13,6 +13,7 @@ agent/data/imagery/
 # (the web buildings base layer depends on it; regenerate via scripts/slim_footprints.py)
 agent/data/footprints/*
 !agent/data/footprints/karrada.min.geojson
+!agent/data/footprints/bismayah.min.geojson
 agent/data/rasters/
 agent/data/*.db
 # Autonomous-loop runtime state (regenerate: python -m nova.loop --once)
@@ -48,6 +49,7 @@ Thumbs.db
 # Cached Esri thumbnails (regenerable)
 agent/data/cache/
 
-# Local script scratch (temp stores, logs)
+# Local script scratch (temp stores, logs, audit crops)
 scripts/_tmp_loop/
+scripts/_audit/
 scripts/*.log

@@ -160,6 +160,7 @@ def get_detections(set: str = "full") -> dict:
 
 _FOOTPRINT_SETS = {
     "karrada": "footprints/karrada.min.geojson",
+    "bismayah": "footprints/bismayah.min.geojson",
 }
 
 

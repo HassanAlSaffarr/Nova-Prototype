@@ -15,7 +15,7 @@ const METHODS: { key: DetectionSet; label: string; legacy?: boolean }[] = [
   { key: "recent", label: "Recent", legacy: true },
 ];
 
-const LAND_EMERGENCE = "#9ca3af";
+const NON_CONSTRUCTION = "#9ca3af";
 
 export default function LayerFilter() {
   const activeAgents = useStore((s) => s.activeAgents);
@@ -25,6 +25,8 @@ export default function LayerFilter() {
   const setDetectionSet = useStore((s) => s.setDetectionSet);
   const showBuildings = useStore((s) => s.showBuildings);
   const toggleBuildings = useStore((s) => s.toggleBuildings);
+  const constructionOnly = useStore((s) => s.constructionOnly);
+  const toggleConstructionOnly = useStore((s) => s.toggleConstructionOnly);
   const aoi = useStore((s) => s.aoi);
   const focusAoi = useStore((s) => s.focusAoi);
 
@@ -147,11 +149,24 @@ export default function LayerFilter() {
           <span className="flex items-center gap-1">
             <span
               className="h-2 w-2 rounded-full"
-              style={{ border: `1.5px solid ${LAND_EMERGENCE}` }}
+              style={{ border: `1.5px solid ${NON_CONSTRUCTION}` }}
             />
-            land emergence
+            other change
           </span>
         </div>
+
+        {/* Demo lever: hide the lower-confidence non-construction sites */}
+        <button
+          onClick={toggleConstructionOnly}
+          className={`mt-2 flex w-full items-center justify-between rounded border px-2 py-1 text-[10px] font-semibold transition-colors ${
+            constructionOnly
+              ? "border-accent bg-accent/15 text-accent"
+              : "border-border text-muted hover:bg-surface-2"
+          }`}
+        >
+          Construction only
+          <span>{constructionOnly ? "on" : "off"}</span>
+        </button>
 
         <button
           onClick={() => setMethodOpen((o) => !o)}

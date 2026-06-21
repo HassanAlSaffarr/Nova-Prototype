@@ -210,9 +210,9 @@ export default function SidePanel() {
         ? [
             [
               "Type",
-              (p as Record<string, unknown>)?.category === "land_emergence"
-                ? "Land emergence (river)"
-                : "Construction",
+              { land_emergence: "Land emergence (river)", open_land: "Open land (desert)" }[
+                (p as Record<string, unknown>)?.category as string
+              ] ?? "Construction",
             ],
             ["Δ structure", p?.mean_delta],
             ["Cells flagged", p?.n_cells],
