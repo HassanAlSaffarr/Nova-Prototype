@@ -214,6 +214,16 @@ export default function SidePanel() {
                 (p as Record<string, unknown>)?.category as string
               ] ?? "Construction",
             ],
+            ...(typeof (p as Record<string, unknown>)?.cnn_prob === "number"
+              ? [
+                  [
+                    "Building (CNN)",
+                    `${Math.round(
+                      ((p as Record<string, unknown>).cnn_prob as number) * 100,
+                    )}%`,
+                  ] as [string, unknown],
+                ]
+              : []),
             ["Δ structure", p?.mean_delta],
             ["Cells flagged", p?.n_cells],
             ["Compared", `${p?.before} → ${p?.after}`],

@@ -32,7 +32,8 @@
         "confidence": 0.93,
         "related_ids": [],
         "nearest_building_m": 65,
-        "category": "construction"
+        "category": "construction",
+        "cnn_prob": 0.987
       }
     },
     {
@@ -59,7 +60,8 @@
         "confidence": 0.52,
         "related_ids": [],
         "nearest_building_m": 130,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.014
       }
     },
     {
@@ -86,7 +88,8 @@
         "confidence": 0.5,
         "related_ids": [],
         "nearest_building_m": 219,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.008
       }
     },
     {
@@ -113,7 +116,8 @@
         "confidence": 0.98,
         "related_ids": [],
         "nearest_building_m": 22,
-        "category": "construction"
+        "category": "construction",
+        "cnn_prob": 0.987
       }
     },
     {
@@ -140,7 +144,8 @@
         "confidence": 0.99,
         "related_ids": [],
         "nearest_building_m": 55,
-        "category": "construction"
+        "category": "land_emergence",
+        "cnn_prob": 0.161
       }
     },
     {
@@ -167,7 +172,8 @@
         "confidence": 0.5,
         "related_ids": [],
         "nearest_building_m": 102,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.013
       }
     },
     {
@@ -194,7 +200,8 @@
         "confidence": 0.55,
         "related_ids": [],
         "nearest_building_m": 108,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.337
       }
     },
     {
@@ -221,7 +228,8 @@
         "confidence": 0.72,
         "related_ids": [],
         "nearest_building_m": 69,
-        "category": "construction"
+        "category": "land_emergence",
+        "cnn_prob": 0.049
       }
     },
     {
@@ -248,7 +256,8 @@
         "confidence": 0.93,
         "related_ids": [],
         "nearest_building_m": 45,
-        "category": "construction"
+        "category": "construction",
+        "cnn_prob": 0.999
       }
     },
     {
@@ -275,7 +284,8 @@
         "confidence": 0.5,
         "related_ids": [],
         "nearest_building_m": 203,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.005
       }
     },
     {
@@ -302,7 +312,8 @@
         "confidence": 0.63,
         "related_ids": [],
         "nearest_building_m": 151,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.051
       }
     },
     {
@@ -329,7 +340,8 @@
         "confidence": 0.5,
         "related_ids": [],
         "nearest_building_m": 285,
-        "category": "land_emergence"
+        "category": "land_emergence",
+        "cnn_prob": 0.011
       }
     },
     {
@@ -356,7 +368,8 @@
         "confidence": 0.56,
         "related_ids": [],
         "nearest_building_m": 58,
-        "category": "construction"
+        "category": "land_emergence",
+        "cnn_prob": 0.099
       }
     },
     {
@@ -383,7 +396,8 @@
         "confidence": 0.69,
         "related_ids": [],
         "nearest_building_m": 43,
-        "category": "construction"
+        "category": "land_emergence",
+        "cnn_prob": 0.158
       }
     },
     {
@@ -410,7 +424,8 @@
         "confidence": 0.99,
         "related_ids": [],
         "nearest_building_m": 30,
-        "category": "construction"
+        "category": "construction",
+        "cnn_prob": 0.925
       }
     },
     {
@@ -437,7 +452,8 @@
         "confidence": 0.74,
         "related_ids": [],
         "nearest_building_m": 50,
-        "category": "construction"
+        "category": "land_emergence",
+        "cnn_prob": 0.196
       }
     },
     {
@@ -464,7 +480,8 @@
         "confidence": 0.75,
         "related_ids": [],
         "nearest_building_m": 57,
-        "category": "construction"
+        "category": "construction",
+        "cnn_prob": 0.957
       }
     }
   ]
