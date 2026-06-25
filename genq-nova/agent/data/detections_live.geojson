@@ -3,7 +3,7 @@
   "properties": {
     "detector": "highres-structural-change",
     "store": "live",
-    "updated_at": "2026-06-24T14:35:54.370257+00:00",
+    "updated_at": "2026-06-25T03:49:28.600334+00:00",
     "aoi": "karrada"
   },
   "features": [
@@ -27,9 +27,9 @@
         "cnn_prob": 0.987,
         "category": "construction",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -53,9 +53,9 @@
         "cnn_prob": 0.014,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -79,9 +79,9 @@
         "cnn_prob": 0.008,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -105,9 +105,9 @@
         "cnn_prob": 0.987,
         "category": "construction",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -131,9 +131,9 @@
         "cnn_prob": 0.172,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -157,9 +157,9 @@
         "cnn_prob": 0.013,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -183,9 +183,9 @@
         "cnn_prob": 0.277,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -209,9 +209,9 @@
         "cnn_prob": 0.049,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -235,9 +235,9 @@
         "cnn_prob": 0.998,
         "category": "construction",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -261,9 +261,9 @@
         "cnn_prob": 0.005,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -287,9 +287,9 @@
         "cnn_prob": 0.062,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -313,9 +313,9 @@
         "cnn_prob": 0.011,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -339,9 +339,9 @@
         "cnn_prob": 0.08,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -365,9 +365,9 @@
         "cnn_prob": 0.158,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -391,9 +391,9 @@
         "cnn_prob": 0.925,
         "category": "construction",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -417,9 +417,9 @@
         "cnn_prob": 0.241,
         "category": "land_emergence",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
@@ -443,9 +443,9 @@
         "cnn_prob": 0.95,
         "category": "construction",
         "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 7,
+        "times_seen": 8,
         "status": "active",
-        "last_seen": "2026-06-24T14:35:54.370257+00:00",
+        "last_seen": "2026-06-25T03:49:28.600334+00:00",
         "aoi": "karrada"
       }
     },
