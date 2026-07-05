@@ -3,10 +3,452 @@
   "properties": {
     "detector": "highres-structural-change",
     "store": "live",
-    "updated_at": "2026-07-04T19:16:58.559810+00:00",
-    "aoi": "bismayah"
+    "updated_at": "2026-07-05T03:37:39.925430+00:00",
+    "aoi": "karrada"
   },
   "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.410702,
+          33.296691
+        ]
+      },
+      "properties": {
+        "lat": 33.296691,
+        "lon": 44.410702,
+        "n_cells": 242,
+        "area_m2": 24200,
+        "mean_delta": 27.8,
+        "id": "nova-hr-507ddb8b79477610",
+        "method": "highres",
+        "cnn_prob": 0.987,
+        "category": "construction",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.412835,
+          33.31302
+        ]
+      },
+      "properties": {
+        "lat": 33.31302,
+        "lon": 44.412835,
+        "n_cells": 112,
+        "area_m2": 11200,
+        "mean_delta": 15.7,
+        "id": "nova-hr-8cca2dcf24cd9b76",
+        "method": "highres",
+        "cnn_prob": 0.014,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.390492,
+          33.294779
+        ]
+      },
+      "properties": {
+        "lat": 33.294779,
+        "lon": 44.390492,
+        "n_cells": 70,
+        "area_m2": 7000,
+        "mean_delta": 12.6,
+        "id": "nova-hr-ee763721de49128d",
+        "method": "highres",
+        "cnn_prob": 0.008,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.386903,
+          33.302154
+        ]
+      },
+      "properties": {
+        "lat": 33.302154,
+        "lon": 44.386903,
+        "n_cells": 68,
+        "area_m2": 6800,
+        "mean_delta": 29.3,
+        "id": "nova-hr-ec402d1e3bd766ae",
+        "method": "highres",
+        "cnn_prob": 0.987,
+        "category": "construction",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.387222,
+          33.313283
+        ]
+      },
+      "properties": {
+        "lat": 33.313283,
+        "lon": 44.387222,
+        "n_cells": 65,
+        "area_m2": 6500,
+        "mean_delta": 42.5,
+        "id": "nova-hr-d79e313755b22b01",
+        "method": "highres",
+        "cnn_prob": 0.172,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.398867,
+          33.296052
+        ]
+      },
+      "properties": {
+        "lat": 33.296052,
+        "lon": 44.398867,
+        "n_cells": 58,
+        "area_m2": 5800,
+        "mean_delta": 14.8,
+        "id": "nova-hr-02826588d3e54ef4",
+        "method": "highres",
+        "cnn_prob": 0.013,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.418588,
+          33.303924
+        ]
+      },
+      "properties": {
+        "lat": 33.303924,
+        "lon": 44.418588,
+        "n_cells": 49,
+        "area_m2": 4900,
+        "mean_delta": 16.4,
+        "id": "nova-hr-febcf6f7d766d52b",
+        "method": "highres",
+        "cnn_prob": 0.277,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.393266,
+          33.296997
+        ]
+      },
+      "properties": {
+        "lat": 33.296997,
+        "lon": 44.393266,
+        "n_cells": 49,
+        "area_m2": 4900,
+        "mean_delta": 21.5,
+        "id": "nova-hr-c74166d8b902eab3",
+        "method": "highres",
+        "cnn_prob": 0.049,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.4044,
+          33.295316
+        ]
+      },
+      "properties": {
+        "lat": 33.295316,
+        "lon": 44.4044,
+        "n_cells": 49,
+        "area_m2": 4900,
+        "mean_delta": 27.8,
+        "id": "nova-hr-e032a8b53f544751",
+        "method": "highres",
+        "cnn_prob": 0.998,
+        "category": "construction",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.391477,
+          33.29499
+        ]
+      },
+      "properties": {
+        "lat": 33.29499,
+        "lon": 44.391477,
+        "n_cells": 46,
+        "area_m2": 4600,
+        "mean_delta": 12.9,
+        "id": "nova-hr-64eea60b50aab701",
+        "method": "highres",
+        "cnn_prob": 0.005,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.428546,
+          33.288673
+        ]
+      },
+      "properties": {
+        "lat": 33.288673,
+        "lon": 44.428546,
+        "n_cells": 43,
+        "area_m2": 4300,
+        "mean_delta": 18.8,
+        "id": "nova-hr-f826f620846d99fb",
+        "method": "highres",
+        "cnn_prob": 0.062,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.41619,
+          33.303572
+        ]
+      },
+      "properties": {
+        "lat": 33.303572,
+        "lon": 44.41619,
+        "n_cells": 39,
+        "area_m2": 3900,
+        "mean_delta": 12.1,
+        "id": "nova-hr-3945e688e0f57fae",
+        "method": "highres",
+        "cnn_prob": 0.011,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.401068,
+          33.293867
+        ]
+      },
+      "properties": {
+        "lat": 33.293867,
+        "lon": 44.401068,
+        "n_cells": 38,
+        "area_m2": 3800,
+        "mean_delta": 16.9,
+        "id": "nova-hr-b57c883f61a2c962",
+        "method": "highres",
+        "cnn_prob": 0.08,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.409192,
+          33.301315
+        ]
+      },
+      "properties": {
+        "lat": 33.301315,
+        "lon": 44.409192,
+        "n_cells": 31,
+        "area_m2": 3100,
+        "mean_delta": 20.8,
+        "id": "nova-hr-fc6b07eaa37a83e4",
+        "method": "highres",
+        "cnn_prob": 0.158,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.387141,
+          33.300969
+        ]
+      },
+      "properties": {
+        "lat": 33.300969,
+        "lon": 44.387141,
+        "n_cells": 31,
+        "area_m2": 3100,
+        "mean_delta": 34.0,
+        "id": "nova-hr-3e231d0ff494b879",
+        "method": "highres",
+        "cnn_prob": 0.925,
+        "category": "construction",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.393584,
+          33.309495
+        ]
+      },
+      "properties": {
+        "lat": 33.309495,
+        "lon": 44.393584,
+        "n_cells": 30,
+        "area_m2": 3000,
+        "mean_delta": 22.1,
+        "id": "nova-hr-aa902ef3838d7147",
+        "method": "highres",
+        "cnn_prob": 0.241,
+        "category": "land_emergence",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.416338,
+          33.299234
+        ]
+      },
+      "properties": {
+        "lat": 33.299234,
+        "lon": 44.416338,
+        "n_cells": 30,
+        "area_m2": 3000,
+        "mean_delta": 22.5,
+        "id": "nova-hr-8a1a4754134c7fe7",
+        "method": "highres",
+        "cnn_prob": 0.95,
+        "category": "construction",
+        "first_seen": "2026-06-21T14:10:18.208145+00:00",
+        "times_seen": 28,
+        "status": "active",
+        "last_seen": "2026-07-05T03:37:39.925430+00:00",
+        "aoi": "karrada"
+      }
+    },
     {
       "type": "Feature",
       "geometry": {
@@ -5231,448 +5673,6 @@
         "status": "active",
         "last_seen": "2026-07-04T19:16:58.559810+00:00",
         "aoi": "bismayah"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.410702,
-          33.296691
-        ]
-      },
-      "properties": {
-        "lat": 33.296691,
-        "lon": 44.410702,
-        "n_cells": 242,
-        "area_m2": 24200,
-        "mean_delta": 27.8,
-        "id": "nova-hr-507ddb8b79477610",
-        "method": "highres",
-        "cnn_prob": 0.987,
-        "category": "construction",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.412835,
-          33.31302
-        ]
-      },
-      "properties": {
-        "lat": 33.31302,
-        "lon": 44.412835,
-        "n_cells": 112,
-        "area_m2": 11200,
-        "mean_delta": 15.7,
-        "id": "nova-hr-8cca2dcf24cd9b76",
-        "method": "highres",
-        "cnn_prob": 0.014,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.390492,
-          33.294779
-        ]
-      },
-      "properties": {
-        "lat": 33.294779,
-        "lon": 44.390492,
-        "n_cells": 70,
-        "area_m2": 7000,
-        "mean_delta": 12.6,
-        "id": "nova-hr-ee763721de49128d",
-        "method": "highres",
-        "cnn_prob": 0.008,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.386903,
-          33.302154
-        ]
-      },
-      "properties": {
-        "lat": 33.302154,
-        "lon": 44.386903,
-        "n_cells": 68,
-        "area_m2": 6800,
-        "mean_delta": 29.3,
-        "id": "nova-hr-ec402d1e3bd766ae",
-        "method": "highres",
-        "cnn_prob": 0.987,
-        "category": "construction",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.387222,
-          33.313283
-        ]
-      },
-      "properties": {
-        "lat": 33.313283,
-        "lon": 44.387222,
-        "n_cells": 65,
-        "area_m2": 6500,
-        "mean_delta": 42.5,
-        "id": "nova-hr-d79e313755b22b01",
-        "method": "highres",
-        "cnn_prob": 0.172,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.398867,
-          33.296052
-        ]
-      },
-      "properties": {
-        "lat": 33.296052,
-        "lon": 44.398867,
-        "n_cells": 58,
-        "area_m2": 5800,
-        "mean_delta": 14.8,
-        "id": "nova-hr-02826588d3e54ef4",
-        "method": "highres",
-        "cnn_prob": 0.013,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.418588,
-          33.303924
-        ]
-      },
-      "properties": {
-        "lat": 33.303924,
-        "lon": 44.418588,
-        "n_cells": 49,
-        "area_m2": 4900,
-        "mean_delta": 16.4,
-        "id": "nova-hr-febcf6f7d766d52b",
-        "method": "highres",
-        "cnn_prob": 0.277,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.393266,
-          33.296997
-        ]
-      },
-      "properties": {
-        "lat": 33.296997,
-        "lon": 44.393266,
-        "n_cells": 49,
-        "area_m2": 4900,
-        "mean_delta": 21.5,
-        "id": "nova-hr-c74166d8b902eab3",
-        "method": "highres",
-        "cnn_prob": 0.049,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.4044,
-          33.295316
-        ]
-      },
-      "properties": {
-        "lat": 33.295316,
-        "lon": 44.4044,
-        "n_cells": 49,
-        "area_m2": 4900,
-        "mean_delta": 27.8,
-        "id": "nova-hr-e032a8b53f544751",
-        "method": "highres",
-        "cnn_prob": 0.998,
-        "category": "construction",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.391477,
-          33.29499
-        ]
-      },
-      "properties": {
-        "lat": 33.29499,
-        "lon": 44.391477,
-        "n_cells": 46,
-        "area_m2": 4600,
-        "mean_delta": 12.9,
-        "id": "nova-hr-64eea60b50aab701",
-        "method": "highres",
-        "cnn_prob": 0.005,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.428546,
-          33.288673
-        ]
-      },
-      "properties": {
-        "lat": 33.288673,
-        "lon": 44.428546,
-        "n_cells": 43,
-        "area_m2": 4300,
-        "mean_delta": 18.8,
-        "id": "nova-hr-f826f620846d99fb",
-        "method": "highres",
-        "cnn_prob": 0.062,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.41619,
-          33.303572
-        ]
-      },
-      "properties": {
-        "lat": 33.303572,
-        "lon": 44.41619,
-        "n_cells": 39,
-        "area_m2": 3900,
-        "mean_delta": 12.1,
-        "id": "nova-hr-3945e688e0f57fae",
-        "method": "highres",
-        "cnn_prob": 0.011,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.401068,
-          33.293867
-        ]
-      },
-      "properties": {
-        "lat": 33.293867,
-        "lon": 44.401068,
-        "n_cells": 38,
-        "area_m2": 3800,
-        "mean_delta": 16.9,
-        "id": "nova-hr-b57c883f61a2c962",
-        "method": "highres",
-        "cnn_prob": 0.08,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.409192,
-          33.301315
-        ]
-      },
-      "properties": {
-        "lat": 33.301315,
-        "lon": 44.409192,
-        "n_cells": 31,
-        "area_m2": 3100,
-        "mean_delta": 20.8,
-        "id": "nova-hr-fc6b07eaa37a83e4",
-        "method": "highres",
-        "cnn_prob": 0.158,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.387141,
-          33.300969
-        ]
-      },
-      "properties": {
-        "lat": 33.300969,
-        "lon": 44.387141,
-        "n_cells": 31,
-        "area_m2": 3100,
-        "mean_delta": 34.0,
-        "id": "nova-hr-3e231d0ff494b879",
-        "method": "highres",
-        "cnn_prob": 0.925,
-        "category": "construction",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.393584,
-          33.309495
-        ]
-      },
-      "properties": {
-        "lat": 33.309495,
-        "lon": 44.393584,
-        "n_cells": 30,
-        "area_m2": 3000,
-        "mean_delta": 22.1,
-        "id": "nova-hr-aa902ef3838d7147",
-        "method": "highres",
-        "cnn_prob": 0.241,
-        "category": "land_emergence",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          44.416338,
-          33.299234
-        ]
-      },
-      "properties": {
-        "lat": 33.299234,
-        "lon": 44.416338,
-        "n_cells": 30,
-        "area_m2": 3000,
-        "mean_delta": 22.5,
-        "id": "nova-hr-8a1a4754134c7fe7",
-        "method": "highres",
-        "cnn_prob": 0.95,
-        "category": "construction",
-        "first_seen": "2026-06-21T14:10:18.208145+00:00",
-        "times_seen": 27,
-        "status": "active",
-        "last_seen": "2026-07-04T13:37:41.827488+00:00",
-        "aoi": "karrada"
       }
     },
     {
